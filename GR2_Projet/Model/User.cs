@@ -8,23 +8,22 @@ namespace GR2_Projet.Model
 {
     class User
     {
-        private int id
+        public int id
         {
             get { return id; }
             set { id = value; }
         }
-        private string username
+        public string username
         {
             get { return username; }
             set { username = value; }
         }
-        private string email
-
+        public string email
         {
             get { return email; }
             set { email = value; }
         }
-        private string password
+        public string password
         {
             get { return password; }
             set { password = value; }
