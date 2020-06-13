@@ -8,9 +8,9 @@ namespace GR2_Projet.Model
 {
     class Account
     {
-        public int id { get { return id; } set { id = value; } }
-        public string name { get { return name; } set { name = value; } }
-        public int budget { get { return budget; } set { budget = value; } }
+        private int id { get { return id; } set { id = value; } }
+        private string name { get { return name; } set { name = value; } }
+        private int budget { get { return budget; } set { budget = value; } }
 
         public Account() { }
     }
