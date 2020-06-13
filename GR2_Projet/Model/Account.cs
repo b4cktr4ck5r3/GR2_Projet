@@ -8,10 +8,22 @@ namespace GR2_Projet.Model
 {
     class Account
     {
+        /// <summary>
+        /// GETTER; SETTER; Integer id
+        /// </summary>
         private int id { get { return id; } set { id = value; } }
+        /// <summary>
+        /// GETTER; SETTER; String name
+        /// </summary>
         private string name { get { return name; } set { name = value; } }
+        /// <summary>
+        /// GETTER;SETTER; Integer budget
+        /// </summary>
         private int budget { get { return budget; } set { budget = value; } }
 
+        /// <summary>
+        /// Construct
+        /// </summary>
         public Account() { }
     }
 }
