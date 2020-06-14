@@ -16,7 +16,8 @@ namespace GR2_Projet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            ViewManager.Instance.ShowMainForm();
+            Application.Run();
         }
     }
 }

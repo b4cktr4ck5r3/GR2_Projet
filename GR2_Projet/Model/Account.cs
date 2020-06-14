@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace GR2_Projet.Model
 {
+    /// <summary>
+    /// Classe représentant le modèle d'un compte bancaire.
+    /// </summary>
     class Account
     {
         /// <summary>

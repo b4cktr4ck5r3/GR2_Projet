@@ -1,6 +1,8 @@
-﻿namespace GR2_Projet
+﻿using System.Windows.Forms;
+
+namespace GR2_Projet
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -28,10 +30,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Name = "MainForm";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+            
+            //Anti resize
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+
         }
 
         #endregion
