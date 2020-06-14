@@ -56,6 +56,7 @@
     </Compile>
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\Due.cs" />
     <Compile Include="Model\Operation.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
