@@ -15,45 +15,48 @@ namespace GR2_Projet.Model
         /// <summary>
         /// Propriété id.
         /// </summary>
-        public int id
+        private int mId;
+        public int Id
         {
-            get { return id; }
-            set { id = value; }
+            get { return mId; }
+            set { mId = value; }
         }
 
         /// <summary>
         /// Propriété nom d'utilisateur.
         /// </summary>
-        public string username
+        private string mUsername;
+        public string Username
         {
-            get { return username; }
-            set { username = value; }
+            get { return mUsername; }
+            set { mUsername = value; }
         }
 
         /// <summary>
         /// Propriété email.
         /// </summary>
-        public string email
+        private string mEmail;
+        public string Email
         {
-            get { return email; }
-            set { email = value; }
+            get { return mEmail; }
+            set { mEmail = value; }
         }
 
         /// <summary>
         /// Propriété mot de passe.
         /// </summary>
-        public string password
+        private string mPassword;
+        public string Password
         {
-            get { return password; }
-            set { password = value; }
+            get { return mPassword; }
+            set { mPassword = value; }
         }
 
         /// <summary>
         /// Constructeur.
         /// </summary>
-        public User(string username)
+        public User()
         {
-            this.username = username;
         }
     }
 }

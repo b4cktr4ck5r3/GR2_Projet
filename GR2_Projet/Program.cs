@@ -20,24 +20,6 @@ namespace GR2_Projet
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ViewManager.Instance.ShowMainForm();
-
-            User test = new User("TestUser");
-            Stream stream = File.Open("data.dat", FileMode.Create);
-            BinaryFormatter formatter = new BinaryFormatter();
-
-            formatter.Serialize(stream, test);
-            stream.Close();
-
-            stream = File.Open("data.dat", FileMode.Open);
-            formatter = new BinaryFormatter();
-
-            test = (User)formatter.Deserialize(stream);
-            stream.Close();
-
-            System.Diagnostics.Debug.WriteLine("---------------------------");
-            System.Diagnostics.Debug.WriteLine(test.username);
-            System.Diagnostics.Debug.WriteLine("---------------------------");
-
             Application.Run();
        }
     }
