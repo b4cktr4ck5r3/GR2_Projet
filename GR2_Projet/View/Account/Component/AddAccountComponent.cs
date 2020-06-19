@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GR2_Projet.View
+namespace GR2_Projet.View.Account.Component
 {
-    public partial class ViewExemple : UserControl
+    public partial class AddAccountComponent : UserControl
     {
-        public ViewExemple()
+        public AddAccountComponent()
         {
             InitializeComponent();
         }

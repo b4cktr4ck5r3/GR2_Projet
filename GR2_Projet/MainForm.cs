@@ -16,5 +16,29 @@ namespace GR2_Projet
         {
             InitializeComponent();
         }
+
+        public void ChangePanel(UserControl tab)
+        {
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(tab);
+        }
+
+        public void ClearPanel()
+        {
+            mainPanel.Controls.Clear();
+        }
+
+        public void ClearPanelRessources()
+        {
+            foreach(Control ctrl in mainPanel.Controls)
+            {
+                ctrl.Dispose();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ViewManager.Instance.ShowViewAccount();
+        }
     }
 }

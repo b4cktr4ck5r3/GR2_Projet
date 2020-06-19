@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using GR2_Projet.View;
 
 namespace GR2_Projet
 {
@@ -22,6 +24,8 @@ namespace GR2_Projet
         /// Vue principale de l'application.
         /// </summary>
         private MainForm mainForm;
+
+        private ViewAccount viewAccount;
         #endregion Views declaration
 
         /// <summary>
@@ -35,6 +39,15 @@ namespace GR2_Projet
         private ViewManager(){}
 
         #region Views treatments
+        public void ChangePanel(UserControl tab)
+        {
+            mainForm.ChangePanel(tab);
+        }
+
+        public void ClearPanel()
+        {
+            mainForm.ClearPanel();
+        }
         /// <summary>
         /// Permet de créer et d'afficher le formulaire principale de l'application.
         /// </summary>
@@ -53,6 +66,15 @@ namespace GR2_Projet
                 mainForm.Close();
             else
                 throw new Exception("Le formulaire principale n'existe pas.");
+        }
+
+
+
+        public void ShowViewAccount()
+        {
+            viewAccount = new ViewAccount();
+            mainForm.ChangePanel(viewAccount);
+
         }
         #endregion Views treatments
     }

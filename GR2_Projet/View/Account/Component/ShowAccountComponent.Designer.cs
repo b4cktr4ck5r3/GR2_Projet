@@ -1,6 +1,6 @@
-﻿namespace GR2_Projet.View
+﻿namespace GR2_Projet.View.Account.Component
 {
-    partial class ViewExemple
+    partial class ShowAccountComponent
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -30,12 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // ViewExemple
+            // ShowAccountComponent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "ViewExemple";
-            this.Size = new System.Drawing.Size(481, 255);
+            this.BackColor = System.Drawing.Color.Blue;
+            this.Name = "ShowAccountComponent";
+            this.Size = new System.Drawing.Size(1024, 731);
             this.ResumeLayout(false);
 
         }
