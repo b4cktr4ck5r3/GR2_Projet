@@ -35,55 +35,61 @@ namespace GR2_Projet.Model
         /// <summary>
         /// Propriété id.
         /// </summary>
-        public int id
+        private int mId;
+        public int Id
         {
-            get { return id; } 
-            set { id = value; }
+            get { return mId; } 
+            set { mId = value; }
         }
 
         /// <summary>
         /// Propriété name.
         /// </summary>
-        public string name
+        private string mName;
+        public string Name
         {
-            get { return name; }
-            set { name = value; }
+            get { return mName; }
+            set { mName = value; }
         }
 
         /// <summary>
         /// Propriété type d'opération.
         /// </summary>
-        public operationType operation_Type
+        private operationType mOperationType;
+        public operationType OperationType
         {
-            get { return operation_Type; }
-            set { operation_Type = value; }
+            get { return mOperationType; }
+            set { mOperationType = value; }
         }
 
         /// <summary>
         /// Propriété date.
         /// </summary>
-        public DateTime date
+        private DateTime mDate;
+        public DateTime Date
         {
-            get { return date; }
-            set { date = value; }
+            get { return mDate; }
+            set { mDate = value; }
         }
 
         /// <summary>
         /// Propriété type de paiement.
         /// </summary>
-        public paymentType payment_Type
+        private paymentType mPaymentType;
+        public paymentType PaymentType
         {
-            get { return payment_Type; }
-            set { payment_Type = value; }
+            get { return mPaymentType; }
+            set { mPaymentType = value; }
         }
 
         /// <summary>
         /// Propriété montant.
         /// </summary>
-        public int amount
+        private int mAmount;
+        public int Amount
         {
-            get { return amount; }
-            set { amount = value; }
+            get { return mAmount; }
+            set { mAmount = value; }
         }
 
         /// <summary>

@@ -50,9 +50,9 @@ namespace GR2_Projet.Model
         /// <summary>
         /// Constructeur.
         /// </summary>
-        public User()
+        public User(string username)
         {
-
+            this.username = username;
         }
     }
 }

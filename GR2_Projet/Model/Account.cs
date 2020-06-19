@@ -14,15 +14,18 @@ namespace GR2_Projet.Model
         /// <summary>
         /// GETTER; SETTER; Integer id
         /// </summary>
-        private int id { get { return id; } set { id = value; } }
+        private int mId;
+        public int Id { get { return mId; } set { mId = value; } }
         /// <summary>
         /// GETTER; SETTER; String name
         /// </summary>
-        private string name { get { return name; } set { name = value; } }
+        private string mName;
+        public string name { get { return mName; } set { mName = value; } }
         /// <summary>
         /// GETTER;SETTER; Integer budget
         /// </summary>
-        private int budget { get { return budget; } set { budget = value; } }
+        private int mBudget;
+        public int Budget { get { return mBudget; } set { mBudget = value; } }
 
         /// <summary>
         /// Construct

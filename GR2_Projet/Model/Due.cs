@@ -14,28 +14,31 @@ namespace GR2_Projet.Model
         /// <summary>
         /// Propriété id.
         /// </summary>
-        public int id
+        private int mId;
+        public int Id
         {
-            get { return id; }
-            set { id = value; }
+            get { return mId; }
+            set { mId = value; }
         }
 
         /// <summary>
         /// Propriété nom.
         /// </summary>
-        public string name
+        private string mName;
+        public string Name
         {
-            get { return name; }
-            set { name = value; }
+            get { return mName; }
+            set { mName = value; }
         }
 
         /// <summary>
         /// Propriété date.
         /// </summary>
-        public DateTime date
+        private DateTime mDate;
+        public DateTime Date
         {
-            get { return date; }
-            set { date = value; }
+            get { return mDate; }
+            set { mDate = value; }
         }
 
         /// <summary>
