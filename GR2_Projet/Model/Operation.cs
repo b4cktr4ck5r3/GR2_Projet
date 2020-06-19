@@ -30,6 +30,7 @@ namespace GR2_Projet.Model
     /// <summary>
     /// Classe représentant le modèle d'une opération bancaire.
     /// </summary>
+    [Serializable()]
     class Operation
     {
         /// <summary>

@@ -9,6 +9,7 @@ namespace GR2_Projet.Model
     /// <summary>
     /// Classe représentant le modèle utilisateur.
     /// </summary>
+    [Serializable()]
     class User
     {
         /// <summary>
