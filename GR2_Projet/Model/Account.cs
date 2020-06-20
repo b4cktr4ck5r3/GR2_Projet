@@ -10,8 +10,10 @@ namespace GR2_Projet.Model
     /// Classe représentant le modèle d'un compte bancaire.
     /// </summary>
     [Serializable()]
-    class Account
+    public class Account
     {
+        private static int accountNumber = 0;
+
         /// <summary>
         /// GETTER; SETTER; Integer id
         /// </summary>
@@ -21,7 +23,7 @@ namespace GR2_Projet.Model
         /// GETTER; SETTER; String name
         /// </summary>
         private string mName;
-        public string name { get { return mName; } set { mName = value; } }
+        public string Name { get { return mName; } set { mName = value; } }
         /// <summary>
         /// GETTER;SETTER; Integer budget
         /// </summary>
@@ -31,6 +33,13 @@ namespace GR2_Projet.Model
         /// <summary>
         /// Construct
         /// </summary>
-        public Account() { }
+        public Account(string Name, int Budget)
+        {
+            this.Name = Name;
+            this.Budget = Budget;
+            this.Id = accountNumber;
+
+            accountNumber++;
+        }
     }
 }

@@ -10,8 +10,9 @@ namespace GR2_Projet.Model
     /// Classe représentant le modèle utilisateur.
     /// </summary>
     [Serializable()]
-    class User
+    public class User
     {
+        static int userCount = 0;
         /// <summary>
         /// Propriété id.
         /// </summary>
@@ -52,11 +53,23 @@ namespace GR2_Projet.Model
             set { mPassword = value; }
         }
 
+        private List<Account> mAccounts;
+        public List<Account> Accounts
+        {
+            get { return mAccounts; }
+            set { mAccounts = value; }
+        }
         /// <summary>
         /// Constructeur.
         /// </summary>
-        public User()
+        public User(string Username, string Email, string Password)
         {
+            this.Id = userCount;
+            this.Username = Username;
+            this.Email = Email;
+            this.Password = Password;
+            Accounts = new List<Account>();
+            userCount++;
         }
     }
 }

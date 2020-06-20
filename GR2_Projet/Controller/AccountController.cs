@@ -9,11 +9,11 @@ namespace GR2_Projet.Controller
     /// <summary>
     /// Controller du modèle compte.
     /// </summary>
-    public class AccountController
+    public static class AccountController
     {
         /// <summary>
         /// Constructeur.
         /// </summary>
-        public AccountController() { }
+        /// public AccountController() { }
     }
 }

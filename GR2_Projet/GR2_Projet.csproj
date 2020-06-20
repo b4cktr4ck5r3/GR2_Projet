@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppFixtures.cs" />
     <Compile Include="Controller\AccountController.cs" />
     <Compile Include="Controller\OperationController.cs" />
     <Compile Include="Controller\UserController.cs" />

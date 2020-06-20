@@ -20,6 +20,10 @@ namespace GR2_Projet
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ViewManager.Instance.ShowMainForm();
+            AppFixtures.CreateFakeUser();
+            AppFixtures.CreateFakeAccount();
+            AppFixtures.Save();
+            AppFixtures.Read();
             Application.Run();
        }
     }

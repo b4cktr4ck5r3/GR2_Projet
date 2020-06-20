@@ -42,7 +42,7 @@ namespace GR2_Projet.View
         private void showAccount_Click(object sender, EventArgs e)
         {
             ClearComponentRessources(accountPanel);
-            showComponent = new Account.Component.ShowAccountComponent();
+            showComponent = new Account.Component.ShowAccountComponent(AppFixtures.currentLoggedUser.Accounts);
             ChangeComponent(accountPanel, showComponent);
         }
 

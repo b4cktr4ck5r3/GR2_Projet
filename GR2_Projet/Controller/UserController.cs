@@ -9,11 +9,11 @@ namespace GR2_Projet.Controller
     /// <summary>
     /// Controller du modèle utilisateur.
     /// </summary>
-    public class UserController
+    public static class UserController
     {
         /// <summary>
         /// Constructeur.
         /// </summary>
-        public UserController() { }
+        /// public UserController() { }
     }
 }
