@@ -12,12 +12,11 @@ namespace GR2_Projet.Model
     [Serializable()]
     public class User
     {
-        static int userCount = 0;
         /// <summary>
         /// Propriété id.
         /// </summary>
-        private int mId;
-        public int Id
+        private string mId;
+        public string Id
         {
             get { return mId; }
             set { mId = value; }
@@ -64,12 +63,11 @@ namespace GR2_Projet.Model
         /// </summary>
         public User(string Username, string Email, string Password)
         {
-            this.Id = userCount;
+            this.Id = Guid.NewGuid().ToString();
             this.Username = Username;
             this.Email = Email;
             this.Password = Password;
             Accounts = new List<Account>();
-            userCount++;
         }
     }
 }

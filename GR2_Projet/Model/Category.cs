@@ -12,7 +12,7 @@ namespace GR2_Projet.Model
     [Serializable()]
     class Category
     {
-        private int id;
+        private string id;
         private string name;
 
         /// <summary>
@@ -20,9 +20,9 @@ namespace GR2_Projet.Model
         /// </summary>
         /// <param name="id">Id de la catégorie.</param>
         /// <param name="name">Nom de la catégorie.</param>
-        public Category(int id, string name)
+        public Category(string name)
         {
-            this.id = id;
+            this.id = Guid.NewGuid().ToString();
             this.name = name;
         }
 
@@ -30,7 +30,7 @@ namespace GR2_Projet.Model
         /// Setter de la propriété id.
         /// </summary>
         /// <param name="id">id de la catégorie.</param>
-        public void SetId(int id)
+        public void SetId(string id)
         {
             this.id = id;
         }
@@ -48,7 +48,7 @@ namespace GR2_Projet.Model
         /// Getter de la propriété id.
         /// </summary>
         /// <returns>Id de la catégorie.</returns>
-        public int GetId()
+        public string GetId()
         {
             return this.id;
         }

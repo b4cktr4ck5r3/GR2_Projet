@@ -40,7 +40,7 @@ namespace GR2_Projet
             Stream stream = File.Open("data.dat", FileMode.Open);
             BinaryFormatter formatter = new BinaryFormatter();
 
-            var test = (User)formatter.Deserialize(stream);
+            currentLoggedUser = (User)formatter.Deserialize(stream);
             stream.Close();
         }
     }

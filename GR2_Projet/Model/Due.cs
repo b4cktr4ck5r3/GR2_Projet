@@ -15,8 +15,8 @@ namespace GR2_Projet.Model
         /// <summary>
         /// Propriété id.
         /// </summary>
-        private int mId;
-        public int Id
+        private string mId;
+        public string Id
         {
             get { return mId; }
             set { mId = value; }
@@ -45,6 +45,9 @@ namespace GR2_Projet.Model
         /// <summary>
         /// Constructeur.
         /// </summary>
-        public Due(){}
+        public Due()
+        {
+            this.Id = Guid.NewGuid().ToString();
+        }
     }
 }

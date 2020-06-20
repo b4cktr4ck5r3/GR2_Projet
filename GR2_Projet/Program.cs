@@ -20,9 +20,13 @@ namespace GR2_Projet
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ViewManager.Instance.ShowMainForm();
+
+            //Uniquement au premier lancement.
             AppFixtures.CreateFakeUser();
             AppFixtures.CreateFakeAccount();
             AppFixtures.Save();
+            //Uniquement au premier lancement.
+
             AppFixtures.Read();
             Application.Run();
        }

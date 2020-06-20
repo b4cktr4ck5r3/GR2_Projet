@@ -12,13 +12,11 @@ namespace GR2_Projet.Model
     [Serializable()]
     public class Account
     {
-        private static int accountNumber = 0;
-
         /// <summary>
         /// GETTER; SETTER; Integer id
         /// </summary>
-        private int mId;
-        public int Id { get { return mId; } set { mId = value; } }
+        private string mId;
+        public string Id { get { return mId; } set { mId = value; } }
         /// <summary>
         /// GETTER; SETTER; String name
         /// </summary>
@@ -27,19 +25,17 @@ namespace GR2_Projet.Model
         /// <summary>
         /// GETTER;SETTER; Integer budget
         /// </summary>
-        private int mBudget;
-        public int Budget { get { return mBudget; } set { mBudget = value; } }
+        private float mBudget;
+        public float Budget { get { return mBudget; } set { mBudget = value; } }
 
         /// <summary>
         /// Construct
         /// </summary>
-        public Account(string Name, int Budget)
+        public Account(string Name, float Budget)
         {
             this.Name = Name;
             this.Budget = Budget;
-            this.Id = accountNumber;
-
-            accountNumber++;
+            this.Id = Guid.NewGuid().ToString();
         }
     }
 }
