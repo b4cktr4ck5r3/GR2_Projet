@@ -70,6 +70,12 @@
     <Compile Include="View\Account\ViewAccount.Designer.cs">
       <DependentUpon>ViewAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Category\ViewCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Category\ViewCategory.Designer.cs">
+      <DependentUpon>ViewCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\User\Component\FormAddAccountComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -103,6 +109,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Category\ViewCategory.resx">
+      <DependentUpon>ViewCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\User\Component\FormAddAccountComponent.resx">
       <DependentUpon>FormAddAccountComponent.cs</DependentUpon>
     </EmbeddedResource>
