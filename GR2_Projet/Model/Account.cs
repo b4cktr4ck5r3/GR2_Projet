@@ -28,6 +28,13 @@ namespace GR2_Projet.Model
         private float mBudget;
         public float Budget { get { return mBudget; } set { mBudget = value; } }
 
+        private List<Operation> mOperations;
+        public List<Operation> Operation
+        {
+            get { return mOperations; }
+            set { mOperations = value; }
+        }
+
         /// <summary>
         /// Construct
         /// </summary>
