@@ -23,7 +23,7 @@ namespace GR2_Projet.View.User.Component
             {
                 AppFixtures.currentLoggedUser =
                     Controller.UserController.Login(this.usernameTxtBox.Text, this.passwordTxtBox.Text);
-                ViewManager.Instance.ShowViewAccounts();
+                ViewManager.Instance.ShowViewUserAccounts();
             }
             else
                 MessageBox.Show("Mauvais username/mdp");

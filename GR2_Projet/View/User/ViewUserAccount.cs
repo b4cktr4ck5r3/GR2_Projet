@@ -15,6 +15,8 @@ namespace GR2_Projet.View
     /// </summary>
     public partial class ViewUserAccount : BaseView
     {
+        private static bool isShowComponentActive;
+        private static bool isAddComponentActive;
         #region Components
         /// <summary>
         /// Composant permettant d'ajouter un compte bancaire.
@@ -37,6 +39,8 @@ namespace GR2_Projet.View
 
             ShowButtons(false);
             EnableButtons(false);
+
+            showAccountLogic();
         }
 
         public void ShowButtons(bool isVisible)
@@ -58,11 +62,22 @@ namespace GR2_Projet.View
         /// <param name="e"></param>
         private void showAccount_Click(object sender, EventArgs e)
         {
+            if (!isShowComponentActive)
+            {
+                showAccountLogic();
+                this.adminComponentPanel.Text = "Mes comptes";
+                ShowButtons(true);
+            }
+        }
+
+        private void showAccountLogic()
+        {
             ClearComponentRessources(adminComponentPanel);
             showComponent = new Account.Component.ShowAccountComponent(AppFixtures.currentLoggedUser.Accounts);
             ChangeComponent(adminComponentPanel, showComponent);
-            this.adminComponentPanel.Text = "Mes comptes";
-            ShowButtons(true);
+
+            isShowComponentActive = true;
+            isAddComponentActive = false;
         }
 
         /// <summary>
@@ -72,11 +87,22 @@ namespace GR2_Projet.View
         /// <param name="e"></param>
         private void addAccount_Click(object sender, EventArgs e)
         {
+            if (!isAddComponentActive)
+            {
+                addAccountLogic();
+                this.adminComponentPanel.Text = "Ajouter un compte";
+                ShowButtons(false);
+            }
+        }
+
+        private void addAccountLogic()
+        {
             ClearComponentRessources(adminComponentPanel);
             addComponent = new Account.Component.AddAccountComponent();
             ChangeComponent(adminComponentPanel, addComponent);
-            this.adminComponentPanel.Text = "Ajouter un compte";
-            ShowButtons(false);
+
+            isAddComponentActive = true;
+            isShowComponentActive = false;
         }
 
         private void editBtn_Click(object sender, EventArgs e)

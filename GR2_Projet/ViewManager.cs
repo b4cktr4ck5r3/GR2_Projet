@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GR2_Projet.View;
 using GR2_Projet.View.Account;
+using GR2_Projet.View.Operation;
 using GR2_Projet.View.User;
 
 namespace GR2_Projet
@@ -32,6 +33,12 @@ namespace GR2_Projet
         private View.ViewUserAccount viewUserAccount;
 
         private View.Account.ViewAccount viewAccount;
+
+        private View.Operation.ViewOperation viewOperation;
+
+        private View.Due.ViewDue viewDue;
+
+        private View.Category.ViewCategory viewCategory;
         #endregion Views declaration
 
         /// <summary>
@@ -83,7 +90,7 @@ namespace GR2_Projet
                 throw new Exception("Le formulaire principale n'existe pas.");
         }
 
-        public void ShowViewAccounts()
+        public void ShowViewUserAccounts()
         {
             viewUserAccount = new ViewUserAccount();
             mainForm.ChangePanel(viewUserAccount);
@@ -93,6 +100,12 @@ namespace GR2_Projet
         {
             viewAccount = new ViewAccount(account);
             mainForm.ChangePanel(viewAccount);
+        }
+
+        public void ShowViewOperation(List<Model.Operation> operations)
+        {
+            viewOperation = new ViewOperation(operations);
+            mainForm.ChangePanel(viewOperation);
         }
         #endregion Views treatments
     }

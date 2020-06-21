@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GR2_Projet.View.Operation
 {
-    public partial class ViewOperation : UserControl
+    public partial class ViewOperation : BaseView
     {
-        public ViewOperation()
+        public ViewOperation(List<Model.Operation> operations)
         {
             InitializeComponent();
         }

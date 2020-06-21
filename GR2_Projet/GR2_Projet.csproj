@@ -146,6 +146,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Account\ViewAccount.resx">
+      <DependentUpon>ViewAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\BaseView.resx">
       <DependentUpon>BaseView.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Due\ViewDue.resx">
       <DependentUpon>ViewDue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Operation\ViewOperation.resx">
+      <DependentUpon>ViewOperation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\User\Component\FormAddAccountComponent.resx">
       <DependentUpon>FormAddAccountComponent.cs</DependentUpon>

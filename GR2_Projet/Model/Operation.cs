@@ -31,7 +31,7 @@ namespace GR2_Projet.Model
     /// Classe représentant le modèle d'une opération bancaire.
     /// </summary>
     [Serializable()]
-    class Operation
+    public class Operation
     {
         /// <summary>
         /// Propriété id.

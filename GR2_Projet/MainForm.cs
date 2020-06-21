@@ -39,7 +39,7 @@ namespace GR2_Projet
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ViewManager.Instance.ShowViewAccounts();
+            ViewManager.Instance.ShowViewUserAccounts();
         }
     }
 }

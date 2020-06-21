@@ -71,6 +71,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataAccount.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataAccount.RowTemplate.Height = 30;
+            this.dataAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataAccount.Size = new System.Drawing.Size(1024, 731);
             this.dataAccount.TabIndex = 0;
             this.dataAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataAccount_CellClick);

@@ -28,20 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.accountNameLbl = new System.Windows.Forms.Label();
+            this.returnPreviousViewBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.dateLbl = new System.Windows.Forms.Label();
+            this.budgetLbl = new System.Windows.Forms.Label();
+            this.staticBudgetLbl = new System.Windows.Forms.Label();
+            this.operationViewBtn = new System.Windows.Forms.Button();
+            this.dueViewBtn = new System.Windows.Forms.Button();
+            this.categoryViewBtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.timerForDate = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -53,24 +55,25 @@
             this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 0;
             // 
-            // label2
+            // accountNameLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 34);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(258, 37);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nom du compte";
+            this.accountNameLbl.AutoSize = true;
+            this.accountNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountNameLbl.Location = new System.Drawing.Point(28, 34);
+            this.accountNameLbl.Name = "accountNameLbl";
+            this.accountNameLbl.Size = new System.Drawing.Size(258, 37);
+            this.accountNameLbl.TabIndex = 1;
+            this.accountNameLbl.Text = "Nom du compte";
             // 
-            // button1
+            // returnPreviousViewBtn
             // 
-            this.button1.Location = new System.Drawing.Point(876, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 48);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Retour";
-            this.button1.UseVisualStyleBackColor = true;
+            this.returnPreviousViewBtn.Location = new System.Drawing.Point(876, 25);
+            this.returnPreviousViewBtn.Name = "returnPreviousViewBtn";
+            this.returnPreviousViewBtn.Size = new System.Drawing.Size(116, 48);
+            this.returnPreviousViewBtn.TabIndex = 2;
+            this.returnPreviousViewBtn.Text = "Retour";
+            this.returnPreviousViewBtn.UseVisualStyleBackColor = true;
+            this.returnPreviousViewBtn.Click += new System.EventHandler(this.returnPreviousViewBtn_Click);
             // 
             // label3
             // 
@@ -81,66 +84,69 @@
             this.label3.Size = new System.Drawing.Size(1024, 3);
             this.label3.TabIndex = 3;
             // 
-            // label4
+            // dateLbl
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 124);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(363, 37);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "DD:MM:YYYY  HH:MM";
+            this.dateLbl.AutoSize = true;
+            this.dateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateLbl.Location = new System.Drawing.Point(28, 124);
+            this.dateLbl.Name = "dateLbl";
+            this.dateLbl.Size = new System.Drawing.Size(363, 37);
+            this.dateLbl.TabIndex = 4;
+            this.dateLbl.Text = "DD:MM:YYYY  HH:MM";
             // 
-            // label5
+            // budgetLbl
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(212, 206);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 37);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "{SOLDE}€";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.budgetLbl.AutoSize = true;
+            this.budgetLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.budgetLbl.Location = new System.Drawing.Point(212, 206);
+            this.budgetLbl.Name = "budgetLbl";
+            this.budgetLbl.Size = new System.Drawing.Size(173, 37);
+            this.budgetLbl.TabIndex = 5;
+            this.budgetLbl.Text = "{SOLDE}€";
+            this.budgetLbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label6
+            // staticBudgetLbl
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(28, 206);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 37);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Solde";
+            this.staticBudgetLbl.AutoSize = true;
+            this.staticBudgetLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staticBudgetLbl.Location = new System.Drawing.Point(28, 206);
+            this.staticBudgetLbl.Name = "staticBudgetLbl";
+            this.staticBudgetLbl.Size = new System.Drawing.Size(98, 37);
+            this.staticBudgetLbl.TabIndex = 6;
+            this.staticBudgetLbl.Text = "Solde";
             // 
-            // button2
+            // operationViewBtn
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(35, 319);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(350, 112);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Gestion Operations";
-            this.button2.UseVisualStyleBackColor = true;
+            this.operationViewBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operationViewBtn.Location = new System.Drawing.Point(35, 319);
+            this.operationViewBtn.Name = "operationViewBtn";
+            this.operationViewBtn.Size = new System.Drawing.Size(350, 112);
+            this.operationViewBtn.TabIndex = 7;
+            this.operationViewBtn.Text = "Gestion Operations";
+            this.operationViewBtn.UseVisualStyleBackColor = true;
+            this.operationViewBtn.Click += new System.EventHandler(this.operationViewBtn_Click);
             // 
-            // button3
+            // dueViewBtn
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(35, 452);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(350, 112);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Gestion Echeances";
-            this.button3.UseVisualStyleBackColor = true;
+            this.dueViewBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dueViewBtn.Location = new System.Drawing.Point(35, 452);
+            this.dueViewBtn.Name = "dueViewBtn";
+            this.dueViewBtn.Size = new System.Drawing.Size(350, 112);
+            this.dueViewBtn.TabIndex = 8;
+            this.dueViewBtn.Text = "Gestion Echeances";
+            this.dueViewBtn.UseVisualStyleBackColor = true;
+            this.dueViewBtn.Click += new System.EventHandler(this.dueViewBtn_Click);
             // 
-            // button4
+            // categoryViewBtn
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(35, 590);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(350, 112);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Gestion Categories";
-            this.button4.UseVisualStyleBackColor = true;
+            this.categoryViewBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryViewBtn.Location = new System.Drawing.Point(35, 590);
+            this.categoryViewBtn.Name = "categoryViewBtn";
+            this.categoryViewBtn.Size = new System.Drawing.Size(350, 112);
+            this.categoryViewBtn.TabIndex = 9;
+            this.categoryViewBtn.Text = "Gestion Categories";
+            this.categoryViewBtn.UseVisualStyleBackColor = true;
+            this.categoryViewBtn.Click += new System.EventHandler(this.categoryViewBtn_Click);
             // 
             // label7
             // 
@@ -173,10 +179,14 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(488, 462);
+            this.dataGridView2.Location = new System.Drawing.Point(488, 434);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(504, 260);
             this.dataGridView2.TabIndex = 13;
+            // 
+            // timerForDate
+            // 
+            this.timerForDate.Tick += new System.EventHandler(this.timerForDate_Tick);
             // 
             // ViewAccount
             // 
@@ -186,15 +196,15 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.categoryViewBtn);
+            this.Controls.Add(this.dueViewBtn);
+            this.Controls.Add(this.operationViewBtn);
+            this.Controls.Add(this.staticBudgetLbl);
+            this.Controls.Add(this.budgetLbl);
+            this.Controls.Add(this.dateLbl);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.returnPreviousViewBtn);
+            this.Controls.Add(this.accountNameLbl);
             this.Controls.Add(this.label1);
             this.Name = "ViewAccount";
             this.Size = new System.Drawing.Size(1024, 768);
@@ -208,18 +218,19 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label accountNameLbl;
+        private System.Windows.Forms.Button returnPreviousViewBtn;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label dateLbl;
+        private System.Windows.Forms.Label budgetLbl;
+        private System.Windows.Forms.Label staticBudgetLbl;
+        private System.Windows.Forms.Button operationViewBtn;
+        private System.Windows.Forms.Button dueViewBtn;
+        private System.Windows.Forms.Button categoryViewBtn;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Timer timerForDate;
     }
 }
