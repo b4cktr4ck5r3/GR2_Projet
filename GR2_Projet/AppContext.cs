@@ -24,6 +24,7 @@ namespace GR2_Projet
             if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + "data.dat"))
             {
                 Users = new List<User>();
+                Users.Add(AppFixtures.GetFakeUserWithData());
             }
             else
             {

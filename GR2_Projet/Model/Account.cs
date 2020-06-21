@@ -49,6 +49,7 @@ namespace GR2_Projet.Model
         {
             this.Name = Name;
             this.Budget = Budget;
+            Dues = new List<Due>();
             this.Id = Guid.NewGuid().ToString();
         }
     }
