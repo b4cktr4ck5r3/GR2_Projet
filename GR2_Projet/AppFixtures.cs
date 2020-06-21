@@ -29,9 +29,10 @@ namespace GR2_Projet
                 Model.Account account = new Model.Account($"Compte{i}", 1000);
                 Due fakeDue = new Due($"Echeance{i}", (i % 2 == 0) ? operationType.Credit : operationType.Debit, i, paymentType.Cash, i*2000, user.Categories.ElementAt(i%5));
 
-                for (int j = 0; j < 25; j++)
+                for (int j = 0; j < 30; j++)
                 {
-                    Operation fakeOperation = new Operation($"Operation{j}", (j % 2 == 0) ? operationType.Credit : operationType.Debit, new DateTime(), paymentType.Cash, 3000, user.Categories.ElementAt(i % 5));
+                    Operation fakeOperation = new Operation($"Operation{j}", (j % 2 == 0) ? operationType.Credit : operationType.Debit, DateTime.Now, paymentType.Cash, 3000, user.Categories.ElementAt(i % 5));
+                    account.Operations.Add(fakeOperation);
                 }
                 account.Dues.Add(fakeDue);
                 user.Accounts.Add(account);

@@ -34,12 +34,15 @@ namespace GR2_Projet.View.Account.Component
 
         private void EnableViewButtons(bool enable)
         {
-            AppFixtures.SearchParent(this, "ViewUserAccount").GetType().GetMethod("EnableButtons").Invoke(this.Parent.Parent, new object[] { enable });
+            AppFixtures.SearchParent(this, "ViewUserAccount").GetType().GetMethod("EnableButtons").Invoke(AppFixtures.SearchParent(this, "ViewUserAccount"), new object[] { enable });
         }
 
         private void dataAccount_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int[] indexes = { 0, 1, 2 };
+            int[] indexes = new int[dataAccount.ColumnCount];
+            for (int i = 0; i < dataAccount.ColumnCount; i++)
+                indexes[i] = i;
+
             if (indexes.Contains(e.ColumnIndex) == true && e.RowIndex != -1)
             {
                 if(dataAccount.Rows[e.RowIndex].Cells["Id"].Value != null)
@@ -68,7 +71,10 @@ namespace GR2_Projet.View.Account.Component
 
         private void dataAccount_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int[] indexes = { 0, 1, 2 };
+            int[] indexes = new int[dataAccount.ColumnCount];
+            for (int i = 0; i < dataAccount.ColumnCount; i++)
+                indexes[i] = i;
+
             if (indexes.Contains(e.ColumnIndex) == true && e.RowIndex != -1)
             {
                 if (dataAccount.Rows[e.RowIndex].Cells["Id"].Value != null)

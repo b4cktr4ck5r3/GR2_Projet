@@ -65,10 +65,11 @@
             // 
             // operationComponentPanel
             // 
+            this.operationComponentPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.operationComponentPanel.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.operationComponentPanel.Location = new System.Drawing.Point(0, 65);
+            this.operationComponentPanel.Location = new System.Drawing.Point(0, 76);
             this.operationComponentPanel.Name = "operationComponentPanel";
-            this.operationComponentPanel.Size = new System.Drawing.Size(1024, 703);
+            this.operationComponentPanel.Size = new System.Drawing.Size(1024, 664);
             this.operationComponentPanel.TabIndex = 8;
             // 
             // ViewOperation

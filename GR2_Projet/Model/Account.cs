@@ -50,6 +50,7 @@ namespace GR2_Projet.Model
             this.Name = Name;
             this.Budget = Budget;
             Dues = new List<Due>();
+            Operations = new List<Operation>();
             this.Id = Guid.NewGuid().ToString();
         }
     }

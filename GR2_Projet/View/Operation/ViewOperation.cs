@@ -14,6 +14,7 @@ namespace GR2_Projet.View.Operation
     public partial class ViewOperation : BaseView
     {
         private Component.DataGridOperationComponent dataGridCompoennt;
+        private FormAddOrEditOperationComponent formComponent;
         private bool isDataGridActive;
         private bool isFormActive;
         public ViewOperation()
@@ -23,7 +24,7 @@ namespace GR2_Projet.View.Operation
             ShowOperationsLogic();
         }
 
-        private void ShowOperationsLogic()
+        public void ShowOperationsLogic()
         {
             ClearComponentRessources(operationComponentPanel);
             dataGridCompoennt = new DataGridOperationComponent();
@@ -33,25 +34,25 @@ namespace GR2_Projet.View.Operation
             isFormActive = false;
         }
 
-        //private void showAccount_Click(object sender, EventArgs e)
-        //{
-        //    if (!isShowComponentActive)
-        //    {
-        //        showAccountLogic();
-        //        this.adminComponentPanel.Text = "Mes comptes";
-        //        ShowButtons(true);
-        //    }
-        //}
+        public void ShowAddFormLogic()
+        {
+            ClearComponentRessources(operationComponentPanel);
+            formComponent = new FormAddOrEditOperationComponent();
+            ChangeComponent(operationComponentPanel, formComponent);
 
-        //private void showAccountLogic()
-        //{
-        //    ClearComponentRessources(adminComponentPanel);
-        //    showComponent = new Account.Component.ShowAccountComponent(Program.currentLoggedUser.Accounts);
-        //    ChangeComponent(adminComponentPanel, showComponent);
+            isDataGridActive = false;
+            isFormActive = true;
+        }
 
-        //    isShowComponentActive = true;
-        //    isAddComponentActive = false;
-        //}
+        public void ShowEditFormLogic(Model.Operation operation)
+        {
+            ClearComponentRessources(operationComponentPanel);
+            formComponent = new FormAddOrEditOperationComponent(operation);
+            ChangeComponent(operationComponentPanel, formComponent);
+
+            isDataGridActive = false;
+            isFormActive = true;
+        }
 
         private void returnPreviousViewBtn_Click(object sender, EventArgs e)
         {

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.btRetour = new System.Windows.Forms.Button();
-            this.lbNomCompte = new System.Windows.Forms.Label();
-            this.gbComponent = new System.Windows.Forms.GroupBox();
+            this.lbListeEcheance = new System.Windows.Forms.Label();
+            this.dueComponentPanel = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
             // btRetour
@@ -43,32 +43,32 @@
             this.btRetour.Text = "Retour";
             this.btRetour.UseVisualStyleBackColor = true;
             // 
-            // lbNomCompte
+            // lbListeEcheance
             // 
-            this.lbNomCompte.AutoSize = true;
-            this.lbNomCompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNomCompte.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbNomCompte.Location = new System.Drawing.Point(26, 32);
-            this.lbNomCompte.Name = "lbNomCompte";
-            this.lbNomCompte.Size = new System.Drawing.Size(121, 20);
-            this.lbNomCompte.TabIndex = 2;
-            this.lbNomCompte.Text = "Nom du compte";
+            this.lbListeEcheance.AutoSize = true;
+            this.lbListeEcheance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbListeEcheance.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbListeEcheance.Location = new System.Drawing.Point(26, 32);
+            this.lbListeEcheance.Name = "lbListeEcheance";
+            this.lbListeEcheance.Size = new System.Drawing.Size(155, 20);
+            this.lbListeEcheance.TabIndex = 2;
+            this.lbListeEcheance.Text = "Liste des échéances";
             // 
-            // gbComponent
+            // dueComponentPanel
             // 
-            this.gbComponent.Location = new System.Drawing.Point(0, 80);
-            this.gbComponent.Name = "gbComponent";
-            this.gbComponent.Size = new System.Drawing.Size(1024, 638);
-            this.gbComponent.TabIndex = 4;
-            this.gbComponent.TabStop = false;
+            this.dueComponentPanel.Location = new System.Drawing.Point(0, 80);
+            this.dueComponentPanel.Name = "dueComponentPanel";
+            this.dueComponentPanel.Size = new System.Drawing.Size(1024, 638);
+            this.dueComponentPanel.TabIndex = 4;
+            this.dueComponentPanel.TabStop = false;
             // 
             // ViewDue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.gbComponent);
+            this.Controls.Add(this.dueComponentPanel);
             this.Controls.Add(this.btRetour);
-            this.Controls.Add(this.lbNomCompte);
+            this.Controls.Add(this.lbListeEcheance);
             this.Name = "ViewDue";
             this.Size = new System.Drawing.Size(1024, 768);
             this.ResumeLayout(false);
@@ -79,7 +79,7 @@
         #endregion
 
         private System.Windows.Forms.Button btRetour;
-        private System.Windows.Forms.Label lbNomCompte;
-        private System.Windows.Forms.GroupBox gbComponent;
+        private System.Windows.Forms.Label lbListeEcheance;
+        private System.Windows.Forms.GroupBox dueComponentPanel;
     }
 }

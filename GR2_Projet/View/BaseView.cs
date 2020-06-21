@@ -27,7 +27,7 @@ namespace GR2_Projet.View
             ClearComponent(view);
             component.Size = view.Size;
             view.Controls.Add(component);
-            component.Dock = DockStyle.Fill;
+            //component.Dock = DockStyle.Fill;
         }
 
         /// <summary>
