@@ -20,7 +20,7 @@ namespace GR2_Projet.View.Account
             timerForDate.Start();
             this.dateLbl.Text = DateTime.Now.ToString();
             this.accountNameLbl.Text = Program.currentSelectedAccount.Name;
-            this.budgetLbl.Text = Program.currentSelectedAccount.Budget + "€";
+            this.budgetLbl.Text = Program.currentSelectedAccount.GetSolde() + "€";
         }
 
         private void timerForDate_Tick(object sender, EventArgs e)
