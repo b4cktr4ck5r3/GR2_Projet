@@ -21,11 +21,13 @@ namespace GR2_Projet
             Application.SetCompatibleTextRenderingDefault(false);
             ViewManager.Instance.ShowMainForm();
 
-            //Uniquement au premier lancement.
-            AppFixtures.CreateFakeUser();
-            AppFixtures.CreateFakeAccount();
-            AppFixtures.Save();
-            //Uniquement au premier lancement.
+            if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + "data.dat"))
+            {
+                AppFixtures.CreateFakeUser();
+                AppFixtures.CreateFakeAccount();
+                AppFixtures.Save();
+            }
+            else { }
 
             AppFixtures.Read();
             Application.Run();

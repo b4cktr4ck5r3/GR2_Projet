@@ -15,14 +15,6 @@ namespace GR2_Projet.View
     /// </summary>
     public partial class ViewAccount : BaseView
     {
-        /// <summary>
-        /// Constructeur.
-        /// </summary>
-        public ViewAccount()
-        {
-            InitializeComponent();
-        }
-
         #region Components
         /// <summary>
         /// Composant permettant d'ajouter un compte bancaire.
@@ -35,6 +27,34 @@ namespace GR2_Projet.View
         #endregion Components
 
         /// <summary>
+        /// Constructeur.
+        /// </summary>
+        public ViewAccount()
+        {
+            InitializeComponent();
+
+            ShowButtons(false);
+            EnableButtons(false);
+        }
+
+        public void ShowButtons(bool isVisible)
+        {
+            this.delBtn.Visible = isVisible;
+            this.editBtn.Visible = isVisible;
+        }
+
+        public void EnableButtons(bool isEnabled)
+        {
+            this.delBtn.Enabled = isEnabled;
+            this.editBtn.Enabled = isEnabled;
+        }
+
+        public void Try()
+        {
+            MessageBox.Show("try");
+        }
+
+        /// <summary>
         /// Logique d'affichage du composant permettant d'afficher les comptes bancaires.
         /// </summary>
         /// <param name="sender"></param>
@@ -44,6 +64,8 @@ namespace GR2_Projet.View
             ClearComponentRessources(accountPanel);
             showComponent = new Account.Component.ShowAccountComponent(AppFixtures.currentLoggedUser.Accounts);
             ChangeComponent(accountPanel, showComponent);
+
+            ShowButtons(true);
         }
 
         /// <summary>
@@ -56,6 +78,18 @@ namespace GR2_Projet.View
             ClearComponentRessources(accountPanel);
             addComponent = new Account.Component.AddAccountComponent();
             ChangeComponent(accountPanel, addComponent);
+
+            ShowButtons(false);
+        }
+
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void delBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

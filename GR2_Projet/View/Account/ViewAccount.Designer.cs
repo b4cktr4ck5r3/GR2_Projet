@@ -31,6 +31,8 @@
             this.accountPanel = new System.Windows.Forms.Panel();
             this.showAccount = new System.Windows.Forms.Button();
             this.addAccount = new System.Windows.Forms.Button();
+            this.editBtn = new System.Windows.Forms.Button();
+            this.delBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // accountPanel
@@ -60,11 +62,33 @@
             this.addAccount.UseVisualStyleBackColor = true;
             this.addAccount.Click += new System.EventHandler(this.addAccount_Click);
             // 
+            // editBtn
+            // 
+            this.editBtn.Location = new System.Drawing.Point(165, 8);
+            this.editBtn.Name = "editBtn";
+            this.editBtn.Size = new System.Drawing.Size(75, 23);
+            this.editBtn.TabIndex = 2;
+            this.editBtn.Text = "Editer";
+            this.editBtn.UseVisualStyleBackColor = true;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
+            // 
+            // delBtn
+            // 
+            this.delBtn.Location = new System.Drawing.Point(246, 8);
+            this.delBtn.Name = "delBtn";
+            this.delBtn.Size = new System.Drawing.Size(75, 23);
+            this.delBtn.TabIndex = 3;
+            this.delBtn.Text = "Supprimer";
+            this.delBtn.UseVisualStyleBackColor = true;
+            this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
+            // 
             // ViewAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.delBtn);
+            this.Controls.Add(this.editBtn);
             this.Controls.Add(this.addAccount);
             this.Controls.Add(this.accountPanel);
             this.Controls.Add(this.showAccount);
@@ -79,5 +103,7 @@
         private System.Windows.Forms.Panel accountPanel;
         private System.Windows.Forms.Button showAccount;
         private System.Windows.Forms.Button addAccount;
+        private System.Windows.Forms.Button editBtn;
+        private System.Windows.Forms.Button delBtn;
     }
 }

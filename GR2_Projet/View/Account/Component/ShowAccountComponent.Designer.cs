@@ -37,16 +37,18 @@
             // 
             // dataAccount
             // 
+            this.dataAccount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataAccount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.AccountName,
             this.Budget});
-            this.dataAccount.Location = new System.Drawing.Point(3, 0);
+            this.dataAccount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataAccount.Location = new System.Drawing.Point(0, 0);
             this.dataAccount.Name = "dataAccount";
-            this.dataAccount.Size = new System.Drawing.Size(1021, 499);
+            this.dataAccount.Size = new System.Drawing.Size(1024, 731);
             this.dataAccount.TabIndex = 0;
-            this.dataAccount.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataAccount_CellClick);
             // 
             // Id
             // 

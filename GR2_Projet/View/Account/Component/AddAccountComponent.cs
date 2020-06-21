@@ -25,9 +25,7 @@ namespace GR2_Projet.View.Account.Component
                 float mBudget;
                 if (float.TryParse(budgetTxtBox.Text, out mBudget))
                 {
-                    Model.Account newAccount = new Model.Account(nameTxtBox.Text, mBudget);
-                    AppFixtures.currentLoggedUser.Accounts.Add(newAccount);
-                    AppFixtures.Save();
+                    Controller.AccountController.AddAccount(AppFixtures.currentLoggedUser, nameTxtBox.Text, mBudget);
                 }
                 else
                     throw new Exception("Erreur, mauvaise saisie utilisateur");

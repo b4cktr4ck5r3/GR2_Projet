@@ -48,6 +48,11 @@ namespace GR2_Projet
         {
             mainForm.ClearPanel();
         }
+
+        public void ClearViewRessources()
+        {
+            mainForm.ClearPanelRessources();
+        }
         /// <summary>
         /// Permet de créer et d'afficher le formulaire principale de l'application.
         /// </summary>
@@ -67,8 +72,6 @@ namespace GR2_Projet
             else
                 throw new Exception("Le formulaire principale n'existe pas.");
         }
-
-
 
         public void ShowViewAccount()
         {
