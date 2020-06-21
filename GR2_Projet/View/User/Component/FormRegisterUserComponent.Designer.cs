@@ -39,30 +39,32 @@
             // 
             // mailTxtBox
             // 
-            this.mailTxtBox.Location = new System.Drawing.Point(120, 25);
+            this.mailTxtBox.Location = new System.Drawing.Point(190, 71);
             this.mailTxtBox.Name = "mailTxtBox";
             this.mailTxtBox.Size = new System.Drawing.Size(100, 20);
             this.mailTxtBox.TabIndex = 0;
             // 
             // usernameTxtBox
             // 
-            this.usernameTxtBox.Location = new System.Drawing.Point(120, 51);
+            this.usernameTxtBox.Location = new System.Drawing.Point(190, 109);
             this.usernameTxtBox.Name = "usernameTxtBox";
             this.usernameTxtBox.Size = new System.Drawing.Size(100, 20);
             this.usernameTxtBox.TabIndex = 1;
             // 
             // passwordTxtBox
             // 
-            this.passwordTxtBox.Location = new System.Drawing.Point(120, 77);
+            this.passwordTxtBox.Location = new System.Drawing.Point(190, 143);
             this.passwordTxtBox.Name = "passwordTxtBox";
             this.passwordTxtBox.Size = new System.Drawing.Size(100, 20);
             this.passwordTxtBox.TabIndex = 2;
             // 
             // registerBtn
             // 
-            this.registerBtn.Location = new System.Drawing.Point(132, 103);
+            this.registerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.registerBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.registerBtn.Location = new System.Drawing.Point(142, 178);
             this.registerBtn.Name = "registerBtn";
-            this.registerBtn.Size = new System.Drawing.Size(75, 23);
+            this.registerBtn.Size = new System.Drawing.Size(88, 36);
             this.registerBtn.TabIndex = 3;
             this.registerBtn.Text = "Créer";
             this.registerBtn.UseVisualStyleBackColor = true;
@@ -71,29 +73,35 @@
             // mailLbl
             // 
             this.mailLbl.AutoSize = true;
-            this.mailLbl.Location = new System.Drawing.Point(79, 28);
+            this.mailLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mailLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.mailLbl.Location = new System.Drawing.Point(80, 71);
             this.mailLbl.Name = "mailLbl";
-            this.mailLbl.Size = new System.Drawing.Size(32, 13);
+            this.mailLbl.Size = new System.Drawing.Size(52, 25);
             this.mailLbl.TabIndex = 4;
-            this.mailLbl.Text = "Email";
+            this.mailLbl.Text = "Mail";
             // 
             // usernameLbl
             // 
             this.usernameLbl.AutoSize = true;
-            this.usernameLbl.Location = new System.Drawing.Point(79, 54);
+            this.usernameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.usernameLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.usernameLbl.Location = new System.Drawing.Point(80, 103);
             this.usernameLbl.Name = "usernameLbl";
-            this.usernameLbl.Size = new System.Drawing.Size(29, 13);
+            this.usernameLbl.Size = new System.Drawing.Size(56, 25);
             this.usernameLbl.TabIndex = 5;
             this.usernameLbl.Text = "Nom";
             // 
             // passwordLbl
             // 
             this.passwordLbl.AutoSize = true;
-            this.passwordLbl.Location = new System.Drawing.Point(79, 80);
+            this.passwordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.passwordLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.passwordLbl.Location = new System.Drawing.Point(42, 138);
             this.passwordLbl.Name = "passwordLbl";
-            this.passwordLbl.Size = new System.Drawing.Size(28, 13);
+            this.passwordLbl.Size = new System.Drawing.Size(142, 25);
             this.passwordLbl.TabIndex = 6;
-            this.passwordLbl.Text = "Mdp";
+            this.passwordLbl.Text = "Mot de passe";
             // 
             // FormRegisterUserComponent
             // 

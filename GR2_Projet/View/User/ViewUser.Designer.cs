@@ -35,9 +35,11 @@
             // 
             // loginBtn
             // 
-            this.loginBtn.Location = new System.Drawing.Point(361, 395);
+            this.loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.loginBtn.Location = new System.Drawing.Point(455, 395);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(118, 23);
+            this.loginBtn.Size = new System.Drawing.Size(182, 49);
             this.loginBtn.TabIndex = 2;
             this.loginBtn.Text = "Se connecter";
             this.loginBtn.UseVisualStyleBackColor = true;
@@ -45,6 +47,8 @@
             // 
             // userComponentPanel
             // 
+            this.userComponentPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userComponentPanel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.userComponentPanel.Location = new System.Drawing.Point(13, 46);
             this.userComponentPanel.Name = "userComponentPanel";
             this.userComponentPanel.Size = new System.Drawing.Size(182, 413);
@@ -52,9 +56,11 @@
             // 
             // Créer
             // 
+            this.Créer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Créer.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Créer.Location = new System.Drawing.Point(237, 395);
             this.Créer.Name = "Créer";
-            this.Créer.Size = new System.Drawing.Size(118, 23);
+            this.Créer.Size = new System.Drawing.Size(212, 49);
             this.Créer.TabIndex = 0;
             this.Créer.Text = "Créer un compte";
             this.Créer.UseVisualStyleBackColor = true;

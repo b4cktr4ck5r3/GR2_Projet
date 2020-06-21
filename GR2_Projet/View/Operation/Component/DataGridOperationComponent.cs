@@ -87,5 +87,10 @@ namespace GR2_Projet.View.Operation.Component
                 currentOperation = null;
             }
         }
+
+        private void dataOperationGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
