@@ -28,43 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Créer = new System.Windows.Forms.Button();
-            this.userComponentPanel = new System.Windows.Forms.Panel();
             this.loginBtn = new System.Windows.Forms.Button();
+            this.userComponentPanel = new System.Windows.Forms.Panel();
+            this.Créer = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // Créer
-            // 
-            this.Créer.Location = new System.Drawing.Point(372, 360);
-            this.Créer.Name = "Créer";
-            this.Créer.Size = new System.Drawing.Size(75, 23);
-            this.Créer.TabIndex = 0;
-            this.Créer.Text = "registerBtn";
-            this.Créer.UseVisualStyleBackColor = true;
-            this.Créer.Click += new System.EventHandler(this.Créer_Click);
-            // 
-            // userComponentPanel
-            // 
-            this.userComponentPanel.Location = new System.Drawing.Point(53, 37);
-            this.userComponentPanel.Name = "userComponentPanel";
-            this.userComponentPanel.Size = new System.Drawing.Size(495, 295);
-            this.userComponentPanel.TabIndex = 1;
             // 
             // loginBtn
             // 
-            this.loginBtn.Location = new System.Drawing.Point(291, 360);
+            this.loginBtn.Location = new System.Drawing.Point(361, 395);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(75, 23);
+            this.loginBtn.Size = new System.Drawing.Size(118, 23);
             this.loginBtn.TabIndex = 2;
-            this.loginBtn.Text = "loginBtn";
+            this.loginBtn.Text = "Se connecter";
             this.loginBtn.UseVisualStyleBackColor = true;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            // 
+            // userComponentPanel
+            // 
+            this.userComponentPanel.Location = new System.Drawing.Point(13, 46);
+            this.userComponentPanel.Name = "userComponentPanel";
+            this.userComponentPanel.Size = new System.Drawing.Size(182, 413);
+            this.userComponentPanel.TabIndex = 1;
+            // 
+            // Créer
+            // 
+            this.Créer.Location = new System.Drawing.Point(237, 395);
+            this.Créer.Name = "Créer";
+            this.Créer.Size = new System.Drawing.Size(118, 23);
+            this.Créer.TabIndex = 0;
+            this.Créer.Text = "Créer un compte";
+            this.Créer.UseVisualStyleBackColor = true;
+            this.Créer.Click += new System.EventHandler(this.Créer_Click);
             // 
             // ViewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Red;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.userComponentPanel);
             this.Controls.Add(this.Créer);

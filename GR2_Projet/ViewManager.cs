@@ -41,6 +41,8 @@ namespace GR2_Projet
         private View.Due.ViewDue viewDue;
 
         private View.Category.ViewCategory viewCategory;
+
+        private View.Due.ViewDue viewDues;
         #endregion Views declaration
 
         /// <summary>
@@ -110,10 +112,10 @@ namespace GR2_Projet
             mainForm.ChangePanel(viewOperation);
         }
 
-        public void ShowViewDue(List<Model.Due> dues)
+        public void ShowViewDues()
         {
-            viewDue = new ViewDue(dues);
-            mainForm.ChangePanel(viewDue);
+            viewDues = new ViewDue();
+            mainForm.ChangePanel(viewDues);
         }
 
         public void ShowViewCategory(List<Model.Category> categories)
@@ -121,6 +123,8 @@ namespace GR2_Projet
             viewCategory = new ViewCategory(categories);
             mainForm.ChangePanel(viewCategory);
         }
+
+
         #endregion Views treatments
     }
 }

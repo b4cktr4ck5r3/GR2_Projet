@@ -41,7 +41,7 @@ namespace GR2_Projet.View.Account
 
         private void dueViewBtn_Click(object sender, EventArgs e)
         {
-
+            ViewManager.Instance.ShowViewDues();
         }
 
         private void categoryViewBtn_Click(object sender, EventArgs e)

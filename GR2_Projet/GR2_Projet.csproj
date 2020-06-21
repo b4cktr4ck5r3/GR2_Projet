@@ -71,6 +71,12 @@
     <Compile Include="View\Due\Component\DataGridDueComponent.Designer.cs">
       <DependentUpon>DataGridDueComponent.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Due\Component\FormAddOrEditDueComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Due\Component\FormAddOrEditDueComponent.Designer.cs">
+      <DependentUpon>FormAddOrEditDueComponent.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Due\ViewDue.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -166,6 +172,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Category\ViewCategory.resx">
       <DependentUpon>ViewCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Due\Component\DataGridDueComponent.resx">
+      <DependentUpon>DataGridDueComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Due\Component\FormAddOrEditDueComponent.resx">
+      <DependentUpon>FormAddOrEditDueComponent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Due\ViewDue.resx">
       <DependentUpon>ViewDue.cs</DependentUpon>

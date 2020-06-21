@@ -28,20 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
             this.returnPreviousViewBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.operationComponentPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.SystemColors.Desktop;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Location = new System.Drawing.Point(0, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1024, 3);
-            this.label3.TabIndex = 7;
             // 
             // returnPreviousViewBtn
             // 
@@ -67,9 +57,9 @@
             // 
             this.operationComponentPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.operationComponentPanel.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.operationComponentPanel.Location = new System.Drawing.Point(0, 76);
+            this.operationComponentPanel.Location = new System.Drawing.Point(0, 79);
             this.operationComponentPanel.Name = "operationComponentPanel";
-            this.operationComponentPanel.Size = new System.Drawing.Size(1024, 664);
+            this.operationComponentPanel.Size = new System.Drawing.Size(1024, 661);
             this.operationComponentPanel.TabIndex = 8;
             // 
             // ViewOperation
@@ -77,7 +67,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.operationComponentPanel);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.returnPreviousViewBtn);
             this.Controls.Add(this.label2);
             this.Name = "ViewOperation";
@@ -88,8 +77,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button returnPreviousViewBtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel operationComponentPanel;
