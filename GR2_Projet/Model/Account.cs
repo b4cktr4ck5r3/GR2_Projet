@@ -29,10 +29,17 @@ namespace GR2_Projet.Model
         public float Budget { get { return mBudget; } set { mBudget = value; } }
 
         private List<Operation> mOperations;
-        public List<Operation> Operation
+        public List<Operation> Operations
         {
             get { return mOperations; }
             set { mOperations = value; }
+        }
+
+        private List<Due> mDues;
+        public List<Due> Dues
+        {
+            get { return mDues; }
+            set { mDues = value; }
         }
 
         /// <summary>

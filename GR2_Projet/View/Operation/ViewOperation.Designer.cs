@@ -29,28 +29,29 @@
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.returnPreviousViewBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.operationComponentPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.SystemColors.Desktop;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Location = new System.Drawing.Point(0, 98);
+            this.label3.Location = new System.Drawing.Point(0, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(1024, 3);
             this.label3.TabIndex = 7;
             // 
-            // button1
+            // returnPreviousViewBtn
             // 
-            this.button1.Location = new System.Drawing.Point(876, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 48);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Retour";
-            this.button1.UseVisualStyleBackColor = true;
+            this.returnPreviousViewBtn.Location = new System.Drawing.Point(876, 25);
+            this.returnPreviousViewBtn.Name = "returnPreviousViewBtn";
+            this.returnPreviousViewBtn.Size = new System.Drawing.Size(116, 48);
+            this.returnPreviousViewBtn.TabIndex = 6;
+            this.returnPreviousViewBtn.Text = "Retour";
+            this.returnPreviousViewBtn.UseVisualStyleBackColor = true;
+            this.returnPreviousViewBtn.Click += new System.EventHandler(this.returnPreviousViewBtn_Click);
             // 
             // label2
             // 
@@ -58,24 +59,25 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(28, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(258, 37);
+            this.label2.Size = new System.Drawing.Size(184, 37);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Nom du compte";
+            this.label2.Text = "Opérations";
             // 
-            // panel1
+            // operationComponentPanel
             // 
-            this.panel1.Location = new System.Drawing.Point(0, 100);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1024, 668);
-            this.panel1.TabIndex = 8;
+            this.operationComponentPanel.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.operationComponentPanel.Location = new System.Drawing.Point(0, 82);
+            this.operationComponentPanel.Name = "operationComponentPanel";
+            this.operationComponentPanel.Size = new System.Drawing.Size(1024, 686);
+            this.operationComponentPanel.TabIndex = 8;
             // 
             // ViewOperation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.operationComponentPanel);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.returnPreviousViewBtn);
             this.Controls.Add(this.label2);
             this.Name = "ViewOperation";
             this.Size = new System.Drawing.Size(1024, 768);
@@ -87,8 +89,8 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button returnPreviousViewBtn;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel operationComponentPanel;
     }
 }

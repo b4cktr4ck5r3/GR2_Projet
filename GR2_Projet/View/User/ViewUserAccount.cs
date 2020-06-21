@@ -35,7 +35,7 @@ namespace GR2_Projet.View
         {
             InitializeComponent();
 
-            this.userNameLbl.Text = AppFixtures.currentLoggedUser.Username;
+            this.userNameLbl.Text = Program.currentLoggedUser.Username;
 
             ShowButtons(false);
             EnableButtons(false);
@@ -73,7 +73,7 @@ namespace GR2_Projet.View
         private void showAccountLogic()
         {
             ClearComponentRessources(adminComponentPanel);
-            showComponent = new Account.Component.ShowAccountComponent(AppFixtures.currentLoggedUser.Accounts);
+            showComponent = new Account.Component.ShowAccountComponent(Program.currentLoggedUser.Accounts);
             ChangeComponent(adminComponentPanel, showComponent);
 
             isShowComponentActive = true;
@@ -112,8 +112,8 @@ namespace GR2_Projet.View
 
         private void delBtn_Click(object sender, EventArgs e)
         {
-            Controller.AccountController.DeleteAccount(AppFixtures.currentLoggedUser, showComponent.getCurrentAccount().Id);
-            showComponent.UpdateData(AppFixtures.currentLoggedUser.Accounts);
+            Controller.AccountController.DeleteAccount(Program.currentLoggedUser, showComponent.getCurrentAccount().Id);
+            showComponent.UpdateData(Program.currentLoggedUser.Accounts);
         }
     }
 }

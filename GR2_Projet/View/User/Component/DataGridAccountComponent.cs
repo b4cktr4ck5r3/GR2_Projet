@@ -74,7 +74,8 @@ namespace GR2_Projet.View.Account.Component
                 if (dataAccount.Rows[e.RowIndex].Cells["Id"].Value != null)
                 {
                     currentAccount = mAccounts.Find(a => string.Compare(a.Id, dataAccount.Rows[e.RowIndex].Cells["Id"].Value.ToString()) == 0);
-                    ViewManager.Instance.ShowViewAccount(currentAccount);
+                    Program.currentSelectedAccount = currentAccount;
+                    ViewManager.Instance.ShowViewAccount();
                 }
                 else
                 {

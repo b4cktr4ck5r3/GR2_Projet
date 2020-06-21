@@ -11,7 +11,7 @@ namespace GR2_Projet.Model
     /// Classe représentant le modèle d'échéance mensuelle.
     /// </summary>
     [Serializable()]
-    class Due
+    public class Due
     {
         /// <summary>
         /// Propriété id.

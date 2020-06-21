@@ -12,7 +12,7 @@ namespace GR2_Projet.View.Category
 {
     public partial class ViewCategory : UserControl
     {
-        public ViewCategory()
+        public ViewCategory(List<Model.Category> categories)
         {
             InitializeComponent();
         }

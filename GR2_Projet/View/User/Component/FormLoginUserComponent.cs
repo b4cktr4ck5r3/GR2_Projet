@@ -21,7 +21,7 @@ namespace GR2_Projet.View.User.Component
         {
             if (Controller.UserController.Login(this.usernameTxtBox.Text, this.passwordTxtBox.Text) != null)
             {
-                AppFixtures.currentLoggedUser =
+                Program.currentLoggedUser =
                     Controller.UserController.Login(this.usernameTxtBox.Text, this.passwordTxtBox.Text);
                 ViewManager.Instance.ShowViewUserAccounts();
             }

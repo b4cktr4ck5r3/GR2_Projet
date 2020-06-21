@@ -10,7 +10,7 @@ namespace GR2_Projet.Model
     /// Classe représentant le modèle d'une catégorie (utilisé pour le tri d'opérations).
     /// </summary>
     [Serializable()]
-    class Category
+    public class Category
     {
         private string id;
         private string name;

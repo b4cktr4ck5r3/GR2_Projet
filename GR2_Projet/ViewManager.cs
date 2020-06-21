@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GR2_Projet.View;
 using GR2_Projet.View.Account;
+using GR2_Projet.View.Category;
+using GR2_Projet.View.Due;
 using GR2_Projet.View.Operation;
 using GR2_Projet.View.User;
 
@@ -96,16 +98,28 @@ namespace GR2_Projet
             mainForm.ChangePanel(viewUserAccount);
         }
 
-        public void ShowViewAccount(Model.Account account)
+        public void ShowViewAccount()
         {
-            viewAccount = new ViewAccount(account);
+            viewAccount = new ViewAccount();
             mainForm.ChangePanel(viewAccount);
         }
 
-        public void ShowViewOperation(List<Model.Operation> operations)
+        public void ShowViewOperation()
         {
-            viewOperation = new ViewOperation(operations);
+            viewOperation = new ViewOperation();
             mainForm.ChangePanel(viewOperation);
+        }
+
+        public void ShowViewDue(List<Model.Due> dues)
+        {
+            viewDue = new ViewDue(dues);
+            mainForm.ChangePanel(viewDue);
+        }
+
+        public void ShowViewCategory(List<Model.Category> categories)
+        {
+            viewCategory = new ViewCategory(categories);
+            mainForm.ChangePanel(viewCategory);
         }
         #endregion Views treatments
     }

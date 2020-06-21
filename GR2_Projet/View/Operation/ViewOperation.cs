@@ -12,9 +12,14 @@ namespace GR2_Projet.View.Operation
 {
     public partial class ViewOperation : BaseView
     {
-        public ViewOperation(List<Model.Operation> operations)
+        public ViewOperation()
         {
             InitializeComponent();
+        }
+
+        private void returnPreviousViewBtn_Click(object sender, EventArgs e)
+        {
+            ViewManager.Instance.ShowViewAccount();
         }
     }
 }
