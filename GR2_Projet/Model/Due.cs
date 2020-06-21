@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GR2_Projet.Model
 {
@@ -75,9 +76,14 @@ namespace GR2_Projet.Model
         /// <summary>
         /// Constructeur.
         /// </summary>
-        public Due()
+        public Due(string Name, operationType OperationType, int Day, paymentType PaymentType, int Amount)
         {
             this.Id = Guid.NewGuid().ToString();
+            this.Name = Name;
+            this.OperationType = OperationType;
+            this.Day = Day;
+            this.PaymentType = PaymentType;
+            this.Amount = Amount;
         }
     }
 }
