@@ -11,6 +11,7 @@ namespace GR2_Projet
 {
     static class Program
     {
+        public static AppContext ctx = new AppContext();
         /// <summary>
         /// Point d'entrée principal de l'application.
         /// </summary>
@@ -21,15 +22,13 @@ namespace GR2_Projet
             Application.SetCompatibleTextRenderingDefault(false);
             ViewManager.Instance.ShowMainForm();
 
-            if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + "data.dat"))
-            {
-                AppFixtures.CreateFakeUser();
-                AppFixtures.CreateFakeAccount();
-                AppFixtures.Save();
-            }
-            else { }
-
-            AppFixtures.Read();
+            //if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + "data.dat"))
+            //{
+            //    AppFixtures.CreateFakeUser();
+            //    AppFixtures.CreateFakeAccount();
+            //    AppFixtures.Save();
+            //}
+            //else { }
             Application.Run();
        }
     }

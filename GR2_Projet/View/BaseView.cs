@@ -25,7 +25,9 @@ namespace GR2_Projet.View
         protected void ChangeComponent(Control view, Control component)
         {
             ClearComponent(view);
+            component.Size = view.Size;
             view.Controls.Add(component);
+            component.Dock = DockStyle.Fill;
         }
 
         /// <summary>
@@ -46,6 +48,18 @@ namespace GR2_Projet.View
             {
                 ctrl.Dispose();
             }
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // BaseView
+            // 
+            this.Name = "BaseView";
+            this.Size = new System.Drawing.Size(404, 267);
+            this.ResumeLayout(false);
+
         }
     }
 }

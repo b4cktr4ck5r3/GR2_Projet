@@ -12,7 +12,7 @@ namespace GR2_Projet.View.Account
 {
     public partial class ViewAccount : BaseView
     {
-        public ViewAccount()
+        public ViewAccount(Model.Account account)
         {
             InitializeComponent();
         }

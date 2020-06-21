@@ -32,12 +32,14 @@ namespace GR2_Projet
         {
             this.mainPanel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.viewPanel = new System.Windows.Forms.Panel();
             this.mainPanel.SuspendLayout();
+            this.viewPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
-            this.mainPanel.Controls.Add(this.button1);
+            this.mainPanel.Controls.Add(this.viewPanel);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Name = "mainPanel";
@@ -46,13 +48,22 @@ namespace GR2_Projet
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(559, 392);
+            this.button1.Location = new System.Drawing.Point(742, 138);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(72, 35);
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // viewPanel
+            // 
+            this.viewPanel.Controls.Add(this.button1);
+            this.viewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewPanel.Location = new System.Drawing.Point(0, 0);
+            this.viewPanel.Name = "viewPanel";
+            this.viewPanel.Size = new System.Drawing.Size(1008, 729);
+            this.viewPanel.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -66,6 +77,7 @@ namespace GR2_Projet
             this.Name = "MainForm";
             this.Text = "Form1";
             this.mainPanel.ResumeLayout(false);
+            this.viewPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -74,6 +86,7 @@ namespace GR2_Projet
 
         private Panel mainPanel;
         private Button button1;
+        private Panel viewPanel;
     }
 }
 

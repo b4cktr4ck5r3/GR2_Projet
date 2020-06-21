@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Red;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.budgetLbl);
             this.Controls.Add(this.nameLbl);

@@ -19,19 +19,19 @@ namespace GR2_Projet.Controller
         {
             Model.Account newAccount = new Model.Account(AccountName, AccountBudget);
             User.Accounts.Add(newAccount);
-            AppFixtures.Save();
+            Program.ctx.Save();
         }
 
         public static void DeleteAccount(Model.User User, string AccountId)
         {
             User.Accounts.Remove(User.Accounts.Find(account => string.Compare(account.Id, AccountId) == 0));
-            AppFixtures.Save();
+            Program.ctx.Save();
         }
 
         public static void EditAccount(Model.User User, string AccountId, string AccountNewName)
         {
             User.Accounts.Find(account => string.Compare(account.Id, AccountId) == 0).Name = AccountNewName;
-            AppFixtures.Save();
+            Program.ctx.Save();
         }
     }
 }

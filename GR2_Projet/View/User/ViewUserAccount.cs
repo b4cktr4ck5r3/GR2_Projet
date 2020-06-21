@@ -11,9 +11,9 @@ using System.Windows.Forms;
 namespace GR2_Projet.View
 {
     /// <summary>
-    /// Classe ViewAccount. Elle permet de représenter la vue lié au modèle des comptes bancaires.
+    /// Classe ViewUserAccount. Elle permet de représenter la vue lié au modèle des comptes bancaires.
     /// </summary>
-    public partial class ViewAccount : BaseView
+    public partial class ViewUserAccount : BaseView
     {
         #region Components
         /// <summary>
@@ -29,12 +29,11 @@ namespace GR2_Projet.View
         /// <summary>
         /// Constructeur.
         /// </summary>
-        public ViewAccount()
+        public ViewUserAccount()
         {
             InitializeComponent();
 
             this.userNameLbl.Text = AppFixtures.currentLoggedUser.Username;
-            this.userMailLbl.Text = AppFixtures.currentLoggedUser.Email;
 
             ShowButtons(false);
             EnableButtons(false);
@@ -59,9 +58,10 @@ namespace GR2_Projet.View
         /// <param name="e"></param>
         private void showAccount_Click(object sender, EventArgs e)
         {
-            ClearComponentRessources(accountPanel);
+            ClearComponentRessources(adminComponentPanel);
             showComponent = new Account.Component.ShowAccountComponent(AppFixtures.currentLoggedUser.Accounts);
-            ChangeComponent(accountPanel, showComponent);
+            ChangeComponent(adminComponentPanel, showComponent);
+            this.adminComponentPanel.Text = "Mes comptes";
             ShowButtons(true);
         }
 
@@ -72,9 +72,10 @@ namespace GR2_Projet.View
         /// <param name="e"></param>
         private void addAccount_Click(object sender, EventArgs e)
         {
-            ClearComponentRessources(accountPanel);
+            ClearComponentRessources(adminComponentPanel);
             addComponent = new Account.Component.AddAccountComponent();
-            ChangeComponent(accountPanel, addComponent);
+            ChangeComponent(adminComponentPanel, addComponent);
+            this.adminComponentPanel.Text = "Ajouter un compte";
             ShowButtons(false);
         }
 

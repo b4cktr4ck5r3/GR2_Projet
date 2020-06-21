@@ -1,6 +1,6 @@
 ﻿namespace GR2_Projet.View
 {
-    partial class ViewAccount
+    partial class ViewUserAccount
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewUserAccount));
             this.showAccount = new System.Windows.Forms.Button();
             this.addAccount = new System.Windows.Forms.Button();
             this.editBtn = new System.Windows.Forms.Button();
             this.delBtn = new System.Windows.Forms.Button();
             this.userNameLbl = new System.Windows.Forms.Label();
-            this.userMailLbl = new System.Windows.Forms.Label();
-            this.accountPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.adminComponentPanel = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // showAccount
             // 
             this.showAccount.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.showAccount.Location = new System.Drawing.Point(335, 24);
+            this.showAccount.Location = new System.Drawing.Point(682, 25);
             this.showAccount.Name = "showAccount";
             this.showAccount.Size = new System.Drawing.Size(80, 30);
             this.showAccount.TabIndex = 0;
@@ -51,7 +53,7 @@
             // addAccount
             // 
             this.addAccount.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.addAccount.Location = new System.Drawing.Point(416, 24);
+            this.addAccount.Location = new System.Drawing.Point(763, 25);
             this.addAccount.Name = "addAccount";
             this.addAccount.Size = new System.Drawing.Size(80, 30);
             this.addAccount.TabIndex = 1;
@@ -62,7 +64,7 @@
             // editBtn
             // 
             this.editBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.editBtn.Location = new System.Drawing.Point(497, 24);
+            this.editBtn.Location = new System.Drawing.Point(844, 25);
             this.editBtn.Name = "editBtn";
             this.editBtn.Size = new System.Drawing.Size(80, 30);
             this.editBtn.TabIndex = 2;
@@ -73,7 +75,7 @@
             // delBtn
             // 
             this.delBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.delBtn.Location = new System.Drawing.Point(578, 24);
+            this.delBtn.Location = new System.Drawing.Point(925, 25);
             this.delBtn.Name = "delBtn";
             this.delBtn.Size = new System.Drawing.Size(80, 30);
             this.delBtn.TabIndex = 3;
@@ -86,44 +88,45 @@
             this.userNameLbl.AutoSize = true;
             this.userNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.userNameLbl.Location = new System.Drawing.Point(16, 11);
+            this.userNameLbl.Location = new System.Drawing.Point(71, 29);
             this.userNameLbl.Name = "userNameLbl";
             this.userNameLbl.Size = new System.Drawing.Size(142, 20);
             this.userNameLbl.TabIndex = 4;
             this.userNameLbl.Text = "Nom de l\'utilisateur";
             // 
-            // userMailLbl
+            // pictureBox1
             // 
-            this.userMailLbl.AutoSize = true;
-            this.userMailLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userMailLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.userMailLbl.Location = new System.Drawing.Point(16, 34);
-            this.userMailLbl.Name = "userMailLbl";
-            this.userMailLbl.Size = new System.Drawing.Size(148, 20);
-            this.userMailLbl.TabIndex = 5;
-            this.userMailLbl.Text = "Email de l\'utilisateur";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(16, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // accountPanel
+            // adminComponentPanel
             // 
-            this.accountPanel.Location = new System.Drawing.Point(0, 71);
-            this.accountPanel.Name = "accountPanel";
-            this.accountPanel.Size = new System.Drawing.Size(1024, 697);
-            this.accountPanel.TabIndex = 0;
+            this.adminComponentPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.adminComponentPanel.Location = new System.Drawing.Point(0, 93);
+            this.adminComponentPanel.Name = "adminComponentPanel";
+            this.adminComponentPanel.Size = new System.Drawing.Size(1024, 675);
+            this.adminComponentPanel.TabIndex = 7;
             // 
-            // ViewAccount
+            // ViewUserAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.accountPanel);
-            this.Controls.Add(this.userMailLbl);
+            this.Controls.Add(this.adminComponentPanel);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.userNameLbl);
             this.Controls.Add(this.delBtn);
             this.Controls.Add(this.editBtn);
             this.Controls.Add(this.addAccount);
             this.Controls.Add(this.showAccount);
-            this.Name = "ViewAccount";
+            this.Name = "ViewUserAccount";
             this.Size = new System.Drawing.Size(1024, 768);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,7 +138,7 @@
         private System.Windows.Forms.Button editBtn;
         private System.Windows.Forms.Button delBtn;
         private System.Windows.Forms.Label userNameLbl;
-        private System.Windows.Forms.Label userMailLbl;
-        private System.Windows.Forms.Panel accountPanel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel adminComponentPanel;
     }
 }

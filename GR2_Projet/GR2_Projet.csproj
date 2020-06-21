@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppContext.cs" />
     <Compile Include="AppFixtures.cs" />
     <Compile Include="Controller\AccountController.cs" />
     <Compile Include="Controller\OperationController.cs" />
@@ -106,14 +107,32 @@
     <Compile Include="View\User\Component\DataGridAccountComponent.Designer.cs">
       <DependentUpon>DataGridAccountComponent.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\User\ViewAccount.cs">
+    <Compile Include="View\User\Component\FormLoginUserComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\User\ViewAccount.Designer.cs">
-      <DependentUpon>ViewAccount.cs</DependentUpon>
+    <Compile Include="View\User\Component\FormLoginUserComponent.Designer.cs">
+      <DependentUpon>FormLoginUserComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\Component\FormRegisterUserComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\User\Component\FormRegisterUserComponent.Designer.cs">
+      <DependentUpon>FormRegisterUserComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\ViewUserAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\User\ViewUserAccount.Designer.cs">
+      <DependentUpon>ViewUserAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="View\BaseView.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\User\ViewUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\User\ViewUser.Designer.cs">
+      <DependentUpon>ViewUser.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -127,6 +146,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\BaseView.resx">
+      <DependentUpon>BaseView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Category\ViewCategory.resx">
       <DependentUpon>ViewCategory.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,8 +161,17 @@
     <EmbeddedResource Include="View\User\Component\DataGridAccountComponent.resx">
       <DependentUpon>DataGridAccountComponent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\User\ViewAccount.resx">
-      <DependentUpon>ViewAccount.cs</DependentUpon>
+    <EmbeddedResource Include="View\User\Component\FormLoginUserComponent.resx">
+      <DependentUpon>FormLoginUserComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\User\Component\FormRegisterUserComponent.resx">
+      <DependentUpon>FormRegisterUserComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\User\ViewUserAccount.resx">
+      <DependentUpon>ViewUserAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\User\ViewUser.resx">
+      <DependentUpon>ViewUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

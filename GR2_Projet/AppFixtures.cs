@@ -27,24 +27,6 @@ namespace GR2_Projet
             }
         }
 
-        public static void Save()
-        {
-            Stream stream = File.Open("data.dat", FileMode.Create);
-            BinaryFormatter formatter = new BinaryFormatter();
-
-            formatter.Serialize(stream, currentLoggedUser);
-            stream.Close();
-        }
-
-        public static void Read()
-        {
-            Stream stream = File.Open("data.dat", FileMode.Open);
-            BinaryFormatter formatter = new BinaryFormatter();
-
-            currentLoggedUser = (User)formatter.Deserialize(stream);
-            stream.Close();
-        }
-
         public static object SearchParent(Control ctrl, string Name)
         {
             while (ctrl.Parent.Name != Name)

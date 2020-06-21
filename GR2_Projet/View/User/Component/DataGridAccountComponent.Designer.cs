@@ -42,6 +42,8 @@
             this.dataAccount.AllowUserToAddRows = false;
             this.dataAccount.AllowUserToDeleteRows = false;
             this.dataAccount.AllowUserToOrderColumns = true;
+            this.dataAccount.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataAccount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -56,6 +58,7 @@
             this.AccountName,
             this.Budget});
             this.dataAccount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataAccount.GridColor = System.Drawing.SystemColors.Control;
             this.dataAccount.Location = new System.Drawing.Point(0, 0);
             this.dataAccount.MultiSelect = false;
             this.dataAccount.Name = "dataAccount";
@@ -71,6 +74,7 @@
             this.dataAccount.Size = new System.Drawing.Size(1024, 731);
             this.dataAccount.TabIndex = 0;
             this.dataAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataAccount_CellClick);
+            this.dataAccount.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataAccount_CellDoubleClick);
             // 
             // Id
             // 

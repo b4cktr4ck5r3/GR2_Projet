@@ -17,6 +17,11 @@ namespace GR2_Projet.View.Account.Component
             InitializeComponent();
         }
 
+        public AddAccountComponent(Model.Account account)
+        {
+
+        }
+
         private void createBtn_Click(object sender, EventArgs e)
         {
             //Check si les champs ne sont pas vides.

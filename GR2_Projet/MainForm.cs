@@ -19,7 +19,8 @@ namespace GR2_Projet
 
         public void ChangePanel(UserControl tab)
         {
-            mainPanel.Controls.Clear();
+            ClearPanelRessources();
+            ClearPanel();
             mainPanel.Controls.Add(tab);
         }
 
@@ -38,7 +39,7 @@ namespace GR2_Projet
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ViewManager.Instance.ShowViewAccount();
+            ViewManager.Instance.ShowViewAccounts();
         }
     }
 }

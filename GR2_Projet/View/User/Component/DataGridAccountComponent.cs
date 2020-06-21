@@ -34,7 +34,7 @@ namespace GR2_Projet.View.Account.Component
 
         private void EnableViewButtons(bool enable)
         {
-            AppFixtures.SearchParent(this, "ViewAccount").GetType().GetMethod("EnableButtons").Invoke(this.Parent.Parent, new object[] { enable });
+            AppFixtures.SearchParent(this, "ViewUserAccount").GetType().GetMethod("EnableButtons").Invoke(this.Parent.Parent, new object[] { enable });
         }
 
         private void dataAccount_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -64,6 +64,27 @@ namespace GR2_Projet.View.Account.Component
         public Model.Account getCurrentAccount()
         {
             return currentAccount;
+        }
+
+        private void dataAccount_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int[] indexes = { 0, 1, 2 };
+            if (indexes.Contains(e.ColumnIndex) == true && e.RowIndex != -1)
+            {
+                if (dataAccount.Rows[e.RowIndex].Cells["Id"].Value != null)
+                {
+                    currentAccount = mAccounts.Find(a => string.Compare(a.Id, dataAccount.Rows[e.RowIndex].Cells["Id"].Value.ToString()) == 0);
+                    ViewManager.Instance.ShowViewAccount(currentAccount);
+                }
+                else
+                {
+                    currentAccount = null;
+                }
+            }
+            else
+            {
+                currentAccount = null;
+            }
         }
     }
 }

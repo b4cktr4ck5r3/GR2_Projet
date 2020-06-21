@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GR2_Projet.View;
+using GR2_Projet.View.Account;
+using GR2_Projet.View.User;
 
 namespace GR2_Projet
 {
@@ -25,7 +27,11 @@ namespace GR2_Projet
         /// </summary>
         private MainForm mainForm;
 
-        private ViewAccount viewAccount;
+        private View.User.ViewUser viewUser;
+
+        private View.ViewUserAccount viewUserAccount;
+
+        private View.Account.ViewAccount viewAccount;
         #endregion Views declaration
 
         /// <summary>
@@ -53,6 +59,7 @@ namespace GR2_Projet
         {
             mainForm.ClearPanelRessources();
         }
+
         /// <summary>
         /// Permet de créer et d'afficher le formulaire principale de l'application.
         /// </summary>
@@ -60,6 +67,9 @@ namespace GR2_Projet
         {
             mainForm = new MainForm();
             mainForm.Show();
+
+            viewUser = new ViewUser();
+            mainForm.ChangePanel(viewUser);
         }
 
         /// <summary>
@@ -73,11 +83,16 @@ namespace GR2_Projet
                 throw new Exception("Le formulaire principale n'existe pas.");
         }
 
-        public void ShowViewAccount()
+        public void ShowViewAccounts()
         {
-            viewAccount = new ViewAccount();
-            mainForm.ChangePanel(viewAccount);
+            viewUserAccount = new ViewUserAccount();
+            mainForm.ChangePanel(viewUserAccount);
+        }
 
+        public void ShowViewAccount(Model.Account account)
+        {
+            viewAccount = new ViewAccount(account);
+            mainForm.ChangePanel(viewAccount);
         }
         #endregion Views treatments
     }
