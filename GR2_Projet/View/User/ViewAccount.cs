@@ -33,6 +33,9 @@ namespace GR2_Projet.View
         {
             InitializeComponent();
 
+            this.userNameLbl.Text = AppFixtures.currentLoggedUser.Username;
+            this.userMailLbl.Text = AppFixtures.currentLoggedUser.Email;
+
             ShowButtons(false);
             EnableButtons(false);
         }
@@ -49,11 +52,6 @@ namespace GR2_Projet.View
             this.editBtn.Enabled = isEnabled;
         }
 
-        public void Try()
-        {
-            MessageBox.Show("try");
-        }
-
         /// <summary>
         /// Logique d'affichage du composant permettant d'afficher les comptes bancaires.
         /// </summary>
@@ -64,7 +62,6 @@ namespace GR2_Projet.View
             ClearComponentRessources(accountPanel);
             showComponent = new Account.Component.ShowAccountComponent(AppFixtures.currentLoggedUser.Accounts);
             ChangeComponent(accountPanel, showComponent);
-
             ShowButtons(true);
         }
 
@@ -78,18 +75,18 @@ namespace GR2_Projet.View
             ClearComponentRessources(accountPanel);
             addComponent = new Account.Component.AddAccountComponent();
             ChangeComponent(accountPanel, addComponent);
-
             ShowButtons(false);
         }
 
         private void editBtn_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(showComponent.getCurrentAccount().Name);
         }
 
         private void delBtn_Click(object sender, EventArgs e)
         {
-
+            Controller.AccountController.DeleteAccount(AppFixtures.currentLoggedUser, showComponent.getCurrentAccount().Id);
+            showComponent.UpdateData(AppFixtures.currentLoggedUser.Accounts);
         }
     }
 }

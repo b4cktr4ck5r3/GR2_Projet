@@ -88,11 +88,11 @@
     <Compile Include="View\User\Component\DataGridAccountComponent.Designer.cs">
       <DependentUpon>DataGridAccountComponent.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\User\ViewAccounts.cs">
+    <Compile Include="View\User\ViewAccount.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\User\ViewAccounts.Designer.cs">
-      <DependentUpon>ViewAccounts.cs</DependentUpon>
+    <Compile Include="View\User\ViewAccount.Designer.cs">
+      <DependentUpon>ViewAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="View\BaseView.cs">
       <SubType>UserControl</SubType>
@@ -118,8 +118,8 @@
     <EmbeddedResource Include="View\User\Component\DataGridAccountComponent.resx">
       <DependentUpon>DataGridAccountComponent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\User\ViewAccounts.resx">
-      <DependentUpon>ViewAccounts.cs</DependentUpon>
+    <EmbeddedResource Include="View\User\ViewAccount.resx">
+      <DependentUpon>ViewAccount.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

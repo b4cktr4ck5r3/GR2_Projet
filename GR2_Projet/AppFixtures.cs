@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GR2_Projet
 {
@@ -42,6 +43,14 @@ namespace GR2_Projet
 
             currentLoggedUser = (User)formatter.Deserialize(stream);
             stream.Close();
+        }
+
+        public static object SearchParent(Control ctrl, string Name)
+        {
+            while (ctrl.Parent.Name != Name)
+                ctrl = ctrl.Parent;
+
+            return ctrl.Parent;
         }
     }
 }

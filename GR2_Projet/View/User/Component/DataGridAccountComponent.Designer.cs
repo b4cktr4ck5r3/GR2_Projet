@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataAccount = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AccountName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,7 +39,17 @@
             // 
             // dataAccount
             // 
-            this.dataAccount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataAccount.AllowUserToAddRows = false;
+            this.dataAccount.AllowUserToDeleteRows = false;
+            this.dataAccount.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataAccount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -45,7 +57,17 @@
             this.Budget});
             this.dataAccount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataAccount.Location = new System.Drawing.Point(0, 0);
+            this.dataAccount.MultiSelect = false;
             this.dataAccount.Name = "dataAccount";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataAccount.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataAccount.RowTemplate.Height = 30;
             this.dataAccount.Size = new System.Drawing.Size(1024, 731);
             this.dataAccount.TabIndex = 0;
             this.dataAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataAccount_CellClick);
@@ -55,24 +77,27 @@
             this.Id.HeaderText = "Id";
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
+            this.Id.Width = 327;
             // 
             // AccountName
             // 
             this.AccountName.HeaderText = "Nom";
             this.AccountName.Name = "AccountName";
             this.AccountName.ReadOnly = true;
+            this.AccountName.Width = 327;
             // 
             // Budget
             // 
             this.Budget.HeaderText = "Budget";
             this.Budget.Name = "Budget";
             this.Budget.ReadOnly = true;
+            this.Budget.Width = 327;
             // 
             // ShowAccountComponent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Blue;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.dataAccount);
             this.Name = "ShowAccountComponent";
             this.Size = new System.Drawing.Size(1024, 731);
