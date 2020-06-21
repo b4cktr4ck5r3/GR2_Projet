@@ -12,18 +12,17 @@ namespace GR2_Projet
 {
     public static class AppFixtures
     {
-        public static User currentLoggedUser;
         public static void CreateFakeUser()
         {
             Model.User user = new Model.User("Utilisateur", "utilisateur@utilisateur.fr", "mdp");
-            currentLoggedUser = user;
+            Program.currentLoggedUser = user;
         }
         public static void CreateFakeAccount()
         {
             for(int i = 0; i < 5; i++)
             {
                 Model.Account account = new Model.Account($"Compte{i}", 1000);
-                currentLoggedUser.Accounts.Add(account);
+                Program.currentLoggedUser.Accounts.Add(account);
             }
         }
 

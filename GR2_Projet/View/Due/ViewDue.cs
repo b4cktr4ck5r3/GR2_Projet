@@ -12,7 +12,7 @@ namespace GR2_Projet.View.Due
 {
     public partial class ViewDue : UserControl
     {
-        public ViewDue()
+        public ViewDue(List<Model.Due> dues)
         {
             InitializeComponent();
         }

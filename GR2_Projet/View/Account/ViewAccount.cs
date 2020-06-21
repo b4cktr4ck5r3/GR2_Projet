@@ -12,17 +12,15 @@ namespace GR2_Projet.View.Account
 {
     public partial class ViewAccount : BaseView
     {
-        private Model.Account mAccount;
-        public ViewAccount(Model.Account account)
+        public ViewAccount()
         {
             InitializeComponent();
 
             timerForDate.Interval = 1000;
             timerForDate.Start();
             this.dateLbl.Text = DateTime.Now.ToString();
-            this.accountNameLbl.Text = account.Name;
-            this.budgetLbl.Text = account.Budget + "€";
-            mAccount = account;
+            this.accountNameLbl.Text = Program.currentSelectedAccount.Name;
+            this.budgetLbl.Text = Program.currentSelectedAccount.Budget + "€";
         }
 
         private void timerForDate_Tick(object sender, EventArgs e)
@@ -38,7 +36,7 @@ namespace GR2_Projet.View.Account
 
         private void operationViewBtn_Click(object sender, EventArgs e)
         {
-            //ViewManager.Instance.ShowViewOperation();
+            ViewManager.Instance.ShowViewOperation();
         }
 
         private void dueViewBtn_Click(object sender, EventArgs e)

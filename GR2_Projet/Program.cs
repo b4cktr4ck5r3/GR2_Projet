@@ -12,6 +12,9 @@ namespace GR2_Projet
     static class Program
     {
         public static AppContext ctx = new AppContext();
+        public static User currentLoggedUser = null;
+        public static Account currentSelectedAccount = null;
+
         /// <summary>
         /// Point d'entrée principal de l'application.
         /// </summary>

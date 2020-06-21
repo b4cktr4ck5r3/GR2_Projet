@@ -58,6 +58,13 @@ namespace GR2_Projet.Model
             get { return mAccounts; }
             set { mAccounts = value; }
         }
+
+        private List<Category> mCategories;
+        public List<Category> Categories
+        {
+            get { return mCategories; }
+            set { mCategories = value; }
+        }
         /// <summary>
         /// Constructeur.
         /// </summary>

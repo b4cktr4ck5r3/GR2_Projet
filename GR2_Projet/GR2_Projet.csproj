@@ -71,11 +71,11 @@
     <Compile Include="View\Due\ViewDue.Designer.cs">
       <DependentUpon>ViewDue.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Operation\Component\ListOperationComponent.cs">
+    <Compile Include="View\Operation\Component\DataGridOperationComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Operation\Component\ListOperationComponent.Designer.cs">
-      <DependentUpon>ListOperationComponent.cs</DependentUpon>
+    <Compile Include="View\Operation\Component\DataGridOperationComponent.Designer.cs">
+      <DependentUpon>DataGridOperationComponent.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Account\ViewAccount.cs">
       <SubType>UserControl</SubType>
@@ -88,6 +88,12 @@
     </Compile>
     <Compile Include="View\Category\ViewCategory.Designer.cs">
       <DependentUpon>ViewCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Operation\Component\FormAddOrEditOperationComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Operation\Component\FormAddOrEditOperationComponent.Designer.cs">
+      <DependentUpon>FormAddOrEditOperationComponent.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Operation\ViewOperation.cs">
       <SubType>UserControl</SubType>
@@ -157,6 +163,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Due\ViewDue.resx">
       <DependentUpon>ViewDue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Operation\Component\DataGridOperationComponent.resx">
+      <DependentUpon>DataGridOperationComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Operation\Component\FormAddOrEditOperationComponent.resx">
+      <DependentUpon>FormAddOrEditOperationComponent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Operation\ViewOperation.resx">
       <DependentUpon>ViewOperation.cs</DependentUpon>
