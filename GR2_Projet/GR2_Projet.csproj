@@ -49,6 +49,8 @@
     <Compile Include="AppContext.cs" />
     <Compile Include="AppFixtures.cs" />
     <Compile Include="Controller\AccountController.cs" />
+    <Compile Include="Controller\CategoryController.cs" />
+    <Compile Include="Controller\DueController.cs" />
     <Compile Include="Controller\OperationController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="MainForm.cs">
@@ -113,17 +115,17 @@
     <Compile Include="View\Operation\ViewOperation.Designer.cs">
       <DependentUpon>ViewOperation.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\User\Component\FormAddOrEditAccountComponent.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\User\Component\FormAddOrEditAccountComponent.Designer.cs">
-      <DependentUpon>FormAddOrEditAccountComponent.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\User\Component\DataGridAccountComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\User\Component\DataGridAccountComponent.Designer.cs">
       <DependentUpon>DataGridAccountComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Account\Component\FormAddOrEditAccountComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Account\Component\FormAddOrEditAccountComponent.Designer.cs">
+      <DependentUpon>FormAddOrEditAccountComponent.cs</DependentUpon>
     </Compile>
     <Compile Include="View\User\Component\FormLoginUserComponent.cs">
       <SubType>UserControl</SubType>
@@ -164,6 +166,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Account\Component\FormAddOrEditAccountComponent.resx">
+      <DependentUpon>FormAddOrEditAccountComponent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Account\ViewAccount.resx">
       <DependentUpon>ViewAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,9 +195,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Operation\ViewOperation.resx">
       <DependentUpon>ViewOperation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\User\Component\FormAddOrEditAccountComponent.resx">
-      <DependentUpon>FormAddOrEditAccountComponent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\User\Component\DataGridAccountComponent.resx">
       <DependentUpon>DataGridAccountComponent.cs</DependentUpon>
@@ -222,6 +224,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="View\Category\Component\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

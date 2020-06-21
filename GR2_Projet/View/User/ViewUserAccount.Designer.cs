@@ -1,4 +1,4 @@
-﻿namespace GR2_Projet.View
+﻿namespace GR2_Projet.View.User
 {
     partial class ViewUserAccount
     {
@@ -29,62 +29,54 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewUserAccount));
-            this.showAccount = new System.Windows.Forms.Button();
-            this.addAccount = new System.Windows.Forms.Button();
+            this.addBtn = new System.Windows.Forms.Button();
             this.editBtn = new System.Windows.Forms.Button();
             this.delBtn = new System.Windows.Forms.Button();
             this.userNameLbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.adminComponentPanel = new System.Windows.Forms.Panel();
+            this.returnBtn = new System.Windows.Forms.Button();
+            this.logoutLbl = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // showAccount
+            // addBtn
             // 
-            this.showAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showAccount.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.showAccount.Location = new System.Drawing.Point(579, 26);
-            this.showAccount.Name = "showAccount";
-            this.showAccount.Size = new System.Drawing.Size(85, 34);
-            this.showAccount.TabIndex = 0;
-            this.showAccount.Text = "Voir";
-            this.showAccount.UseVisualStyleBackColor = true;
-            this.showAccount.Click += new System.EventHandler(this.showAccount_Click);
-            // 
-            // addAccount
-            // 
-            this.addAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addAccount.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.addAccount.Location = new System.Drawing.Point(670, 25);
-            this.addAccount.Name = "addAccount";
-            this.addAccount.Size = new System.Drawing.Size(108, 35);
-            this.addAccount.TabIndex = 1;
-            this.addAccount.Text = "Ajouter";
-            this.addAccount.UseVisualStyleBackColor = true;
-            this.addAccount.Click += new System.EventHandler(this.addAccount_Click);
+            this.addBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.addBtn.Location = new System.Drawing.Point(344, 25);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(100, 30);
+            this.addBtn.TabIndex = 1;
+            this.addBtn.Text = "Ajouter";
+            this.addBtn.UseVisualStyleBackColor = false;
+            this.addBtn.Click += new System.EventHandler(this.addAccount_Click);
             // 
             // editBtn
             // 
-            this.editBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.editBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.editBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.editBtn.Location = new System.Drawing.Point(784, 26);
+            this.editBtn.Location = new System.Drawing.Point(450, 25);
             this.editBtn.Name = "editBtn";
-            this.editBtn.Size = new System.Drawing.Size(89, 34);
+            this.editBtn.Size = new System.Drawing.Size(90, 30);
             this.editBtn.TabIndex = 2;
             this.editBtn.Text = "Editer";
-            this.editBtn.UseVisualStyleBackColor = true;
+            this.editBtn.UseVisualStyleBackColor = false;
             this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
             // delBtn
             // 
-            this.delBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.delBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.delBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.delBtn.Location = new System.Drawing.Point(879, 26);
+            this.delBtn.Location = new System.Drawing.Point(546, 25);
             this.delBtn.Name = "delBtn";
-            this.delBtn.Size = new System.Drawing.Size(127, 34);
+            this.delBtn.Size = new System.Drawing.Size(130, 30);
             this.delBtn.TabIndex = 3;
             this.delBtn.Text = "Supprimer";
-            this.delBtn.UseVisualStyleBackColor = true;
+            this.delBtn.UseVisualStyleBackColor = false;
             this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
             // 
             // userNameLbl
@@ -111,23 +103,48 @@
             // adminComponentPanel
             // 
             this.adminComponentPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.adminComponentPanel.Location = new System.Drawing.Point(0, 93);
+            this.adminComponentPanel.Location = new System.Drawing.Point(0, 132);
             this.adminComponentPanel.Name = "adminComponentPanel";
-            this.adminComponentPanel.Size = new System.Drawing.Size(1024, 675);
+            this.adminComponentPanel.Size = new System.Drawing.Size(1024, 636);
             this.adminComponentPanel.TabIndex = 7;
+            // 
+            // returnBtn
+            // 
+            this.returnBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.returnBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.returnBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.returnBtn.Location = new System.Drawing.Point(895, 25);
+            this.returnBtn.Name = "returnBtn";
+            this.returnBtn.Size = new System.Drawing.Size(90, 30);
+            this.returnBtn.TabIndex = 8;
+            this.returnBtn.Text = "Retour";
+            this.returnBtn.UseVisualStyleBackColor = false;
+            this.returnBtn.Click += new System.EventHandler(this.returnBtn_Click);
+            // 
+            // logoutLbl
+            // 
+            this.logoutLbl.AutoSize = true;
+            this.logoutLbl.Location = new System.Drawing.Point(73, 55);
+            this.logoutLbl.Name = "logoutLbl";
+            this.logoutLbl.Size = new System.Drawing.Size(83, 13);
+            this.logoutLbl.TabIndex = 9;
+            this.logoutLbl.TabStop = true;
+            this.logoutLbl.Text = "Se déconnecter";
+            this.logoutLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logoutLbl_LinkClicked);
             // 
             // ViewUserAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.logoutLbl);
+            this.Controls.Add(this.returnBtn);
             this.Controls.Add(this.adminComponentPanel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.userNameLbl);
             this.Controls.Add(this.delBtn);
             this.Controls.Add(this.editBtn);
-            this.Controls.Add(this.addAccount);
-            this.Controls.Add(this.showAccount);
+            this.Controls.Add(this.addBtn);
             this.Name = "ViewUserAccount";
             this.Size = new System.Drawing.Size(1024, 768);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -137,12 +154,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button showAccount;
-        private System.Windows.Forms.Button addAccount;
+        private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Button editBtn;
         private System.Windows.Forms.Button delBtn;
         private System.Windows.Forms.Label userNameLbl;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel adminComponentPanel;
+        private System.Windows.Forms.Button returnBtn;
+        private System.Windows.Forms.LinkLabel logoutLbl;
     }
 }

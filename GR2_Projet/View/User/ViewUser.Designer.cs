@@ -30,14 +30,14 @@
         {
             this.loginBtn = new System.Windows.Forms.Button();
             this.userComponentPanel = new System.Windows.Forms.Panel();
-            this.Créer = new System.Windows.Forms.Button();
+            this.registerBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // loginBtn
             // 
             this.loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.loginBtn.Location = new System.Drawing.Point(498, 677);
+            this.loginBtn.Location = new System.Drawing.Point(438, 677);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(182, 49);
             this.loginBtn.TabIndex = 2;
@@ -54,26 +54,26 @@
             this.userComponentPanel.Size = new System.Drawing.Size(1008, 671);
             this.userComponentPanel.TabIndex = 1;
             // 
-            // Créer
+            // registerBtn
             // 
-            this.Créer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Créer.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Créer.Location = new System.Drawing.Point(280, 677);
-            this.Créer.Name = "Créer";
-            this.Créer.Size = new System.Drawing.Size(212, 49);
-            this.Créer.TabIndex = 0;
-            this.Créer.Text = "Créer un compte";
-            this.Créer.UseVisualStyleBackColor = true;
-            this.Créer.Click += new System.EventHandler(this.Créer_Click);
+            this.registerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.registerBtn.Location = new System.Drawing.Point(424, 677);
+            this.registerBtn.Name = "registerBtn";
+            this.registerBtn.Size = new System.Drawing.Size(212, 49);
+            this.registerBtn.TabIndex = 0;
+            this.registerBtn.Text = "Créer un compte";
+            this.registerBtn.UseVisualStyleBackColor = true;
+            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
             // ViewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.userComponentPanel);
-            this.Controls.Add(this.Créer);
+            this.Controls.Add(this.registerBtn);
             this.Name = "ViewUser";
             this.Size = new System.Drawing.Size(1008, 729);
             this.ResumeLayout(false);
@@ -82,7 +82,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Créer;
+        private System.Windows.Forms.Button registerBtn;
         private System.Windows.Forms.Panel userComponentPanel;
         private System.Windows.Forms.Button loginBtn;
     }

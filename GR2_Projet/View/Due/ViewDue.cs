@@ -14,6 +14,7 @@ namespace GR2_Projet.View.Due
     public partial class ViewDue : BaseView
     {
         private DataGridDueComponent dataGridDue;
+        private FormAddOrEditDueComponent form;
         private bool isDataGridActive;
         private bool isFormActive;
         public ViewDue()
@@ -35,7 +36,44 @@ namespace GR2_Projet.View.Due
 
         public void ShowEditFormLogic(Model.Due due)
         {
+            ClearComponentRessources(dueComponentPanel);
+            form = new FormAddOrEditDueComponent(due);
+            ChangeComponent(dueComponentPanel, form);
 
+            isFormActive = true;
+            isDataGridActive = false;
+        }
+
+        public void ShowAddFormLogic()
+        {
+            ClearComponentRessources(dueComponentPanel);
+            form = new FormAddOrEditDueComponent();
+            ChangeComponent(dueComponentPanel, form);
+
+            isFormActive = true;
+            isDataGridActive = false;
+        }
+
+        private void btRetour_Click(object sender, EventArgs e)
+        {
+            if(isFormActive)
+                ShowDuesLogic();
+            else
+                ViewManager.Instance.ShowViewAccount();
+        }
+
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+            ShowAddFormLogic();
+        }
+
+        private void delBtn_Click(object sender, EventArgs e)
+        {
+            if (dataGridDue.getCurrentDue() != null)
+            {
+                Controller.DueController.DeleteDue(Program.currentSelectedAccount, dataGridDue.getCurrentDue().Id);
+                dataGridDue.UpdateData();
+            }
         }
     }
 }

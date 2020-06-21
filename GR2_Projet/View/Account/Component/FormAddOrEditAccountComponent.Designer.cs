@@ -1,6 +1,6 @@
 ﻿namespace GR2_Projet.View.Account.Component
 {
-    partial class AddAccountComponent
+    partial class FormAddOrEditAccountComponent
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -32,19 +32,20 @@
             this.budgetTxtBox = new System.Windows.Forms.TextBox();
             this.nameLbl = new System.Windows.Forms.Label();
             this.budgetLbl = new System.Windows.Forms.Label();
-            this.createBtn = new System.Windows.Forms.Button();
+            this.addBtn = new System.Windows.Forms.Button();
+            this.editBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nameTxtBox
             // 
-            this.nameTxtBox.Location = new System.Drawing.Point(545, 298);
+            this.nameTxtBox.Location = new System.Drawing.Point(412, 125);
             this.nameTxtBox.Name = "nameTxtBox";
             this.nameTxtBox.Size = new System.Drawing.Size(100, 20);
             this.nameTxtBox.TabIndex = 0;
             // 
             // budgetTxtBox
             // 
-            this.budgetTxtBox.Location = new System.Drawing.Point(545, 340);
+            this.budgetTxtBox.Location = new System.Drawing.Point(412, 151);
             this.budgetTxtBox.Name = "budgetTxtBox";
             this.budgetTxtBox.Size = new System.Drawing.Size(100, 20);
             this.budgetTxtBox.TabIndex = 1;
@@ -52,49 +53,54 @@
             // nameLbl
             // 
             this.nameLbl.AutoSize = true;
-            this.nameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.nameLbl.Location = new System.Drawing.Point(332, 293);
+            this.nameLbl.Location = new System.Drawing.Point(321, 128);
             this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(168, 25);
+            this.nameLbl.Size = new System.Drawing.Size(85, 13);
             this.nameLbl.TabIndex = 2;
             this.nameLbl.Text = "Nom du compte:";
             // 
             // budgetLbl
             // 
             this.budgetLbl.AutoSize = true;
-            this.budgetLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.budgetLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.budgetLbl.Location = new System.Drawing.Point(379, 334);
+            this.budgetLbl.Location = new System.Drawing.Point(369, 154);
             this.budgetLbl.Name = "budgetLbl";
-            this.budgetLbl.Size = new System.Drawing.Size(86, 25);
+            this.budgetLbl.Size = new System.Drawing.Size(37, 13);
             this.budgetLbl.TabIndex = 3;
-            this.budgetLbl.Text = "Budget:";
+            this.budgetLbl.Text = "Solde:";
             // 
-            // createBtn
+            // addBtn
             // 
-            this.createBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.createBtn.Location = new System.Drawing.Point(441, 402);
-            this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(117, 40);
-            this.createBtn.TabIndex = 4;
-            this.createBtn.Text = "Créer";
-            this.createBtn.UseVisualStyleBackColor = true;
-            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
+            this.addBtn.Location = new System.Drawing.Point(437, 177);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(75, 23);
+            this.addBtn.TabIndex = 4;
+            this.addBtn.Text = "Ajouter";
+            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
-            // AddAccountComponent
+            // editBtn
+            // 
+            this.editBtn.Location = new System.Drawing.Point(437, 177);
+            this.editBtn.Name = "editBtn";
+            this.editBtn.Size = new System.Drawing.Size(75, 23);
+            this.editBtn.TabIndex = 5;
+            this.editBtn.Text = "Editer";
+            this.editBtn.UseVisualStyleBackColor = true;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
+            // 
+            // FormAddOrEditAccountComponent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.createBtn);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.editBtn);
+            this.Controls.Add(this.addBtn);
             this.Controls.Add(this.budgetLbl);
             this.Controls.Add(this.nameLbl);
             this.Controls.Add(this.budgetTxtBox);
             this.Controls.Add(this.nameTxtBox);
-            this.Name = "AddAccountComponent";
-            this.Size = new System.Drawing.Size(1024, 731);
+            this.Name = "FormAddOrEditAccountComponent";
+            this.Size = new System.Drawing.Size(1024, 675);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,6 +112,7 @@
         private System.Windows.Forms.TextBox budgetTxtBox;
         private System.Windows.Forms.Label nameLbl;
         private System.Windows.Forms.Label budgetLbl;
-        private System.Windows.Forms.Button createBtn;
+        private System.Windows.Forms.Button addBtn;
+        private System.Windows.Forms.Button editBtn;
     }
 }

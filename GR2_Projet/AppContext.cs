@@ -9,6 +9,9 @@ using GR2_Projet.Model;
 
 namespace GR2_Projet
 {
+    /// <summary>
+    /// Classe permettant de représenter le contexte de l'application et de stocker les différents utilisateur via le processus de sérialisation.
+    /// </summary>
     [Serializable()]
     public class AppContext
     {
@@ -32,6 +35,9 @@ namespace GR2_Projet
             }
         }
 
+        /// <summary>
+        /// Permet de lire les données et d'effectuer le processus de désérialisation.
+        /// </summary>
         public void Read()
         {
             Stream stream = File.Open("data.dat", FileMode.Open);
@@ -41,6 +47,9 @@ namespace GR2_Projet
             stream.Close();
         }
 
+        /// <summary>
+        /// Permet d'écrire les données et d'effectuer le processus de sérialisation.
+        /// </summary>
         public void Save()
         {
             Stream stream = File.Open("data.dat", FileMode.Create);

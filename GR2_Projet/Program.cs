@@ -26,5 +26,13 @@ namespace GR2_Projet
             ViewManager.Instance.ShowMainForm();
             Application.Run();
        }
+
+        public static object SearchParent(Control ctrl, string Name)
+        {
+            while (ctrl.Parent.Name != Name)
+                ctrl = ctrl.Parent;
+
+            return ctrl.Parent;
+        }
     }
 }

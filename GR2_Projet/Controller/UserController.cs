@@ -11,12 +11,25 @@ namespace GR2_Projet.Controller
     /// </summary>
     public static class UserController
     {
-        public static void AddUser(string username, string email, string password)
+        /// <summary>
+        /// Permet d'enregister un utilisateur.
+        /// </summary>
+        /// <param name="username">Nom d'utilisateur.</param>
+        /// <param name="email">Email de l'utilisateur.</param>
+        /// <param name="password">Mot de passe de l'utilisateur.</param>
+        public static void Register(string username, string email, string password)
         {
             Model.User newUser = new Model.User(username, email, password);
             Program.ctx.Users.Add(newUser);
             Program.ctx.Save();
         }
+
+        /// <summary>
+        /// Permet de connecter un utilisateur.
+        /// </summary>
+        /// <param name="username">Nom de l'utilisateur.</param>
+        /// <param name="password">Mot de passe de l'utilisateur.</param>
+        /// <returns></returns>
         public static Model.User Login(string username, string password)
         {
             if (Program.ctx.Users.Contains(

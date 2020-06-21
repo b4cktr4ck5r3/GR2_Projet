@@ -19,7 +19,7 @@ namespace GR2_Projet.View.User.Component
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            Controller.UserController.AddUser(this.usernameTxtBox.Text, this.mailTxtBox.Text, this.passwordTxtBox.Text);
+            Controller.UserController.Register(this.usernameTxtBox.Text, this.mailTxtBox.Text, this.passwordTxtBox.Text);
             Program.ctx.Save();
         }
     }

@@ -47,6 +47,8 @@ namespace GR2_Projet
             // 
             // viewPanel
             // 
+            this.viewPanel.AutoSize = true;
+            this.viewPanel.BackColor = System.Drawing.Color.White;
             this.viewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewPanel.Location = new System.Drawing.Point(0, 0);
             this.viewPanel.Name = "viewPanel";
@@ -65,7 +67,9 @@ namespace GR2_Projet
             this.MinimizeBox = false;
             this.Name = "MainForm";
             this.Text = "Application Gestion Financière";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.mainPanel.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }

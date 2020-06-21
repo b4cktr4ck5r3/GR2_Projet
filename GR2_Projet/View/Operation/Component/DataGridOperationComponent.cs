@@ -30,7 +30,7 @@ namespace GR2_Projet.View.Operation.Component
         {
             foreach (Model.Operation operation in operations)
                 dataOperationGridView.Rows.Add(operation.Id, operation.Name, operation.PaymentType,
-                    operation.Amount + "€", operation.OperationType, operation.Date.ToString());
+                    operation.Amount + "€", operation.OperationType, operation.Date.ToString(), operation.category.GetName());
         }
 
         private void UpdateCbox()
@@ -56,7 +56,6 @@ namespace GR2_Projet.View.Operation.Component
                 {
                     currentOperation = Program.currentSelectedAccount.Operations.Find(o =>
                         string.Compare(o.Id, dataOperationGridView.Rows[e.RowIndex].Cells["Id"].Value.ToString()) == 0);
-                    //EnableViewButtons(true);
                 }
                 else
                 {
@@ -79,7 +78,7 @@ namespace GR2_Projet.View.Operation.Component
             {
                 if (dataOperationGridView.Rows[e.RowIndex].Cells["Id"].Value != null)
                 {
-                    AppFixtures.SearchParent(this, "ViewOperation").GetType().GetMethod("ShowEditFormLogic").Invoke(AppFixtures.SearchParent(this, "ViewOperation"), new object[] { currentOperation });
+                    Program.SearchParent(this, "ViewOperation").GetType().GetMethod("ShowEditFormLogic").Invoke(Program.SearchParent(this, "ViewOperation"), new object[] { currentOperation });
                 }
             }
             else
@@ -89,6 +88,11 @@ namespace GR2_Projet.View.Operation.Component
         }
 
         private void dataOperationGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void DataGridOperationComponent_Load(object sender, EventArgs e)
         {
 
         }

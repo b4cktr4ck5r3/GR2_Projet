@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using GR2_Projet.View.User.Component;
 
-namespace GR2_Projet.View
+namespace GR2_Projet.View.User
 {
     /// <summary>
     /// Classe ViewUserAccount. Elle permet de représenter la vue lié au modèle des comptes bancaires.
@@ -16,16 +10,16 @@ namespace GR2_Projet.View
     public partial class ViewUserAccount : BaseView
     {
         private static bool isShowComponentActive;
-        private static bool isAddComponentActive;
+        private static bool isAddOrEditComponentActive;
         #region Components
         /// <summary>
         /// Composant permettant d'ajouter un compte bancaire.
         /// </summary>
-        private Account.Component.AddAccountComponent addComponent;
+        private Account.Component.FormAddOrEditAccountComponent form;
         /// <summary>
         /// Composant permettant d'afficher les comptes bancaires.
         /// </summary>
-        private Account.Component.ShowAccountComponent showComponent;
+        private ShowAccountComponent showComponent;
         #endregion Components
 
         /// <summary>
@@ -36,84 +30,113 @@ namespace GR2_Projet.View
             InitializeComponent();
 
             this.userNameLbl.Text = Program.currentLoggedUser.Username;
-
-            ShowButtons(false);
-            EnableButtons(false);
-
             showAccountLogic();
+
+            ChangeReturnState(false);
+            EnableButtons(false);
         }
 
-        public void ShowButtons(bool isVisible)
+        public void EnableButtons(bool enable)
         {
-            this.delBtn.Visible = isVisible;
-            this.editBtn.Visible = isVisible;
+            this.editBtn.Enabled = enable;
+            this.delBtn.Enabled = enable;
         }
 
-        public void EnableButtons(bool isEnabled)
+        private void ChangeReturnState(bool state)
         {
-            this.delBtn.Enabled = isEnabled;
-            this.editBtn.Enabled = isEnabled;
+            returnBtn.Visible = state;
         }
 
         /// <summary>
         /// Logique d'affichage du composant permettant d'afficher les comptes bancaires.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void showAccount_Click(object sender, EventArgs e)
         {
             if (!isShowComponentActive)
             {
                 showAccountLogic();
-                this.adminComponentPanel.Text = "Mes comptes";
-                ShowButtons(true);
+                ChangeReturnState(false);
             }
         }
 
-        private void showAccountLogic()
+        public void showAccountLogic()
         {
             ClearComponentRessources(adminComponentPanel);
-            showComponent = new Account.Component.ShowAccountComponent(Program.currentLoggedUser.Accounts);
+            showComponent = new ShowAccountComponent(Program.currentLoggedUser.Accounts);
             ChangeComponent(adminComponentPanel, showComponent);
 
             isShowComponentActive = true;
-            isAddComponentActive = false;
+            isAddOrEditComponentActive = false;
         }
 
         /// <summary>
         /// Logique d'affichage du composant permettant d'ajouter un comptes bancaire.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void addAccount_Click(object sender, EventArgs e)
         {
-            if (!isAddComponentActive)
+            if (!isAddOrEditComponentActive)
             {
                 addAccountLogic();
-                this.adminComponentPanel.Text = "Ajouter un compte";
-                ShowButtons(false);
+                ChangeReturnState(true);
             }
         }
 
         private void addAccountLogic()
         {
             ClearComponentRessources(adminComponentPanel);
-            addComponent = new Account.Component.AddAccountComponent();
-            ChangeComponent(adminComponentPanel, addComponent);
+            form = new Account.Component.FormAddOrEditAccountComponent();
+            ChangeComponent(adminComponentPanel, form);
 
-            isAddComponentActive = true;
+            isAddOrEditComponentActive = true;
             isShowComponentActive = false;
         }
 
+
+
         private void editBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(showComponent.getCurrentAccount().Name);
+            if (!isAddOrEditComponentActive)
+            {
+                editAccountLogic();
+                ChangeReturnState(true);
+            }
+        }
+
+        private void editAccountLogic()
+        {
+            if (showComponent.getCurrentAccount() != null)
+            {
+                Model.Account tempAccount = showComponent.getCurrentAccount();
+                ClearComponentRessources(adminComponentPanel);
+                form = new Account.Component.FormAddOrEditAccountComponent(tempAccount);
+                ChangeComponent(adminComponentPanel, form);
+
+                isAddOrEditComponentActive = true;
+                isShowComponentActive = false;
+            }
         }
 
         private void delBtn_Click(object sender, EventArgs e)
         {
-            Controller.AccountController.DeleteAccount(Program.currentLoggedUser, showComponent.getCurrentAccount().Id);
-            showComponent.UpdateData(Program.currentLoggedUser.Accounts);
+            if (showComponent.getCurrentAccount() != null)
+            {
+                Controller.AccountController.DeleteAccount(Program.currentLoggedUser, showComponent.getCurrentAccount().Id);
+                showComponent.UpdateData(Program.currentLoggedUser.Accounts);
+                EnableButtons(false);
+                showComponent.ResetSelection();
+            }
+        }
+
+        private void logoutLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void returnBtn_Click(object sender, EventArgs e)
+        {
+            showAccountLogic();
+            EnableButtons(false);
+            ChangeReturnState(false);
         }
     }
 }

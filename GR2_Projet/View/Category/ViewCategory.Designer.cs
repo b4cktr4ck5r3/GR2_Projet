@@ -36,12 +36,13 @@
             this.btAjouter = new System.Windows.Forms.Button();
             this.lbAjouterCategorie = new System.Windows.Forms.Label();
             this.gbListeCategorie = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridCategory = new System.Windows.Forms.DataGridView();
+            this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbAjouterCategorie = new System.Windows.Forms.GroupBox();
-            this.tbNom = new System.Windows.Forms.TextBox();
-            this.cbCategorie = new System.Windows.Forms.ComboBox();
+            this.nameTxtBox = new System.Windows.Forms.TextBox();
+            this.parentCbox = new System.Windows.Forms.ComboBox();
             this.gbListeCategorie.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCategory)).BeginInit();
             this.gbAjouterCategorie.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +66,7 @@
             this.btRetour.TabIndex = 1;
             this.btRetour.Text = "Retour";
             this.btRetour.UseVisualStyleBackColor = true;
+            this.btRetour.Click += new System.EventHandler(this.btRetour_Click);
             // 
             // lbListeCategorie
             // 
@@ -108,6 +110,7 @@
             this.btAjouter.TabIndex = 6;
             this.btAjouter.Text = "Ajouter";
             this.btAjouter.UseVisualStyleBackColor = true;
+            this.btAjouter.Click += new System.EventHandler(this.btAjouter_Click);
             // 
             // lbAjouterCategorie
             // 
@@ -122,7 +125,7 @@
             // 
             // gbListeCategorie
             // 
-            this.gbListeCategorie.Controls.Add(this.dataGridView1);
+            this.gbListeCategorie.Controls.Add(this.dataGridCategory);
             this.gbListeCategorie.Controls.Add(this.lbListeCategorie);
             this.gbListeCategorie.Location = new System.Drawing.Point(0, 80);
             this.gbListeCategorie.Name = "gbListeCategorie";
@@ -130,20 +133,35 @@
             this.gbListeCategorie.TabIndex = 8;
             this.gbListeCategorie.TabStop = false;
             // 
-            // dataGridView1
+            // dataGridCategory
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 67);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(970, 384);
-            this.dataGridView1.TabIndex = 3;
+            this.dataGridCategory.AllowUserToAddRows = false;
+            this.dataGridCategory.AllowUserToDeleteRows = false;
+            this.dataGridCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridCategory.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CategoryName});
+            this.dataGridCategory.GridColor = System.Drawing.Color.White;
+            this.dataGridCategory.Location = new System.Drawing.Point(30, 67);
+            this.dataGridCategory.MultiSelect = false;
+            this.dataGridCategory.Name = "dataGridCategory";
+            this.dataGridCategory.ReadOnly = true;
+            this.dataGridCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridCategory.Size = new System.Drawing.Size(970, 384);
+            this.dataGridCategory.TabIndex = 3;
+            // 
+            // CategoryName
+            // 
+            this.CategoryName.HeaderText = "Nom";
+            this.CategoryName.Name = "CategoryName";
+            this.CategoryName.ReadOnly = true;
             // 
             // gbAjouterCategorie
             // 
-            this.gbAjouterCategorie.Controls.Add(this.tbNom);
+            this.gbAjouterCategorie.Controls.Add(this.nameTxtBox);
             this.gbAjouterCategorie.Controls.Add(this.btAjouter);
-            this.gbAjouterCategorie.Controls.Add(this.cbCategorie);
+            this.gbAjouterCategorie.Controls.Add(this.parentCbox);
             this.gbAjouterCategorie.Controls.Add(this.lbAjouterCategorie);
             this.gbAjouterCategorie.Controls.Add(this.lbNom);
             this.gbAjouterCategorie.Controls.Add(this.lbParent);
@@ -153,25 +171,26 @@
             this.gbAjouterCategorie.TabIndex = 9;
             this.gbAjouterCategorie.TabStop = false;
             // 
-            // tbNom
+            // nameTxtBox
             // 
-            this.tbNom.Location = new System.Drawing.Point(70, 72);
-            this.tbNom.Name = "tbNom";
-            this.tbNom.Size = new System.Drawing.Size(100, 20);
-            this.tbNom.TabIndex = 3;
+            this.nameTxtBox.Location = new System.Drawing.Point(70, 72);
+            this.nameTxtBox.Name = "nameTxtBox";
+            this.nameTxtBox.Size = new System.Drawing.Size(100, 20);
+            this.nameTxtBox.TabIndex = 3;
             // 
-            // cbCategorie
+            // parentCbox
             // 
-            this.cbCategorie.FormattingEnabled = true;
-            this.cbCategorie.Location = new System.Drawing.Point(457, 71);
-            this.cbCategorie.Name = "cbCategorie";
-            this.cbCategorie.Size = new System.Drawing.Size(121, 21);
-            this.cbCategorie.TabIndex = 3;
+            this.parentCbox.FormattingEnabled = true;
+            this.parentCbox.Location = new System.Drawing.Point(457, 71);
+            this.parentCbox.Name = "parentCbox";
+            this.parentCbox.Size = new System.Drawing.Size(121, 21);
+            this.parentCbox.TabIndex = 3;
             // 
             // ViewCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.gbAjouterCategorie);
             this.Controls.Add(this.gbListeCategorie);
             this.Controls.Add(this.btRetour);
@@ -180,7 +199,7 @@
             this.Size = new System.Drawing.Size(1024, 768);
             this.gbListeCategorie.ResumeLayout(false);
             this.gbListeCategorie.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCategory)).EndInit();
             this.gbAjouterCategorie.ResumeLayout(false);
             this.gbAjouterCategorie.PerformLayout();
             this.ResumeLayout(false);
@@ -198,9 +217,10 @@
         private System.Windows.Forms.Button btAjouter;
         private System.Windows.Forms.Label lbAjouterCategorie;
         private System.Windows.Forms.GroupBox gbListeCategorie;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridCategory;
         private System.Windows.Forms.GroupBox gbAjouterCategorie;
-        private System.Windows.Forms.TextBox tbNom;
-        private System.Windows.Forms.ComboBox cbCategorie;
+        private System.Windows.Forms.TextBox nameTxtBox;
+        private System.Windows.Forms.ComboBox parentCbox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CategoryName;
     }
 }

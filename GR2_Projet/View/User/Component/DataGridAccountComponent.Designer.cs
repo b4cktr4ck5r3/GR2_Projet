@@ -1,4 +1,4 @@
-﻿namespace GR2_Projet.View.Account.Component
+﻿namespace GR2_Projet.View.User.Component
 {
     partial class ShowAccountComponent
     {
@@ -42,7 +42,8 @@
             this.dataAccount.AllowUserToAddRows = false;
             this.dataAccount.AllowUserToDeleteRows = false;
             this.dataAccount.AllowUserToOrderColumns = true;
-            this.dataAccount.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataAccount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataAccount.BackgroundColor = System.Drawing.Color.White;
             this.dataAccount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -75,6 +76,7 @@
             this.dataAccount.Size = new System.Drawing.Size(1024, 731);
             this.dataAccount.TabIndex = 0;
             this.dataAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataAccount_CellClick);
+            this.dataAccount.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataAccount_CellContentClick);
             this.dataAccount.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataAccount_CellDoubleClick);
             // 
             // Id
@@ -82,30 +84,28 @@
             this.Id.HeaderText = "Id";
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
-            this.Id.Width = 327;
             // 
             // AccountName
             // 
             this.AccountName.HeaderText = "Nom";
             this.AccountName.Name = "AccountName";
             this.AccountName.ReadOnly = true;
-            this.AccountName.Width = 327;
             // 
             // Budget
             // 
             this.Budget.HeaderText = "Budget";
             this.Budget.Name = "Budget";
             this.Budget.ReadOnly = true;
-            this.Budget.Width = 327;
             // 
             // ShowAccountComponent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.dataAccount);
             this.Name = "ShowAccountComponent";
             this.Size = new System.Drawing.Size(1024, 731);
+            this.Load += new System.EventHandler(this.ShowAccountComponent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataAccount)).EndInit();
             this.ResumeLayout(false);
 

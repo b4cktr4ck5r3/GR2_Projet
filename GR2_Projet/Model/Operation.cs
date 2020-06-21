@@ -93,6 +93,9 @@ namespace GR2_Projet.Model
             set { mAmount = value; }
         }
 
+        /// <summary>
+        /// Liste des catégories.
+        /// </summary>
         private Category mCategory;
         public Category category
         {

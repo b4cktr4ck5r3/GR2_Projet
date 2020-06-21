@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace GR2_Projet
 {
+    /// <summary>
+    /// Classe permettant de gérer un jeu de fausses données pour tester l'application.
+    /// </summary>
     public static class AppFixtures
     {
         public static User currentLoggedUser;
@@ -52,14 +55,6 @@ namespace GR2_Projet
                 Model.Account account = new Model.Account($"Compte{i}", 1000);
                 Program.currentLoggedUser.Accounts.Add(account);
             }
-        }
-
-        public static object SearchParent(Control ctrl, string Name)
-        {
-            while (ctrl.Parent.Name != Name)
-                ctrl = ctrl.Parent;
-
-            return ctrl.Parent;
         }
     }
 }

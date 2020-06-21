@@ -28,6 +28,9 @@ namespace GR2_Projet.Model
         private float mBudget;
         public float Budget { get { return mBudget; } set { mBudget = value; } }
 
+        /// <summary>
+        /// Liste des opérations.
+        /// </summary>
         private List<Operation> mOperations;
         public List<Operation> Operations
         {
@@ -35,6 +38,9 @@ namespace GR2_Projet.Model
             set { mOperations = value; }
         }
 
+        /// <summary>
+        /// Liste des échéances.
+        /// </summary>
         private List<Due> mDues;
         public List<Due> Dues
         {
@@ -43,7 +49,7 @@ namespace GR2_Projet.Model
         }
 
         /// <summary>
-        /// Construct
+        /// Constructeur
         /// </summary>
         public Account(string Name, float Budget)
         {
@@ -54,6 +60,10 @@ namespace GR2_Projet.Model
             this.Id = Guid.NewGuid().ToString();
         }
 
+        /// <summary>
+        /// Permet d'avoir le solde du compte.
+        /// </summary>
+        /// <returns>Solde du compte</returns>
         public float GetSolde()
         {
             float solde = Budget;

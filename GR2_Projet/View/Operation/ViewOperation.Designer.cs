@@ -31,13 +31,15 @@
             this.returnPreviousViewBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.operationComponentPanel = new System.Windows.Forms.Panel();
+            this.delBtn = new System.Windows.Forms.Button();
+            this.addBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // returnPreviousViewBtn
             // 
             this.returnPreviousViewBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnPreviousViewBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.returnPreviousViewBtn.Location = new System.Drawing.Point(882, 22);
+            this.returnPreviousViewBtn.Location = new System.Drawing.Point(905, 22);
             this.returnPreviousViewBtn.Name = "returnPreviousViewBtn";
             this.returnPreviousViewBtn.Size = new System.Drawing.Size(116, 48);
             this.returnPreviousViewBtn.TabIndex = 6;
@@ -60,15 +62,42 @@
             // 
             this.operationComponentPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.operationComponentPanel.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.operationComponentPanel.Location = new System.Drawing.Point(0, 79);
+            this.operationComponentPanel.Location = new System.Drawing.Point(0, 94);
             this.operationComponentPanel.Name = "operationComponentPanel";
-            this.operationComponentPanel.Size = new System.Drawing.Size(1024, 661);
+            this.operationComponentPanel.Size = new System.Drawing.Size(1024, 646);
             this.operationComponentPanel.TabIndex = 8;
+            // 
+            // delBtn
+            // 
+            this.delBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.delBtn.Location = new System.Drawing.Point(783, 22);
+            this.delBtn.Name = "delBtn";
+            this.delBtn.Size = new System.Drawing.Size(116, 48);
+            this.delBtn.TabIndex = 9;
+            this.delBtn.Text = "Supprimer";
+            this.delBtn.UseVisualStyleBackColor = true;
+            this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
+            // 
+            // addBtn
+            // 
+            this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.addBtn.Location = new System.Drawing.Point(661, 22);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(116, 48);
+            this.addBtn.TabIndex = 10;
+            this.addBtn.Text = "Ajouter";
+            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // ViewOperation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.addBtn);
+            this.Controls.Add(this.delBtn);
             this.Controls.Add(this.operationComponentPanel);
             this.Controls.Add(this.returnPreviousViewBtn);
             this.Controls.Add(this.label2);
@@ -83,5 +112,7 @@
         private System.Windows.Forms.Button returnPreviousViewBtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel operationComponentPanel;
+        private System.Windows.Forms.Button delBtn;
+        private System.Windows.Forms.Button addBtn;
     }
 }

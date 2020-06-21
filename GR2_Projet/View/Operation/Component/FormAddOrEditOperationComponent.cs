@@ -66,14 +66,10 @@ namespace GR2_Projet.View.Operation.Component
             paymentType paymentType;
             paymentType.TryParse(paymentTypeCbox.SelectedItem.ToString(), out paymentType);
 
-            Model.Category tempCategory =
-                Program.currentLoggedUser.Categories.Find(c => c.GetName() == categoryCbox.SelectedItem.ToString());
+            Controller.OperationController.AddOperation(Program.currentSelectedAccount, nameTxtBox.Text,
+                operationType, dateTPicker.Value, paymentType, float.Parse(amountTxtBox.Text), Program.currentLoggedUser.Categories.Find(c => c.GetName() == categoryCbox.SelectedItem.ToString()));
 
-            Model.Operation newOperation = new Model.Operation(nameTxtBox.Text,
-                operationType, dateTPicker.Value, paymentType, float.Parse(amountTxtBox.Text), tempCategory);
-
-            Program.currentSelectedAccount.Operations.Add(newOperation);
-            Program.ctx.Save();
+            Program.SearchParent(this, "ViewOperation").GetType().GetMethod("ShowOperationsLogic").Invoke(Program.SearchParent(this, "ViewOperation"), new object[] { });
         }
 
         private void editBtn_Click(object sender, EventArgs e)
@@ -84,10 +80,11 @@ namespace GR2_Projet.View.Operation.Component
             paymentType paymentType;
             paymentType.TryParse(paymentTypeCbox.SelectedItem.ToString(), out paymentType);
 
-            Model.Category tempCategory =
-                Program.currentLoggedUser.Categories.Find(c => c.GetName() == categoryCbox.SelectedItem.ToString());
+            Controller.OperationController.EditOperation(mOperation, nameTxtBox.Text,
+                float.Parse(amountTxtBox.Text), paymentType, operationType, dateTPicker.Value, Program.currentLoggedUser.Categories.Find(c => c.GetName() == categoryCbox.SelectedItem.ToString()));
 
-            Controller.OperationController.EditOperation(mOperation, nameTxtBox.Text, float.Parse(amountTxtBox.Text), paymentType, operationType, dateTPicker.Value, tempCategory);
+            Program.SearchParent(this, "ViewOperation").GetType().GetMethod("ShowOperationsLogic").Invoke(Program.SearchParent(this, "ViewOperation"), new object[] { });
+
         }
     }
 }

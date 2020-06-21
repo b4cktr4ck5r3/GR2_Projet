@@ -37,6 +37,7 @@
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OperationType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataOperationGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +65,7 @@
             this.dataOperationGridView.AllowUserToAddRows = false;
             this.dataOperationGridView.AllowUserToDeleteRows = false;
             this.dataOperationGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataOperationGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataOperationGridView.BackgroundColor = System.Drawing.Color.White;
             this.dataOperationGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataOperationGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataOperationGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -73,15 +74,16 @@
             this.PaymentType,
             this.Amount,
             this.OperationType,
-            this.Date});
+            this.Date,
+            this.Category});
             this.dataOperationGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataOperationGridView.GridColor = System.Drawing.SystemColors.Control;
-            this.dataOperationGridView.Location = new System.Drawing.Point(0, 67);
+            this.dataOperationGridView.Location = new System.Drawing.Point(0, 84);
             this.dataOperationGridView.MultiSelect = false;
             this.dataOperationGridView.Name = "dataOperationGridView";
             this.dataOperationGridView.ReadOnly = true;
             this.dataOperationGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataOperationGridView.Size = new System.Drawing.Size(1024, 597);
+            this.dataOperationGridView.Size = new System.Drawing.Size(1024, 580);
             this.dataOperationGridView.TabIndex = 10;
             this.dataOperationGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataOperationGridView_CellClick);
             this.dataOperationGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataOperationGridView_CellContentClick);
@@ -123,15 +125,23 @@
             this.Date.Name = "Date";
             this.Date.ReadOnly = true;
             // 
+            // Category
+            // 
+            this.Category.HeaderText = "Catégorie";
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            // 
             // DataGridOperationComponent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.dataOperationGridView);
             this.Controls.Add(this.categoriesCbox);
             this.Controls.Add(this.label1);
             this.Name = "DataGridOperationComponent";
             this.Size = new System.Drawing.Size(1024, 664);
+            this.Load += new System.EventHandler(this.DataGridOperationComponent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataOperationGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -148,5 +158,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn OperationType;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
     }
 }

@@ -11,9 +11,12 @@ using GR2_Projet.View.Operation.Component;
 
 namespace GR2_Projet.View.Operation
 {
+    /// <summary>
+    /// Composant : Vue permettant d'afficher les informatiosn liées aux opérations.
+    /// </summary>
     public partial class ViewOperation : BaseView
     {
-        private Component.DataGridOperationComponent dataGridCompoennt;
+        private Component.DataGridOperationComponent dataGridComponent;
         private FormAddOrEditOperationComponent formComponent;
         private bool isDataGridActive;
         private bool isFormActive;
@@ -27,8 +30,8 @@ namespace GR2_Projet.View.Operation
         public void ShowOperationsLogic()
         {
             ClearComponentRessources(operationComponentPanel);
-            dataGridCompoennt = new DataGridOperationComponent();
-            ChangeComponent(operationComponentPanel, dataGridCompoennt);
+            dataGridComponent = new DataGridOperationComponent();
+            ChangeComponent(operationComponentPanel, dataGridComponent);
 
             isDataGridActive = true;
             isFormActive = false;
@@ -56,7 +59,26 @@ namespace GR2_Projet.View.Operation
 
         private void returnPreviousViewBtn_Click(object sender, EventArgs e)
         {
-            ViewManager.Instance.ShowViewAccount();
+            if(isFormActive)
+                ShowOperationsLogic();
+            else
+                ViewManager.Instance.ShowViewAccount();
+        }
+
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+            ShowAddFormLogic();
+        }
+
+        private void delBtn_Click(object sender, EventArgs e)
+        {
+            if (dataGridComponent.getCurrentOperation() != null)
+            {
+                Controller.OperationController.DeleteOperation(Program.currentSelectedAccount,
+                    dataGridComponent.getCurrentOperation().Id);
+                dataGridComponent.UpdateData();
+            }
+
         }
     }
 }

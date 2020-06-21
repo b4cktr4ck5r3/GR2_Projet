@@ -66,8 +66,8 @@ namespace GR2_Projet.Model
         /// <summary>
         /// Propriété montant.
         /// </summary>
-        private int mAmount;
-        public int Amount
+        private float mAmount;
+        public float Amount
         {
             get { return mAmount; }
             set { mAmount = value; }
@@ -83,7 +83,7 @@ namespace GR2_Projet.Model
         /// <summary>
         /// Constructeur.
         /// </summary>
-        public Due(string Name, operationType OperationType, int Day, paymentType PaymentType, int Amount, Category category)
+        public Due(string Name, operationType OperationType, int Day, paymentType PaymentType, float Amount, Category category)
         {
             this.Id = Guid.NewGuid().ToString();
             this.Name = Name;

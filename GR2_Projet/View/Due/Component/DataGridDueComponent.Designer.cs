@@ -44,7 +44,7 @@
             this.dataDuesGrid.AllowUserToAddRows = false;
             this.dataDuesGrid.AllowUserToDeleteRows = false;
             this.dataDuesGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataDuesGrid.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataDuesGrid.BackgroundColor = System.Drawing.Color.White;
             this.dataDuesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataDuesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -112,6 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.dataDuesGrid);
             this.Name = "DataGridDueComponent";
             this.Size = new System.Drawing.Size(1024, 638);

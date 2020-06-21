@@ -32,7 +32,7 @@ namespace GR2_Projet
 
         private View.User.ViewUser viewUser;
 
-        private View.ViewUserAccount viewUserAccount;
+        private ViewUserAccount viewUserAccount;
 
         private View.Account.ViewAccount viewAccount;
 
@@ -118,13 +118,11 @@ namespace GR2_Projet
             mainForm.ChangePanel(viewDues);
         }
 
-        public void ShowViewCategory(List<Model.Category> categories)
+        public void ShowViewCategory()
         {
-            viewCategory = new ViewCategory(categories);
+            viewCategory = new ViewCategory();
             mainForm.ChangePanel(viewCategory);
         }
-
-
         #endregion Views treatments
     }
 }

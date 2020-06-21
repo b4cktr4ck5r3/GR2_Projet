@@ -32,6 +32,11 @@ namespace GR2_Projet.View.Due.Component
         }
 
         private Model.Due currentDue;
+
+        public Model.Due getCurrentDue()
+        {
+            return currentDue;
+        }
         private void dataDuesGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int[] indexes = new int[dataDuesGrid.ColumnCount];
@@ -66,7 +71,7 @@ namespace GR2_Projet.View.Due.Component
             {
                 if (dataDuesGrid.Rows[e.RowIndex].Cells["Id"].Value != null)
                 {
-                    AppFixtures.SearchParent(this, "ViewDue").GetType().GetMethod("ShowEditFormLogic").Invoke(AppFixtures.SearchParent(this, "ViewDue"), new object[] { currentDue });
+                    Program.SearchParent(this, "ViewDue").GetType().GetMethod("ShowEditFormLogic").Invoke(Program.SearchParent(this, "ViewDue"), new object[] { currentDue });
                 }
             }
             else

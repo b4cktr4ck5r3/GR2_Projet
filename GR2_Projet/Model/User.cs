@@ -52,6 +52,9 @@ namespace GR2_Projet.Model
             set { mPassword = value; }
         }
 
+        /// <summary>
+        /// Liste des comptes
+        /// </summary>
         private List<Account> mAccounts;
         public List<Account> Accounts
         {
@@ -59,6 +62,9 @@ namespace GR2_Projet.Model
             set { mAccounts = value; }
         }
 
+        /// <summary>
+        /// Liste des catégories
+        /// </summary>
         private List<Category> mCategories;
         public List<Category> Categories
         {

@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GR2_Projet.View.Account.Component
+namespace GR2_Projet.View.User.Component
 {
     public partial class ShowAccountComponent : UserControl
     {
@@ -32,9 +27,13 @@ namespace GR2_Projet.View.Account.Component
             foreach (Model.Account account in accounts) dataAccount.Rows.Add(account.Id, account.Name, account.GetSolde() + "€");
         }
 
+        public void ResetSelection()
+        {
+            dataAccount.ClearSelection();
+        }
         private void EnableViewButtons(bool enable)
         {
-            AppFixtures.SearchParent(this, "ViewUserAccount").GetType().GetMethod("EnableButtons").Invoke(AppFixtures.SearchParent(this, "ViewUserAccount"), new object[] { enable });
+            Program.SearchParent(this, "ViewUserAccount").GetType().GetMethod("EnableButtons").Invoke(Program.SearchParent(this, "ViewUserAccount"), new object[] { enable });
         }
 
         private void dataAccount_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -92,6 +91,16 @@ namespace GR2_Projet.View.Account.Component
             {
                 currentAccount = null;
             }
+        }
+
+        private void ShowAccountComponent_Load(object sender, EventArgs e)
+        {
+            dataAccount.ClearSelection();
+        }
+
+        private void dataAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
