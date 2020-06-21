@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             this.categoryLbl = new System.Windows.Forms.Label();
-            this._categoryLbl = new System.Windows.Forms.Label();
             this.nameLbl = new System.Windows.Forms.Label();
             this.dateLbl = new System.Windows.Forms.Label();
             this.operationTypeLbl = new System.Windows.Forms.Label();
             this.amountLbl = new System.Windows.Forms.Label();
             this.paymentTypeLbl = new System.Windows.Forms.Label();
             this.categoryCbox = new System.Windows.Forms.ComboBox();
-            this._categoryCbox = new System.Windows.Forms.ComboBox();
             this.operationTypeCbox = new System.Windows.Forms.ComboBox();
             this.paymentTypeCbox = new System.Windows.Forms.ComboBox();
             this.nameTxtBox = new System.Windows.Forms.TextBox();
@@ -51,29 +49,18 @@
             this.categoryLbl.AutoSize = true;
             this.categoryLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.categoryLbl.Location = new System.Drawing.Point(347, 233);
+            this.categoryLbl.Location = new System.Drawing.Point(311, 234);
             this.categoryLbl.Name = "categoryLbl";
             this.categoryLbl.Size = new System.Drawing.Size(105, 25);
             this.categoryLbl.TabIndex = 0;
             this.categoryLbl.Text = "Catégorie";
-            // 
-            // _categoryLbl
-            // 
-            this._categoryLbl.AutoSize = true;
-            this._categoryLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this._categoryLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this._categoryLbl.Location = new System.Drawing.Point(324, 268);
-            this._categoryLbl.Name = "_categoryLbl";
-            this._categoryLbl.Size = new System.Drawing.Size(157, 25);
-            this._categoryLbl.TabIndex = 1;
-            this._categoryLbl.Text = "Sous-catégorie";
             // 
             // nameLbl
             // 
             this.nameLbl.AutoSize = true;
             this.nameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.nameLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.nameLbl.Location = new System.Drawing.Point(372, 299);
+            this.nameLbl.Location = new System.Drawing.Point(311, 268);
             this.nameLbl.Name = "nameLbl";
             this.nameLbl.Size = new System.Drawing.Size(56, 25);
             this.nameLbl.TabIndex = 2;
@@ -84,7 +71,7 @@
             this.dateLbl.AutoSize = true;
             this.dateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.dateLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dateLbl.Location = new System.Drawing.Point(372, 333);
+            this.dateLbl.Location = new System.Drawing.Point(311, 302);
             this.dateLbl.Name = "dateLbl";
             this.dateLbl.Size = new System.Drawing.Size(57, 25);
             this.dateLbl.TabIndex = 3;
@@ -95,7 +82,7 @@
             this.operationTypeLbl.AutoSize = true;
             this.operationTypeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.operationTypeLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.operationTypeLbl.Location = new System.Drawing.Point(323, 367);
+            this.operationTypeLbl.Location = new System.Drawing.Point(311, 336);
             this.operationTypeLbl.Name = "operationTypeLbl";
             this.operationTypeLbl.Size = new System.Drawing.Size(172, 25);
             this.operationTypeLbl.TabIndex = 4;
@@ -106,7 +93,7 @@
             this.amountLbl.AutoSize = true;
             this.amountLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.amountLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.amountLbl.Location = new System.Drawing.Point(362, 405);
+            this.amountLbl.Location = new System.Drawing.Point(311, 374);
             this.amountLbl.Name = "amountLbl";
             this.amountLbl.Size = new System.Drawing.Size(90, 25);
             this.amountLbl.TabIndex = 5;
@@ -117,7 +104,7 @@
             this.paymentTypeLbl.AutoSize = true;
             this.paymentTypeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.paymentTypeLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.paymentTypeLbl.Location = new System.Drawing.Point(311, 445);
+            this.paymentTypeLbl.Location = new System.Drawing.Point(311, 414);
             this.paymentTypeLbl.Name = "paymentTypeLbl";
             this.paymentTypeLbl.Size = new System.Drawing.Size(184, 25);
             this.paymentTypeLbl.TabIndex = 6;
@@ -126,23 +113,15 @@
             // categoryCbox
             // 
             this.categoryCbox.FormattingEnabled = true;
-            this.categoryCbox.Location = new System.Drawing.Point(512, 237);
+            this.categoryCbox.Location = new System.Drawing.Point(512, 238);
             this.categoryCbox.Name = "categoryCbox";
             this.categoryCbox.Size = new System.Drawing.Size(121, 21);
             this.categoryCbox.TabIndex = 7;
             // 
-            // _categoryCbox
-            // 
-            this._categoryCbox.FormattingEnabled = true;
-            this._categoryCbox.Location = new System.Drawing.Point(512, 272);
-            this._categoryCbox.Name = "_categoryCbox";
-            this._categoryCbox.Size = new System.Drawing.Size(121, 21);
-            this._categoryCbox.TabIndex = 8;
-            // 
             // operationTypeCbox
             // 
             this.operationTypeCbox.FormattingEnabled = true;
-            this.operationTypeCbox.Location = new System.Drawing.Point(512, 371);
+            this.operationTypeCbox.Location = new System.Drawing.Point(512, 340);
             this.operationTypeCbox.Name = "operationTypeCbox";
             this.operationTypeCbox.Size = new System.Drawing.Size(121, 21);
             this.operationTypeCbox.TabIndex = 9;
@@ -150,28 +129,28 @@
             // paymentTypeCbox
             // 
             this.paymentTypeCbox.FormattingEnabled = true;
-            this.paymentTypeCbox.Location = new System.Drawing.Point(512, 451);
+            this.paymentTypeCbox.Location = new System.Drawing.Point(512, 420);
             this.paymentTypeCbox.Name = "paymentTypeCbox";
             this.paymentTypeCbox.Size = new System.Drawing.Size(121, 21);
             this.paymentTypeCbox.TabIndex = 10;
             // 
             // nameTxtBox
             // 
-            this.nameTxtBox.Location = new System.Drawing.Point(512, 305);
+            this.nameTxtBox.Location = new System.Drawing.Point(512, 274);
             this.nameTxtBox.Name = "nameTxtBox";
             this.nameTxtBox.Size = new System.Drawing.Size(121, 20);
             this.nameTxtBox.TabIndex = 11;
             // 
             // amountTxtBox
             // 
-            this.amountTxtBox.Location = new System.Drawing.Point(512, 410);
+            this.amountTxtBox.Location = new System.Drawing.Point(512, 379);
             this.amountTxtBox.Name = "amountTxtBox";
             this.amountTxtBox.Size = new System.Drawing.Size(121, 20);
             this.amountTxtBox.TabIndex = 13;
             // 
             // dateTPicker
             // 
-            this.dateTPicker.Location = new System.Drawing.Point(512, 336);
+            this.dateTPicker.Location = new System.Drawing.Point(512, 305);
             this.dateTPicker.Name = "dateTPicker";
             this.dateTPicker.Size = new System.Drawing.Size(121, 20);
             this.dateTPicker.TabIndex = 14;
@@ -180,7 +159,7 @@
             // 
             this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.addBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.addBtn.Location = new System.Drawing.Point(498, 502);
+            this.addBtn.Location = new System.Drawing.Point(498, 471);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(147, 33);
             this.addBtn.TabIndex = 15;
@@ -192,7 +171,7 @@
             // 
             this.editBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.75F);
             this.editBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.editBtn.Location = new System.Drawing.Point(498, 502);
+            this.editBtn.Location = new System.Drawing.Point(498, 471);
             this.editBtn.Name = "editBtn";
             this.editBtn.Size = new System.Drawing.Size(147, 33);
             this.editBtn.TabIndex = 16;
@@ -212,14 +191,12 @@
             this.Controls.Add(this.nameTxtBox);
             this.Controls.Add(this.paymentTypeCbox);
             this.Controls.Add(this.operationTypeCbox);
-            this.Controls.Add(this._categoryCbox);
             this.Controls.Add(this.categoryCbox);
             this.Controls.Add(this.paymentTypeLbl);
             this.Controls.Add(this.amountLbl);
             this.Controls.Add(this.operationTypeLbl);
             this.Controls.Add(this.dateLbl);
             this.Controls.Add(this.nameLbl);
-            this.Controls.Add(this._categoryLbl);
             this.Controls.Add(this.categoryLbl);
             this.Name = "FormAddOrEditOperationComponent";
             this.Size = new System.Drawing.Size(1024, 686);
@@ -231,14 +208,12 @@
         #endregion
 
         private System.Windows.Forms.Label categoryLbl;
-        private System.Windows.Forms.Label _categoryLbl;
         private System.Windows.Forms.Label nameLbl;
         private System.Windows.Forms.Label dateLbl;
         private System.Windows.Forms.Label operationTypeLbl;
         private System.Windows.Forms.Label amountLbl;
         private System.Windows.Forms.Label paymentTypeLbl;
         private System.Windows.Forms.ComboBox categoryCbox;
-        private System.Windows.Forms.ComboBox _categoryCbox;
         private System.Windows.Forms.ComboBox operationTypeCbox;
         private System.Windows.Forms.ComboBox paymentTypeCbox;
         private System.Windows.Forms.TextBox nameTxtBox;

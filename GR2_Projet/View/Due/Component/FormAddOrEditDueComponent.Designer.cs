@@ -132,7 +132,7 @@
             this.amountLbl.AutoSize = true;
             this.amountLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.amountLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.amountLbl.Location = new System.Drawing.Point(388, 353);
+            this.amountLbl.Location = new System.Drawing.Point(337, 353);
             this.amountLbl.Name = "amountLbl";
             this.amountLbl.Size = new System.Drawing.Size(90, 25);
             this.amountLbl.TabIndex = 22;
@@ -143,7 +143,7 @@
             this.operationTypeLbl.AutoSize = true;
             this.operationTypeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.operationTypeLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.operationTypeLbl.Location = new System.Drawing.Point(349, 315);
+            this.operationTypeLbl.Location = new System.Drawing.Point(337, 315);
             this.operationTypeLbl.Name = "operationTypeLbl";
             this.operationTypeLbl.Size = new System.Drawing.Size(172, 25);
             this.operationTypeLbl.TabIndex = 21;
@@ -154,7 +154,7 @@
             this.dayLbl.AutoSize = true;
             this.dayLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.dayLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dayLbl.Location = new System.Drawing.Point(398, 281);
+            this.dayLbl.Location = new System.Drawing.Point(337, 281);
             this.dayLbl.Name = "dayLbl";
             this.dayLbl.Size = new System.Drawing.Size(54, 25);
             this.dayLbl.TabIndex = 20;
@@ -165,7 +165,7 @@
             this.nameLbl.AutoSize = true;
             this.nameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.nameLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.nameLbl.Location = new System.Drawing.Point(398, 247);
+            this.nameLbl.Location = new System.Drawing.Point(337, 247);
             this.nameLbl.Name = "nameLbl";
             this.nameLbl.Size = new System.Drawing.Size(56, 25);
             this.nameLbl.TabIndex = 19;
@@ -176,7 +176,7 @@
             this._categoryLbl.AutoSize = true;
             this._categoryLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this._categoryLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this._categoryLbl.Location = new System.Drawing.Point(350, 216);
+            this._categoryLbl.Location = new System.Drawing.Point(337, 216);
             this._categoryLbl.Name = "_categoryLbl";
             this._categoryLbl.Size = new System.Drawing.Size(157, 25);
             this._categoryLbl.TabIndex = 18;
@@ -187,7 +187,7 @@
             this.categoryLbl.AutoSize = true;
             this.categoryLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.categoryLbl.Location = new System.Drawing.Point(373, 181);
+            this.categoryLbl.Location = new System.Drawing.Point(337, 181);
             this.categoryLbl.Name = "categoryLbl";
             this.categoryLbl.Size = new System.Drawing.Size(105, 25);
             this.categoryLbl.TabIndex = 17;

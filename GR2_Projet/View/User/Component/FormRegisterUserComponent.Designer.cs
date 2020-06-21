@@ -44,7 +44,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mailTxtBox.Location = new System.Drawing.Point(515, 233);
             this.mailTxtBox.Name = "mailTxtBox";
-            this.mailTxtBox.Size = new System.Drawing.Size(100, 20);
+            this.mailTxtBox.Size = new System.Drawing.Size(119, 20);
             this.mailTxtBox.TabIndex = 0;
             // 
             // usernameTxtBox
@@ -54,7 +54,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.usernameTxtBox.Location = new System.Drawing.Point(515, 271);
             this.usernameTxtBox.Name = "usernameTxtBox";
-            this.usernameTxtBox.Size = new System.Drawing.Size(100, 20);
+            this.usernameTxtBox.Size = new System.Drawing.Size(119, 20);
             this.usernameTxtBox.TabIndex = 1;
             // 
             // passwordTxtBox
@@ -64,7 +64,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordTxtBox.Location = new System.Drawing.Point(515, 305);
             this.passwordTxtBox.Name = "passwordTxtBox";
-            this.passwordTxtBox.Size = new System.Drawing.Size(100, 20);
+            this.passwordTxtBox.Size = new System.Drawing.Size(119, 20);
             this.passwordTxtBox.TabIndex = 2;
             // 
             // registerBtn
@@ -90,7 +90,7 @@
             this.mailLbl.AutoSize = true;
             this.mailLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mailLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.mailLbl.Location = new System.Drawing.Point(405, 233);
+            this.mailLbl.Location = new System.Drawing.Point(367, 233);
             this.mailLbl.Name = "mailLbl";
             this.mailLbl.Size = new System.Drawing.Size(52, 25);
             this.mailLbl.TabIndex = 4;
@@ -104,7 +104,7 @@
             this.usernameLbl.AutoSize = true;
             this.usernameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.usernameLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.usernameLbl.Location = new System.Drawing.Point(405, 265);
+            this.usernameLbl.Location = new System.Drawing.Point(367, 265);
             this.usernameLbl.Name = "usernameLbl";
             this.usernameLbl.Size = new System.Drawing.Size(56, 25);
             this.usernameLbl.TabIndex = 5;

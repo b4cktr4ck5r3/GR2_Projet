@@ -43,7 +43,7 @@
             this.usernameLbl.AutoSize = true;
             this.usernameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.usernameLbl.Location = new System.Drawing.Point(390, 232);
+            this.usernameLbl.Location = new System.Drawing.Point(352, 232);
             this.usernameLbl.Name = "usernameLbl";
             this.usernameLbl.Size = new System.Drawing.Size(56, 25);
             this.usernameLbl.TabIndex = 10;
@@ -56,7 +56,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.loginBtn.Location = new System.Drawing.Point(473, 325);
+            this.loginBtn.Location = new System.Drawing.Point(420, 322);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(127, 38);
             this.loginBtn.TabIndex = 9;

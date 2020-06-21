@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GR2_Projet.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,12 @@ namespace GR2_Projet.Controller
         /// <param name="password">Mot de passe de l'utilisateur.</param>
         public static void Register(string username, string email, string password)
         {
-            Model.User newUser = new Model.User(username, email, password);
-            Program.ctx.Users.Add(newUser);
-            Program.ctx.Save();
+            if (!(String.IsNullOrEmpty(username) || String.IsNullOrEmpty(email) || String.IsNullOrEmpty(password)))
+            {
+                Model.User newUser = new Model.User(username, email, password);
+                Program.ctx.Users.Add(newUser);
+                Program.ctx.Save();
+            }
         }
 
         /// <summary>
