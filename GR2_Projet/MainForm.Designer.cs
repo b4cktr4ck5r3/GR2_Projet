@@ -30,9 +30,10 @@ namespace GR2_Projet
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.viewPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.viewPanel.SuspendLayout();
             this.SuspendLayout();
@@ -46,6 +47,15 @@ namespace GR2_Projet
             this.mainPanel.Size = new System.Drawing.Size(1008, 729);
             this.mainPanel.TabIndex = 0;
             // 
+            // viewPanel
+            // 
+            this.viewPanel.Controls.Add(this.button1);
+            this.viewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewPanel.Location = new System.Drawing.Point(0, 0);
+            this.viewPanel.Name = "viewPanel";
+            this.viewPanel.Size = new System.Drawing.Size(1008, 729);
+            this.viewPanel.TabIndex = 2;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(742, 138);
@@ -56,15 +66,6 @@ namespace GR2_Projet
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // viewPanel
-            // 
-            this.viewPanel.Controls.Add(this.button1);
-            this.viewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewPanel.Location = new System.Drawing.Point(0, 0);
-            this.viewPanel.Name = "viewPanel";
-            this.viewPanel.Size = new System.Drawing.Size(1008, 729);
-            this.viewPanel.TabIndex = 2;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -72,10 +73,11 @@ namespace GR2_Projet
             this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Application Gestion Financière";
             this.mainPanel.ResumeLayout(false);
             this.viewPanel.ResumeLayout(false);
             this.ResumeLayout(false);

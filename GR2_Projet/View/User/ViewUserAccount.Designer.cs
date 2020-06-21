@@ -42,7 +42,7 @@
             // showAccount
             // 
             this.showAccount.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.showAccount.Location = new System.Drawing.Point(682, 25);
+            this.showAccount.Location = new System.Drawing.Point(682, 31);
             this.showAccount.Name = "showAccount";
             this.showAccount.Size = new System.Drawing.Size(80, 30);
             this.showAccount.TabIndex = 0;
@@ -53,7 +53,7 @@
             // addAccount
             // 
             this.addAccount.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.addAccount.Location = new System.Drawing.Point(763, 25);
+            this.addAccount.Location = new System.Drawing.Point(763, 31);
             this.addAccount.Name = "addAccount";
             this.addAccount.Size = new System.Drawing.Size(80, 30);
             this.addAccount.TabIndex = 1;
@@ -64,7 +64,7 @@
             // editBtn
             // 
             this.editBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.editBtn.Location = new System.Drawing.Point(844, 25);
+            this.editBtn.Location = new System.Drawing.Point(844, 31);
             this.editBtn.Name = "editBtn";
             this.editBtn.Size = new System.Drawing.Size(80, 30);
             this.editBtn.TabIndex = 2;
@@ -75,7 +75,7 @@
             // delBtn
             // 
             this.delBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.delBtn.Location = new System.Drawing.Point(925, 25);
+            this.delBtn.Location = new System.Drawing.Point(925, 31);
             this.delBtn.Name = "delBtn";
             this.delBtn.Size = new System.Drawing.Size(80, 30);
             this.delBtn.TabIndex = 3;
@@ -88,7 +88,7 @@
             this.userNameLbl.AutoSize = true;
             this.userNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.userNameLbl.Location = new System.Drawing.Point(71, 29);
+            this.userNameLbl.Location = new System.Drawing.Point(69, 35);
             this.userNameLbl.Name = "userNameLbl";
             this.userNameLbl.Size = new System.Drawing.Size(142, 20);
             this.userNameLbl.TabIndex = 4;
@@ -97,7 +97,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(16, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 22);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(49, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

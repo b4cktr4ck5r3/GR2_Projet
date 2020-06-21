@@ -37,14 +37,14 @@
             // 
             // nameTxtBox
             // 
-            this.nameTxtBox.Location = new System.Drawing.Point(431, 75);
+            this.nameTxtBox.Location = new System.Drawing.Point(464, 306);
             this.nameTxtBox.Name = "nameTxtBox";
             this.nameTxtBox.Size = new System.Drawing.Size(100, 20);
             this.nameTxtBox.TabIndex = 0;
             // 
             // budgetTxtBox
             // 
-            this.budgetTxtBox.Location = new System.Drawing.Point(431, 116);
+            this.budgetTxtBox.Location = new System.Drawing.Point(464, 387);
             this.budgetTxtBox.Name = "budgetTxtBox";
             this.budgetTxtBox.Size = new System.Drawing.Size(100, 20);
             this.budgetTxtBox.TabIndex = 1;
@@ -52,26 +52,31 @@
             // nameLbl
             // 
             this.nameLbl.AutoSize = true;
-            this.nameLbl.Location = new System.Drawing.Point(428, 59);
+            this.nameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.nameLbl.Location = new System.Drawing.Point(452, 270);
             this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(85, 13);
+            this.nameLbl.Size = new System.Drawing.Size(129, 20);
             this.nameLbl.TabIndex = 2;
-            this.nameLbl.Text = "Nom du compte:";
+            this.nameLbl.Text = "Nom du compte :";
             // 
             // budgetLbl
             // 
             this.budgetLbl.AutoSize = true;
-            this.budgetLbl.Location = new System.Drawing.Point(428, 100);
+            this.budgetLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.budgetLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.budgetLbl.Location = new System.Drawing.Point(481, 355);
             this.budgetLbl.Name = "budgetLbl";
-            this.budgetLbl.Size = new System.Drawing.Size(44, 13);
+            this.budgetLbl.Size = new System.Drawing.Size(69, 20);
             this.budgetLbl.TabIndex = 3;
-            this.budgetLbl.Text = "Budget:";
+            this.budgetLbl.Text = "Budget :";
             // 
             // createBtn
             // 
-            this.createBtn.Location = new System.Drawing.Point(431, 152);
+            this.createBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.createBtn.Location = new System.Drawing.Point(472, 458);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(75, 23);
+            this.createBtn.Size = new System.Drawing.Size(80, 30);
             this.createBtn.TabIndex = 4;
             this.createBtn.Text = "Créer";
             this.createBtn.UseVisualStyleBackColor = true;
