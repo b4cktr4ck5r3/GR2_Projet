@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GR2_Projet.Model
 {
@@ -33,21 +34,56 @@ namespace GR2_Projet.Model
         }
 
         /// <summary>
-        /// Propriété date.
+        /// Propriété type d'opération.
         /// </summary>
-        private DateTime mDate;
-        public DateTime Date
+        private operationType mOperationType;
+        public operationType OperationType
         {
-            get { return mDate; }
-            set { mDate = value; }
+            get { return mOperationType; }
+            set { mOperationType = value; }
+        }
+
+        /// <summary>
+        /// Propriété date - Jour de l'échéance dans le mois.
+        /// </summary>
+        private int mDay;
+        public int Day
+        {
+            get { return mDay; }
+            set { mDay = value; }
+        }
+
+        /// <summary>
+        /// Propriété type de paiement.
+        /// </summary>
+        private paymentType mPaymentType;
+        public paymentType PaymentType
+        {
+            get { return mPaymentType; }
+            set { mPaymentType = value; }
+        }
+
+        /// <summary>
+        /// Propriété montant.
+        /// </summary>
+        private int mAmount;
+        public int Amount
+        {
+            get { return mAmount; }
+            set { mAmount = value; }
         }
 
         /// <summary>
         /// Constructeur.
         /// </summary>
-        public Due()
+        public Due(string Name, operationType OperationType, int Day, paymentType PaymentType, int Amount)
         {
             this.Id = Guid.NewGuid().ToString();
+            this.Name = Name;
+            this.OperationType = OperationType;
+            this.Day = Day;
+            this.PaymentType = PaymentType;
+            this.Amount = Amount;
         }
     }
 }

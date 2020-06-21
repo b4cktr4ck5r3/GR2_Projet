@@ -96,9 +96,14 @@ namespace GR2_Projet.Model
         /// <summary>
         /// Constructeur.
         /// </summary>
-        public Operation()
+        public Operation(string Name, operationType OperationType, DateTime Date, paymentType PaymentType, int Amount)
         {
             this.Id = Guid.NewGuid().ToString();
+            this.Name = Name;
+            this.OperationType = OperationType;
+            this.Date = Date;
+            this.PaymentType = PaymentType;
+            this.Amount = Amount;
         }
     }
 }
