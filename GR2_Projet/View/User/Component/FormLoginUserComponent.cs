@@ -28,5 +28,10 @@ namespace GR2_Projet.View.User.Component
             else
                 MessageBox.Show("Mauvais username/mdp");
         }
+
+        private void passwordLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

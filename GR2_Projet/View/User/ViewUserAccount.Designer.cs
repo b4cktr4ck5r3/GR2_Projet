@@ -41,10 +41,11 @@
             // 
             // showAccount
             // 
+            this.showAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showAccount.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.showAccount.Location = new System.Drawing.Point(682, 31);
+            this.showAccount.Location = new System.Drawing.Point(579, 26);
             this.showAccount.Name = "showAccount";
-            this.showAccount.Size = new System.Drawing.Size(80, 30);
+            this.showAccount.Size = new System.Drawing.Size(85, 34);
             this.showAccount.TabIndex = 0;
             this.showAccount.Text = "Voir";
             this.showAccount.UseVisualStyleBackColor = true;
@@ -52,10 +53,11 @@
             // 
             // addAccount
             // 
+            this.addAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addAccount.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.addAccount.Location = new System.Drawing.Point(763, 31);
+            this.addAccount.Location = new System.Drawing.Point(670, 25);
             this.addAccount.Name = "addAccount";
-            this.addAccount.Size = new System.Drawing.Size(80, 30);
+            this.addAccount.Size = new System.Drawing.Size(108, 35);
             this.addAccount.TabIndex = 1;
             this.addAccount.Text = "Ajouter";
             this.addAccount.UseVisualStyleBackColor = true;
@@ -63,10 +65,11 @@
             // 
             // editBtn
             // 
+            this.editBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.editBtn.Location = new System.Drawing.Point(844, 31);
+            this.editBtn.Location = new System.Drawing.Point(784, 26);
             this.editBtn.Name = "editBtn";
-            this.editBtn.Size = new System.Drawing.Size(80, 30);
+            this.editBtn.Size = new System.Drawing.Size(89, 34);
             this.editBtn.TabIndex = 2;
             this.editBtn.Text = "Editer";
             this.editBtn.UseVisualStyleBackColor = true;
@@ -74,10 +77,11 @@
             // 
             // delBtn
             // 
+            this.delBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.delBtn.Location = new System.Drawing.Point(925, 31);
+            this.delBtn.Location = new System.Drawing.Point(879, 26);
             this.delBtn.Name = "delBtn";
-            this.delBtn.Size = new System.Drawing.Size(80, 30);
+            this.delBtn.Size = new System.Drawing.Size(127, 34);
             this.delBtn.TabIndex = 3;
             this.delBtn.Text = "Supprimer";
             this.delBtn.UseVisualStyleBackColor = true;
@@ -86,18 +90,18 @@
             // userNameLbl
             // 
             this.userNameLbl.AutoSize = true;
-            this.userNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.userNameLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.userNameLbl.Location = new System.Drawing.Point(69, 35);
+            this.userNameLbl.Location = new System.Drawing.Point(71, 29);
             this.userNameLbl.Name = "userNameLbl";
-            this.userNameLbl.Size = new System.Drawing.Size(142, 20);
+            this.userNameLbl.Size = new System.Drawing.Size(197, 26);
             this.userNameLbl.TabIndex = 4;
             this.userNameLbl.Text = "Nom de l\'utilisateur";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 22);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(49, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

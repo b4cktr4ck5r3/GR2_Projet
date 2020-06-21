@@ -49,70 +49,84 @@
             // categoryLbl
             // 
             this.categoryLbl.AutoSize = true;
-            this.categoryLbl.Location = new System.Drawing.Point(33, 54);
+            this.categoryLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.categoryLbl.Location = new System.Drawing.Point(347, 233);
             this.categoryLbl.Name = "categoryLbl";
-            this.categoryLbl.Size = new System.Drawing.Size(52, 13);
+            this.categoryLbl.Size = new System.Drawing.Size(105, 25);
             this.categoryLbl.TabIndex = 0;
             this.categoryLbl.Text = "Catégorie";
             // 
             // _categoryLbl
             // 
             this._categoryLbl.AutoSize = true;
-            this._categoryLbl.Location = new System.Drawing.Point(33, 85);
+            this._categoryLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this._categoryLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this._categoryLbl.Location = new System.Drawing.Point(324, 268);
             this._categoryLbl.Name = "_categoryLbl";
-            this._categoryLbl.Size = new System.Drawing.Size(78, 13);
+            this._categoryLbl.Size = new System.Drawing.Size(157, 25);
             this._categoryLbl.TabIndex = 1;
             this._categoryLbl.Text = "Sous-catégorie";
             // 
             // nameLbl
             // 
             this.nameLbl.AutoSize = true;
-            this.nameLbl.Location = new System.Drawing.Point(33, 120);
+            this.nameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.nameLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.nameLbl.Location = new System.Drawing.Point(372, 299);
             this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(29, 13);
+            this.nameLbl.Size = new System.Drawing.Size(56, 25);
             this.nameLbl.TabIndex = 2;
             this.nameLbl.Text = "Nom";
             // 
             // dateLbl
             // 
             this.dateLbl.AutoSize = true;
-            this.dateLbl.Location = new System.Drawing.Point(33, 150);
+            this.dateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.dateLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dateLbl.Location = new System.Drawing.Point(372, 333);
             this.dateLbl.Name = "dateLbl";
-            this.dateLbl.Size = new System.Drawing.Size(30, 13);
+            this.dateLbl.Size = new System.Drawing.Size(57, 25);
             this.dateLbl.TabIndex = 3;
             this.dateLbl.Text = "Date";
             // 
             // operationTypeLbl
             // 
             this.operationTypeLbl.AutoSize = true;
-            this.operationTypeLbl.Location = new System.Drawing.Point(33, 188);
+            this.operationTypeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.operationTypeLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.operationTypeLbl.Location = new System.Drawing.Point(323, 367);
             this.operationTypeLbl.Name = "operationTypeLbl";
-            this.operationTypeLbl.Size = new System.Drawing.Size(86, 13);
+            this.operationTypeLbl.Size = new System.Drawing.Size(172, 25);
             this.operationTypeLbl.TabIndex = 4;
             this.operationTypeLbl.Text = "Type d\'opération";
             // 
             // amountLbl
             // 
             this.amountLbl.AutoSize = true;
-            this.amountLbl.Location = new System.Drawing.Point(33, 227);
+            this.amountLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.amountLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.amountLbl.Location = new System.Drawing.Point(362, 405);
             this.amountLbl.Name = "amountLbl";
-            this.amountLbl.Size = new System.Drawing.Size(46, 13);
+            this.amountLbl.Size = new System.Drawing.Size(90, 25);
             this.amountLbl.TabIndex = 5;
             this.amountLbl.Text = "Montant";
             // 
             // paymentTypeLbl
             // 
             this.paymentTypeLbl.AutoSize = true;
-            this.paymentTypeLbl.Location = new System.Drawing.Point(33, 262);
+            this.paymentTypeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.paymentTypeLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.paymentTypeLbl.Location = new System.Drawing.Point(311, 445);
             this.paymentTypeLbl.Name = "paymentTypeLbl";
-            this.paymentTypeLbl.Size = new System.Drawing.Size(92, 13);
+            this.paymentTypeLbl.Size = new System.Drawing.Size(184, 25);
             this.paymentTypeLbl.TabIndex = 6;
             this.paymentTypeLbl.Text = "Type de paiement";
             // 
             // categoryCbox
             // 
             this.categoryCbox.FormattingEnabled = true;
-            this.categoryCbox.Location = new System.Drawing.Point(140, 51);
+            this.categoryCbox.Location = new System.Drawing.Point(512, 237);
             this.categoryCbox.Name = "categoryCbox";
             this.categoryCbox.Size = new System.Drawing.Size(121, 21);
             this.categoryCbox.TabIndex = 7;
@@ -120,7 +134,7 @@
             // _categoryCbox
             // 
             this._categoryCbox.FormattingEnabled = true;
-            this._categoryCbox.Location = new System.Drawing.Point(140, 82);
+            this._categoryCbox.Location = new System.Drawing.Point(512, 272);
             this._categoryCbox.Name = "_categoryCbox";
             this._categoryCbox.Size = new System.Drawing.Size(121, 21);
             this._categoryCbox.TabIndex = 8;
@@ -128,7 +142,7 @@
             // operationTypeCbox
             // 
             this.operationTypeCbox.FormattingEnabled = true;
-            this.operationTypeCbox.Location = new System.Drawing.Point(140, 185);
+            this.operationTypeCbox.Location = new System.Drawing.Point(512, 371);
             this.operationTypeCbox.Name = "operationTypeCbox";
             this.operationTypeCbox.Size = new System.Drawing.Size(121, 21);
             this.operationTypeCbox.TabIndex = 9;
@@ -136,37 +150,39 @@
             // paymentTypeCbox
             // 
             this.paymentTypeCbox.FormattingEnabled = true;
-            this.paymentTypeCbox.Location = new System.Drawing.Point(140, 259);
+            this.paymentTypeCbox.Location = new System.Drawing.Point(512, 451);
             this.paymentTypeCbox.Name = "paymentTypeCbox";
             this.paymentTypeCbox.Size = new System.Drawing.Size(121, 21);
             this.paymentTypeCbox.TabIndex = 10;
             // 
             // nameTxtBox
             // 
-            this.nameTxtBox.Location = new System.Drawing.Point(140, 113);
+            this.nameTxtBox.Location = new System.Drawing.Point(512, 305);
             this.nameTxtBox.Name = "nameTxtBox";
             this.nameTxtBox.Size = new System.Drawing.Size(121, 20);
             this.nameTxtBox.TabIndex = 11;
             // 
             // amountTxtBox
             // 
-            this.amountTxtBox.Location = new System.Drawing.Point(140, 224);
+            this.amountTxtBox.Location = new System.Drawing.Point(512, 410);
             this.amountTxtBox.Name = "amountTxtBox";
             this.amountTxtBox.Size = new System.Drawing.Size(121, 20);
             this.amountTxtBox.TabIndex = 13;
             // 
             // dateTPicker
             // 
-            this.dateTPicker.Location = new System.Drawing.Point(140, 150);
+            this.dateTPicker.Location = new System.Drawing.Point(512, 336);
             this.dateTPicker.Name = "dateTPicker";
             this.dateTPicker.Size = new System.Drawing.Size(121, 20);
             this.dateTPicker.TabIndex = 14;
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(186, 300);
+            this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.addBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.addBtn.Location = new System.Drawing.Point(498, 502);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(75, 23);
+            this.addBtn.Size = new System.Drawing.Size(147, 33);
             this.addBtn.TabIndex = 15;
             this.addBtn.Text = "Ajouter";
             this.addBtn.UseVisualStyleBackColor = true;
@@ -174,9 +190,11 @@
             // 
             // editBtn
             // 
-            this.editBtn.Location = new System.Drawing.Point(186, 300);
+            this.editBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.75F);
+            this.editBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.editBtn.Location = new System.Drawing.Point(498, 502);
             this.editBtn.Name = "editBtn";
-            this.editBtn.Size = new System.Drawing.Size(75, 23);
+            this.editBtn.Size = new System.Drawing.Size(147, 33);
             this.editBtn.TabIndex = 16;
             this.editBtn.Text = "Modifier";
             this.editBtn.UseVisualStyleBackColor = true;
