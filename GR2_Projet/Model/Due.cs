@@ -33,13 +33,43 @@ namespace GR2_Projet.Model
         }
 
         /// <summary>
-        /// Propriété date.
+        /// Propriété type d'opération.
         /// </summary>
-        private DateTime mDate;
-        public DateTime Date
+        private operationType mOperationType;
+        public operationType OperationType
         {
-            get { return mDate; }
-            set { mDate = value; }
+            get { return mOperationType; }
+            set { mOperationType = value; }
+        }
+
+        /// <summary>
+        /// Propriété date - Jour de l'échéance dans le mois.
+        /// </summary>
+        private int mDay;
+        public int Day
+        {
+            get { return mDay; }
+            set { mDay = value; }
+        }
+
+        /// <summary>
+        /// Propriété type de paiement.
+        /// </summary>
+        private paymentType mPaymentType;
+        public paymentType PaymentType
+        {
+            get { return mPaymentType; }
+            set { mPaymentType = value; }
+        }
+
+        /// <summary>
+        /// Propriété montant.
+        /// </summary>
+        private int mAmount;
+        public int Amount
+        {
+            get { return mAmount; }
+            set { mAmount = value; }
         }
 
         /// <summary>
