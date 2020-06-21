@@ -21,6 +21,7 @@ namespace GR2_Projet
         {
             ClearPanelRessources();
             ClearPanel();
+            tab.Dock = DockStyle.Fill;
             mainPanel.Controls.Add(tab);
         }
 
@@ -35,11 +36,6 @@ namespace GR2_Projet
             {
                 ctrl.Dispose();
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ViewManager.Instance.ShowViewUserAccounts();
         }
     }
 }

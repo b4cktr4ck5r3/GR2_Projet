@@ -61,6 +61,8 @@
             // 
             // dataOperationGridView
             // 
+            this.dataOperationGridView.AllowUserToAddRows = false;
+            this.dataOperationGridView.AllowUserToDeleteRows = false;
             this.dataOperationGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataOperationGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataOperationGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -77,6 +79,7 @@
             this.dataOperationGridView.Location = new System.Drawing.Point(0, 67);
             this.dataOperationGridView.MultiSelect = false;
             this.dataOperationGridView.Name = "dataOperationGridView";
+            this.dataOperationGridView.ReadOnly = true;
             this.dataOperationGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataOperationGridView.Size = new System.Drawing.Size(1024, 597);
             this.dataOperationGridView.TabIndex = 10;

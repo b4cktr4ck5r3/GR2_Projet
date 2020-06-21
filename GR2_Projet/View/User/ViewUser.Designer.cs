@@ -37,7 +37,7 @@
             // 
             this.loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.loginBtn.Location = new System.Drawing.Point(455, 395);
+            this.loginBtn.Location = new System.Drawing.Point(498, 677);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(182, 49);
             this.loginBtn.TabIndex = 2;
@@ -49,16 +49,16 @@
             // 
             this.userComponentPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userComponentPanel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.userComponentPanel.Location = new System.Drawing.Point(13, 46);
+            this.userComponentPanel.Location = new System.Drawing.Point(0, 0);
             this.userComponentPanel.Name = "userComponentPanel";
-            this.userComponentPanel.Size = new System.Drawing.Size(182, 413);
+            this.userComponentPanel.Size = new System.Drawing.Size(1008, 671);
             this.userComponentPanel.TabIndex = 1;
             // 
             // Créer
             // 
             this.Créer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Créer.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Créer.Location = new System.Drawing.Point(237, 395);
+            this.Créer.Location = new System.Drawing.Point(280, 677);
             this.Créer.Name = "Créer";
             this.Créer.Size = new System.Drawing.Size(212, 49);
             this.Créer.TabIndex = 0;
@@ -75,7 +75,7 @@
             this.Controls.Add(this.userComponentPanel);
             this.Controls.Add(this.Créer);
             this.Name = "ViewUser";
-            this.Size = new System.Drawing.Size(904, 523);
+            this.Size = new System.Drawing.Size(1008, 729);
             this.ResumeLayout(false);
 
         }

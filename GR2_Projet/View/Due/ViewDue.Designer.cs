@@ -71,7 +71,7 @@
             this.Controls.Add(this.lbListeEcheance);
             this.Location = new System.Drawing.Point(26, 32);
             this.Name = "ViewDue";
-            this.Size = new System.Drawing.Size(1024, 768);
+            this.Size = new System.Drawing.Size(1008, 729);
             this.ResumeLayout(false);
             this.PerformLayout();
 

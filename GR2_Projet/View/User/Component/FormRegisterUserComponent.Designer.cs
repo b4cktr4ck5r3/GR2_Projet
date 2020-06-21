@@ -39,30 +39,42 @@
             // 
             // mailTxtBox
             // 
-            this.mailTxtBox.Location = new System.Drawing.Point(190, 71);
+            this.mailTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mailTxtBox.Location = new System.Drawing.Point(515, 233);
             this.mailTxtBox.Name = "mailTxtBox";
             this.mailTxtBox.Size = new System.Drawing.Size(100, 20);
             this.mailTxtBox.TabIndex = 0;
             // 
             // usernameTxtBox
             // 
-            this.usernameTxtBox.Location = new System.Drawing.Point(190, 109);
+            this.usernameTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.usernameTxtBox.Location = new System.Drawing.Point(515, 271);
             this.usernameTxtBox.Name = "usernameTxtBox";
             this.usernameTxtBox.Size = new System.Drawing.Size(100, 20);
             this.usernameTxtBox.TabIndex = 1;
             // 
             // passwordTxtBox
             // 
-            this.passwordTxtBox.Location = new System.Drawing.Point(190, 143);
+            this.passwordTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.passwordTxtBox.Location = new System.Drawing.Point(515, 305);
             this.passwordTxtBox.Name = "passwordTxtBox";
             this.passwordTxtBox.Size = new System.Drawing.Size(100, 20);
             this.passwordTxtBox.TabIndex = 2;
             // 
             // registerBtn
             // 
+            this.registerBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.registerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.registerBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.registerBtn.Location = new System.Drawing.Point(142, 178);
+            this.registerBtn.Location = new System.Drawing.Point(467, 340);
             this.registerBtn.Name = "registerBtn";
             this.registerBtn.Size = new System.Drawing.Size(88, 36);
             this.registerBtn.TabIndex = 3;
@@ -72,10 +84,13 @@
             // 
             // mailLbl
             // 
+            this.mailLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mailLbl.AutoSize = true;
             this.mailLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mailLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.mailLbl.Location = new System.Drawing.Point(80, 71);
+            this.mailLbl.Location = new System.Drawing.Point(405, 233);
             this.mailLbl.Name = "mailLbl";
             this.mailLbl.Size = new System.Drawing.Size(52, 25);
             this.mailLbl.TabIndex = 4;
@@ -83,10 +98,13 @@
             // 
             // usernameLbl
             // 
+            this.usernameLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.usernameLbl.AutoSize = true;
             this.usernameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.usernameLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.usernameLbl.Location = new System.Drawing.Point(80, 103);
+            this.usernameLbl.Location = new System.Drawing.Point(405, 265);
             this.usernameLbl.Name = "usernameLbl";
             this.usernameLbl.Size = new System.Drawing.Size(56, 25);
             this.usernameLbl.TabIndex = 5;
@@ -94,10 +112,13 @@
             // 
             // passwordLbl
             // 
+            this.passwordLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordLbl.AutoSize = true;
             this.passwordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.passwordLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.passwordLbl.Location = new System.Drawing.Point(42, 138);
+            this.passwordLbl.Location = new System.Drawing.Point(367, 300);
             this.passwordLbl.Name = "passwordLbl";
             this.passwordLbl.Size = new System.Drawing.Size(142, 25);
             this.passwordLbl.TabIndex = 6;
@@ -115,7 +136,7 @@
             this.Controls.Add(this.usernameTxtBox);
             this.Controls.Add(this.mailTxtBox);
             this.Name = "FormRegisterUserComponent";
-            this.Size = new System.Drawing.Size(351, 267);
+            this.Size = new System.Drawing.Size(1008, 671);
             this.ResumeLayout(false);
             this.PerformLayout();
 

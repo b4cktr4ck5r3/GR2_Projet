@@ -24,14 +24,6 @@ namespace GR2_Projet
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ViewManager.Instance.ShowMainForm();
-
-            //if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + "data.dat"))
-            //{
-            //    AppFixtures.CreateFakeUser();
-            //    AppFixtures.CreateFakeAccount();
-            //    AppFixtures.Save();
-            //}
-            //else { }
             Application.Run();
        }
     }
