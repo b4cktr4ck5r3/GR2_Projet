@@ -34,7 +34,7 @@
             this.dateLbl = new System.Windows.Forms.Label();
             this.operationTypeLbl = new System.Windows.Forms.Label();
             this.amountLbl = new System.Windows.Forms.Label();
-            this.paymentType = new System.Windows.Forms.Label();
+            this.paymentTypeLbl = new System.Windows.Forms.Label();
             this.categoryCbox = new System.Windows.Forms.ComboBox();
             this._categoryCbox = new System.Windows.Forms.ComboBox();
             this.operationTypeCbox = new System.Windows.Forms.ComboBox();
@@ -100,14 +100,14 @@
             this.amountLbl.TabIndex = 5;
             this.amountLbl.Text = "Montant";
             // 
-            // paymentType
+            // paymentTypeLbl
             // 
-            this.paymentType.AutoSize = true;
-            this.paymentType.Location = new System.Drawing.Point(33, 262);
-            this.paymentType.Name = "paymentType";
-            this.paymentType.Size = new System.Drawing.Size(92, 13);
-            this.paymentType.TabIndex = 6;
-            this.paymentType.Text = "Type de paiement";
+            this.paymentTypeLbl.AutoSize = true;
+            this.paymentTypeLbl.Location = new System.Drawing.Point(33, 262);
+            this.paymentTypeLbl.Name = "paymentTypeLbl";
+            this.paymentTypeLbl.Size = new System.Drawing.Size(92, 13);
+            this.paymentTypeLbl.TabIndex = 6;
+            this.paymentTypeLbl.Text = "Type de paiement";
             // 
             // categoryCbox
             // 
@@ -170,6 +170,7 @@
             this.addBtn.TabIndex = 15;
             this.addBtn.Text = "Ajouter";
             this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // editBtn
             // 
@@ -179,6 +180,7 @@
             this.editBtn.TabIndex = 16;
             this.editBtn.Text = "Modifier";
             this.editBtn.UseVisualStyleBackColor = true;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
             // FormAddOrEditOperationComponent
             // 
@@ -193,7 +195,7 @@
             this.Controls.Add(this.operationTypeCbox);
             this.Controls.Add(this._categoryCbox);
             this.Controls.Add(this.categoryCbox);
-            this.Controls.Add(this.paymentType);
+            this.Controls.Add(this.paymentTypeLbl);
             this.Controls.Add(this.amountLbl);
             this.Controls.Add(this.operationTypeLbl);
             this.Controls.Add(this.dateLbl);
@@ -215,7 +217,7 @@
         private System.Windows.Forms.Label dateLbl;
         private System.Windows.Forms.Label operationTypeLbl;
         private System.Windows.Forms.Label amountLbl;
-        private System.Windows.Forms.Label paymentType;
+        private System.Windows.Forms.Label paymentTypeLbl;
         private System.Windows.Forms.ComboBox categoryCbox;
         private System.Windows.Forms.ComboBox _categoryCbox;
         private System.Windows.Forms.ComboBox operationTypeCbox;

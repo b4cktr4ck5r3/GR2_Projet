@@ -101,11 +101,11 @@
     <Compile Include="View\Operation\ViewOperation.Designer.cs">
       <DependentUpon>ViewOperation.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\User\Component\FormAddAccountComponent.cs">
+    <Compile Include="View\User\Component\FormAddOrEditAccountComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\User\Component\FormAddAccountComponent.Designer.cs">
-      <DependentUpon>FormAddAccountComponent.cs</DependentUpon>
+    <Compile Include="View\User\Component\FormAddOrEditAccountComponent.Designer.cs">
+      <DependentUpon>FormAddOrEditAccountComponent.cs</DependentUpon>
     </Compile>
     <Compile Include="View\User\Component\DataGridAccountComponent.cs">
       <SubType>UserControl</SubType>
@@ -173,8 +173,8 @@
     <EmbeddedResource Include="View\Operation\ViewOperation.resx">
       <DependentUpon>ViewOperation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\User\Component\FormAddAccountComponent.resx">
-      <DependentUpon>FormAddAccountComponent.cs</DependentUpon>
+    <EmbeddedResource Include="View\User\Component\FormAddOrEditAccountComponent.resx">
+      <DependentUpon>FormAddOrEditAccountComponent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\User\Component\DataGridAccountComponent.resx">
       <DependentUpon>DataGridAccountComponent.cs</DependentUpon>

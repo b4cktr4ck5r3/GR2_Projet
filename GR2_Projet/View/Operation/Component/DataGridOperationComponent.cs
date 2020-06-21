@@ -8,16 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GR2_Projet.View.Account.Component
+namespace GR2_Projet.View.Operation.Component
 {
-    public partial class ListOperationComponent : UserControl
+    public partial class DataGridOperationComponent : UserControl
     {
-        public ListOperationComponent()
+        public DataGridOperationComponent()
         {
             InitializeComponent();
 
             InsertData(Program.currentSelectedAccount.Operations);
-
         }
 
         public void UpdateData()

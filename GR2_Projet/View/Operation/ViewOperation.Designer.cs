@@ -57,7 +57,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 34);
+            this.label2.Location = new System.Drawing.Point(3, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(184, 37);
             this.label2.TabIndex = 5;
@@ -66,9 +66,9 @@
             // operationComponentPanel
             // 
             this.operationComponentPanel.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.operationComponentPanel.Location = new System.Drawing.Point(0, 82);
+            this.operationComponentPanel.Location = new System.Drawing.Point(0, 65);
             this.operationComponentPanel.Name = "operationComponentPanel";
-            this.operationComponentPanel.Size = new System.Drawing.Size(1024, 686);
+            this.operationComponentPanel.Size = new System.Drawing.Size(1024, 703);
             this.operationComponentPanel.TabIndex = 8;
             // 
             // ViewOperation
