@@ -64,18 +64,30 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewManager.cs" />
+    <Compile Include="View\Operation\Component\ListOperationComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Operation\Component\ListOperationComponent.Designer.cs">
+      <DependentUpon>ListOperationComponent.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Account\ViewAccount.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\Account\ViewAccount.Designer.cs">
       <DependentUpon>ViewAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Category\ViewCategory.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\Category\ViewCategory.Designer.cs">
-      <DependentUpon>ViewCategory.cs</DependentUpon>
-    </Compile>
+	  <Compile Include="View\Category\ViewCategory.cs">
+		  <SubType>UserControl</SubType>
+	  </Compile>
+	  <Compile Include="View\Category\ViewCategory.Designer.cs">
+		  <DependentUpon>ViewCategory.cs</DependentUpon>
+	  </Compile>
+	  <Compile Include="View\Operation\ViewOperation.cs">
+		  <SubType>UserControl</SubType>
+	  </Compile>
+	  <Compile Include="View\Operation\ViewOperation.Designer.cs">
+		  <DependentUpon>ViewOperation.cs</DependentUpon>
+	  </Compile>
     <Compile Include="View\User\Component\FormAddAccountComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -109,9 +121,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\Category\ViewCategory.resx">
-      <DependentUpon>ViewCategory.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\User\Component\FormAddAccountComponent.resx">
       <DependentUpon>FormAddAccountComponent.cs</DependentUpon>
     </EmbeddedResource>
