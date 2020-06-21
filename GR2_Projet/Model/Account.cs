@@ -53,5 +53,16 @@ namespace GR2_Projet.Model
             Operations = new List<Operation>();
             this.Id = Guid.NewGuid().ToString();
         }
+
+        public float GetSolde()
+        {
+            float solde = Budget;
+            Operations.ForEach(operation =>
+            {
+                if (operation.OperationType == operationType.Credit) solde += operation.Amount;
+                else if (operation.OperationType == operationType.Debit) solde -= operation.Amount;
+            });
+            return solde;
+        }
     }
 }
