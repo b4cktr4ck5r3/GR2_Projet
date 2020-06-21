@@ -36,13 +36,13 @@
             this.btAjouter = new System.Windows.Forms.Button();
             this.lbAjouterCategorie = new System.Windows.Forms.Label();
             this.gbListeCategorie = new System.Windows.Forms.GroupBox();
-            this.gbAjouterCategorie = new System.Windows.Forms.GroupBox();
-            this.cbCategorie = new System.Windows.Forms.ComboBox();
-            this.tbNom = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gbAjouterCategorie = new System.Windows.Forms.GroupBox();
+            this.tbNom = new System.Windows.Forms.TextBox();
+            this.cbCategorie = new System.Windows.Forms.ComboBox();
             this.gbListeCategorie.SuspendLayout();
-            this.gbAjouterCategorie.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gbAjouterCategorie.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbNomCompte
@@ -126,9 +126,18 @@
             this.gbListeCategorie.Controls.Add(this.lbListeCategorie);
             this.gbListeCategorie.Location = new System.Drawing.Point(0, 80);
             this.gbListeCategorie.Name = "gbListeCategorie";
-            this.gbListeCategorie.Size = new System.Drawing.Size(1024, 451);
+            this.gbListeCategorie.Size = new System.Drawing.Size(1024, 478);
             this.gbListeCategorie.TabIndex = 8;
             this.gbListeCategorie.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(30, 67);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(970, 384);
+            this.dataGridView1.TabIndex = 3;
             // 
             // gbAjouterCategorie
             // 
@@ -138,19 +147,11 @@
             this.gbAjouterCategorie.Controls.Add(this.lbAjouterCategorie);
             this.gbAjouterCategorie.Controls.Add(this.lbNom);
             this.gbAjouterCategorie.Controls.Add(this.lbParent);
-            this.gbAjouterCategorie.Location = new System.Drawing.Point(30, 537);
+            this.gbAjouterCategorie.Location = new System.Drawing.Point(30, 590);
             this.gbAjouterCategorie.Name = "gbAjouterCategorie";
             this.gbAjouterCategorie.Size = new System.Drawing.Size(970, 145);
             this.gbAjouterCategorie.TabIndex = 9;
             this.gbAjouterCategorie.TabStop = false;
-            // 
-            // cbCategorie
-            // 
-            this.cbCategorie.FormattingEnabled = true;
-            this.cbCategorie.Location = new System.Drawing.Point(457, 71);
-            this.cbCategorie.Name = "cbCategorie";
-            this.cbCategorie.Size = new System.Drawing.Size(121, 21);
-            this.cbCategorie.TabIndex = 3;
             // 
             // tbNom
             // 
@@ -159,14 +160,13 @@
             this.tbNom.Size = new System.Drawing.Size(100, 20);
             this.tbNom.TabIndex = 3;
             // 
-            // dataGridView1
+            // cbCategorie
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 67);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(970, 363);
-            this.dataGridView1.TabIndex = 3;
+            this.cbCategorie.FormattingEnabled = true;
+            this.cbCategorie.Location = new System.Drawing.Point(457, 71);
+            this.cbCategorie.Name = "cbCategorie";
+            this.cbCategorie.Size = new System.Drawing.Size(121, 21);
+            this.cbCategorie.TabIndex = 3;
             // 
             // ViewCategory
             // 
@@ -180,9 +180,9 @@
             this.Size = new System.Drawing.Size(1024, 768);
             this.gbListeCategorie.ResumeLayout(false);
             this.gbListeCategorie.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gbAjouterCategorie.ResumeLayout(false);
             this.gbAjouterCategorie.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
