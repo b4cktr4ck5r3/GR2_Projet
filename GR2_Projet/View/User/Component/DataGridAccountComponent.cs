@@ -22,7 +22,7 @@ namespace GR2_Projet.View.Account.Component
         {
             if (this.Parent != null)
                 if (this.Parent.Parent != null)
-                    //Reflection, permet d'appeler la fonction de l'instance parent de deux niveaux (premier parent = Control Panel contenu dans la vue parent, deuxième = Vue parent) depuis cette instance.
+                    //Reflection, permet d'appeler la fonction de l'instance parent de deux niveaux supérieur (premier parent = Control Panel contenu dans la vue parent, deuxième = Vue parent) depuis cette instance.
                     this.Parent.Parent.GetType().GetMethod("EnableButtons").Invoke(this.Parent.Parent, new object[] { enable });
         }
 
