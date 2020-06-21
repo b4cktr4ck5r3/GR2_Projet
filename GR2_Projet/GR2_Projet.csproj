@@ -64,23 +64,23 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewManager.cs" />
-    <Compile Include="View\Account\Component\AddAccountComponent.cs">
+    <Compile Include="View\User\Component\FormAddAccountComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Account\Component\AddAccountComponent.Designer.cs">
-      <DependentUpon>AddAccountComponent.cs</DependentUpon>
+    <Compile Include="View\User\Component\FormAddAccountComponent.Designer.cs">
+      <DependentUpon>FormAddAccountComponent.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Account\Component\ShowAccountComponent.cs">
+    <Compile Include="View\User\Component\DataGridAccountComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Account\Component\ShowAccountComponent.Designer.cs">
-      <DependentUpon>ShowAccountComponent.cs</DependentUpon>
+    <Compile Include="View\User\Component\DataGridAccountComponent.Designer.cs">
+      <DependentUpon>DataGridAccountComponent.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Account\ViewAccount.cs">
+    <Compile Include="View\User\ViewAccounts.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Account\ViewAccount.Designer.cs">
-      <DependentUpon>ViewAccount.cs</DependentUpon>
+    <Compile Include="View\User\ViewAccounts.Designer.cs">
+      <DependentUpon>ViewAccounts.cs</DependentUpon>
     </Compile>
     <Compile Include="View\BaseView.cs">
       <SubType>UserControl</SubType>
@@ -97,14 +97,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\Account\Component\AddAccountComponent.resx">
-      <DependentUpon>AddAccountComponent.cs</DependentUpon>
+    <EmbeddedResource Include="View\User\Component\FormAddAccountComponent.resx">
+      <DependentUpon>FormAddAccountComponent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Account\Component\ShowAccountComponent.resx">
-      <DependentUpon>ShowAccountComponent.cs</DependentUpon>
+    <EmbeddedResource Include="View\User\Component\DataGridAccountComponent.resx">
+      <DependentUpon>DataGridAccountComponent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Account\ViewAccount.resx">
-      <DependentUpon>ViewAccount.cs</DependentUpon>
+    <EmbeddedResource Include="View\User\ViewAccounts.resx">
+      <DependentUpon>ViewAccounts.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -119,6 +119,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="View\Account\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
