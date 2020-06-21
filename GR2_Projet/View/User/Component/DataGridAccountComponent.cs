@@ -29,7 +29,7 @@ namespace GR2_Projet.View.Account.Component
 
         public void InsertData(List<Model.Account> accounts)
         {
-            foreach (Model.Account account in accounts) dataAccount.Rows.Add(account.Id, account.Name, account.Budget + "€");
+            foreach (Model.Account account in accounts) dataAccount.Rows.Add(account.Id, account.Name, account.GetSolde() + "€");
         }
 
         private void EnableViewButtons(bool enable)
