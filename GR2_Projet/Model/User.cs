@@ -75,6 +75,7 @@ namespace GR2_Projet.Model
             this.Email = Email;
             this.Password = Password;
             Accounts = new List<Account>();
+            Categories = new List<Category>();
         }
     }
 }

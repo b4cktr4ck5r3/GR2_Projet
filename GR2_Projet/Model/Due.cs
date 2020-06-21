@@ -73,10 +73,17 @@ namespace GR2_Projet.Model
             set { mAmount = value; }
         }
 
+        private Category mCategory;
+        public Category category
+        {
+            get { return mCategory; }
+            set { mCategory = value; }
+        }
+
         /// <summary>
         /// Constructeur.
         /// </summary>
-        public Due(string Name, operationType OperationType, int Day, paymentType PaymentType, int Amount)
+        public Due(string Name, operationType OperationType, int Day, paymentType PaymentType, int Amount, Category category)
         {
             this.Id = Guid.NewGuid().ToString();
             this.Name = Name;
@@ -84,6 +91,7 @@ namespace GR2_Projet.Model
             this.Day = Day;
             this.PaymentType = PaymentType;
             this.Amount = Amount;
+            this.category = category;
         }
     }
 }
