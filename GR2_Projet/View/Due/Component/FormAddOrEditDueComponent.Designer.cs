@@ -34,14 +34,12 @@
             this.nameTxtBox = new System.Windows.Forms.TextBox();
             this.paymentTypeCbox = new System.Windows.Forms.ComboBox();
             this.operationTypeCbox = new System.Windows.Forms.ComboBox();
-            this._categoryCbox = new System.Windows.Forms.ComboBox();
             this.categoryCbox = new System.Windows.Forms.ComboBox();
             this.paymentTypeLbl = new System.Windows.Forms.Label();
             this.amountLbl = new System.Windows.Forms.Label();
             this.operationTypeLbl = new System.Windows.Forms.Label();
             this.dayLbl = new System.Windows.Forms.Label();
             this.nameLbl = new System.Windows.Forms.Label();
-            this._categoryLbl = new System.Windows.Forms.Label();
             this.categoryLbl = new System.Windows.Forms.Label();
             this.dayTxtBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -100,18 +98,10 @@
             this.operationTypeCbox.Size = new System.Drawing.Size(121, 21);
             this.operationTypeCbox.TabIndex = 26;
             // 
-            // _categoryCbox
-            // 
-            this._categoryCbox.FormattingEnabled = true;
-            this._categoryCbox.Location = new System.Drawing.Point(538, 220);
-            this._categoryCbox.Name = "_categoryCbox";
-            this._categoryCbox.Size = new System.Drawing.Size(121, 21);
-            this._categoryCbox.TabIndex = 25;
-            // 
             // categoryCbox
             // 
             this.categoryCbox.FormattingEnabled = true;
-            this.categoryCbox.Location = new System.Drawing.Point(538, 185);
+            this.categoryCbox.Location = new System.Drawing.Point(538, 218);
             this.categoryCbox.Name = "categoryCbox";
             this.categoryCbox.Size = new System.Drawing.Size(121, 21);
             this.categoryCbox.TabIndex = 24;
@@ -171,23 +161,12 @@
             this.nameLbl.TabIndex = 19;
             this.nameLbl.Text = "Nom";
             // 
-            // _categoryLbl
-            // 
-            this._categoryLbl.AutoSize = true;
-            this._categoryLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this._categoryLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this._categoryLbl.Location = new System.Drawing.Point(337, 216);
-            this._categoryLbl.Name = "_categoryLbl";
-            this._categoryLbl.Size = new System.Drawing.Size(157, 25);
-            this._categoryLbl.TabIndex = 18;
-            this._categoryLbl.Text = "Sous-catégorie";
-            // 
             // categoryLbl
             // 
             this.categoryLbl.AutoSize = true;
             this.categoryLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.categoryLbl.Location = new System.Drawing.Point(337, 181);
+            this.categoryLbl.Location = new System.Drawing.Point(337, 214);
             this.categoryLbl.Name = "categoryLbl";
             this.categoryLbl.Size = new System.Drawing.Size(105, 25);
             this.categoryLbl.TabIndex = 17;
@@ -212,14 +191,12 @@
             this.Controls.Add(this.nameTxtBox);
             this.Controls.Add(this.paymentTypeCbox);
             this.Controls.Add(this.operationTypeCbox);
-            this.Controls.Add(this._categoryCbox);
             this.Controls.Add(this.categoryCbox);
             this.Controls.Add(this.paymentTypeLbl);
             this.Controls.Add(this.amountLbl);
             this.Controls.Add(this.operationTypeLbl);
             this.Controls.Add(this.dayLbl);
             this.Controls.Add(this.nameLbl);
-            this.Controls.Add(this._categoryLbl);
             this.Controls.Add(this.categoryLbl);
             this.Name = "FormAddOrEditDueComponent";
             this.Size = new System.Drawing.Size(1008, 665);
@@ -236,14 +213,12 @@
         private System.Windows.Forms.TextBox nameTxtBox;
         private System.Windows.Forms.ComboBox paymentTypeCbox;
         private System.Windows.Forms.ComboBox operationTypeCbox;
-        private System.Windows.Forms.ComboBox _categoryCbox;
         private System.Windows.Forms.ComboBox categoryCbox;
         private System.Windows.Forms.Label paymentTypeLbl;
         private System.Windows.Forms.Label amountLbl;
         private System.Windows.Forms.Label operationTypeLbl;
         private System.Windows.Forms.Label dayLbl;
         private System.Windows.Forms.Label nameLbl;
-        private System.Windows.Forms.Label _categoryLbl;
         private System.Windows.Forms.Label categoryLbl;
         private System.Windows.Forms.TextBox dayTxtBox;
     }

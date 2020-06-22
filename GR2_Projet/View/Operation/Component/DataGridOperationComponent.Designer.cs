@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.categoriesCbox = new System.Windows.Forms.ComboBox();
             this.dataOperationGridView = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,25 +38,6 @@
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataOperationGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(16, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 31);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Catégorie";
-            // 
-            // categoriesCbox
-            // 
-            this.categoriesCbox.FormattingEnabled = true;
-            this.categoriesCbox.Location = new System.Drawing.Point(154, 24);
-            this.categoriesCbox.Name = "categoriesCbox";
-            this.categoriesCbox.Size = new System.Drawing.Size(121, 21);
-            this.categoriesCbox.TabIndex = 9;
             // 
             // dataOperationGridView
             // 
@@ -137,20 +116,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.dataOperationGridView);
-            this.Controls.Add(this.categoriesCbox);
-            this.Controls.Add(this.label1);
             this.Name = "DataGridOperationComponent";
             this.Size = new System.Drawing.Size(1024, 664);
             this.Load += new System.EventHandler(this.DataGridOperationComponent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataOperationGridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox categoriesCbox;
         private System.Windows.Forms.DataGridView dataOperationGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Namee;

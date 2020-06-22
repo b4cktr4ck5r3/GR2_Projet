@@ -32,7 +32,6 @@
             this.btRetour = new System.Windows.Forms.Button();
             this.lbListeCategorie = new System.Windows.Forms.Label();
             this.lbNom = new System.Windows.Forms.Label();
-            this.lbParent = new System.Windows.Forms.Label();
             this.btAjouter = new System.Windows.Forms.Button();
             this.lbAjouterCategorie = new System.Windows.Forms.Label();
             this.gbListeCategorie = new System.Windows.Forms.GroupBox();
@@ -40,7 +39,6 @@
             this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbAjouterCategorie = new System.Windows.Forms.GroupBox();
             this.nameTxtBox = new System.Windows.Forms.TextBox();
-            this.parentCbox = new System.Windows.Forms.ComboBox();
             this.gbListeCategorie.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCategory)).BeginInit();
             this.gbAjouterCategorie.SuspendLayout();
@@ -84,27 +82,16 @@
             this.lbNom.AutoSize = true;
             this.lbNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNom.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbNom.Location = new System.Drawing.Point(18, 72);
+            this.lbNom.Location = new System.Drawing.Point(342, 75);
             this.lbNom.Name = "lbNom";
             this.lbNom.Size = new System.Drawing.Size(46, 20);
             this.lbNom.TabIndex = 3;
             this.lbNom.Text = "Nom ";
             // 
-            // lbParent
-            // 
-            this.lbParent.AutoSize = true;
-            this.lbParent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbParent.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbParent.Location = new System.Drawing.Point(395, 71);
-            this.lbParent.Name = "lbParent";
-            this.lbParent.Size = new System.Drawing.Size(56, 20);
-            this.lbParent.TabIndex = 4;
-            this.lbParent.Text = "Parent";
-            // 
             // btAjouter
             // 
             this.btAjouter.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btAjouter.Location = new System.Drawing.Point(866, 65);
+            this.btAjouter.Location = new System.Drawing.Point(527, 69);
             this.btAjouter.Name = "btAjouter";
             this.btAjouter.Size = new System.Drawing.Size(80, 30);
             this.btAjouter.TabIndex = 6;
@@ -161,10 +148,8 @@
             // 
             this.gbAjouterCategorie.Controls.Add(this.nameTxtBox);
             this.gbAjouterCategorie.Controls.Add(this.btAjouter);
-            this.gbAjouterCategorie.Controls.Add(this.parentCbox);
             this.gbAjouterCategorie.Controls.Add(this.lbAjouterCategorie);
             this.gbAjouterCategorie.Controls.Add(this.lbNom);
-            this.gbAjouterCategorie.Controls.Add(this.lbParent);
             this.gbAjouterCategorie.Location = new System.Drawing.Point(30, 590);
             this.gbAjouterCategorie.Name = "gbAjouterCategorie";
             this.gbAjouterCategorie.Size = new System.Drawing.Size(970, 145);
@@ -173,18 +158,10 @@
             // 
             // nameTxtBox
             // 
-            this.nameTxtBox.Location = new System.Drawing.Point(70, 72);
+            this.nameTxtBox.Location = new System.Drawing.Point(394, 75);
             this.nameTxtBox.Name = "nameTxtBox";
             this.nameTxtBox.Size = new System.Drawing.Size(100, 20);
             this.nameTxtBox.TabIndex = 3;
-            // 
-            // parentCbox
-            // 
-            this.parentCbox.FormattingEnabled = true;
-            this.parentCbox.Location = new System.Drawing.Point(457, 71);
-            this.parentCbox.Name = "parentCbox";
-            this.parentCbox.Size = new System.Drawing.Size(121, 21);
-            this.parentCbox.TabIndex = 3;
             // 
             // ViewCategory
             // 
@@ -213,14 +190,12 @@
         private System.Windows.Forms.Button btRetour;
         private System.Windows.Forms.Label lbListeCategorie;
         private System.Windows.Forms.Label lbNom;
-        private System.Windows.Forms.Label lbParent;
         private System.Windows.Forms.Button btAjouter;
         private System.Windows.Forms.Label lbAjouterCategorie;
         private System.Windows.Forms.GroupBox gbListeCategorie;
         private System.Windows.Forms.DataGridView dataGridCategory;
         private System.Windows.Forms.GroupBox gbAjouterCategorie;
         private System.Windows.Forms.TextBox nameTxtBox;
-        private System.Windows.Forms.ComboBox parentCbox;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoryName;
     }
 }

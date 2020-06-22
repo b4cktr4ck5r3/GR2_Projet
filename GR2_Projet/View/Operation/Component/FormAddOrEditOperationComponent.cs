@@ -60,31 +60,44 @@ namespace GR2_Projet.View.Operation.Component
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            operationType operationType;
-            operationType.TryParse(operationTypeCbox.SelectedItem.ToString(), out operationType);
+            try
+            {
+                operationType operationType;
+                operationType.TryParse(operationTypeCbox.SelectedItem.ToString(), out operationType);
 
-            paymentType paymentType;
-            paymentType.TryParse(paymentTypeCbox.SelectedItem.ToString(), out paymentType);
+                paymentType paymentType;
+                paymentType.TryParse(paymentTypeCbox.SelectedItem.ToString(), out paymentType);
 
-            Controller.OperationController.AddOperation(Program.currentSelectedAccount, nameTxtBox.Text,
-                operationType, dateTPicker.Value, paymentType, float.Parse(amountTxtBox.Text), Program.currentLoggedUser.Categories.Find(c => c.GetName() == categoryCbox.SelectedItem.ToString()));
+                Controller.OperationController.AddOperation(Program.currentSelectedAccount, nameTxtBox.Text,
+                    operationType, dateTPicker.Value, paymentType, float.Parse(amountTxtBox.Text), Program.currentLoggedUser.Categories.Find(c => c.GetName() == categoryCbox.SelectedItem.ToString()));
 
-            Program.SearchParent(this, "ViewOperation").GetType().GetMethod("ShowOperationsLogic").Invoke(Program.SearchParent(this, "ViewOperation"), new object[] { });
+                Program.SearchParent(this, "ViewOperation").GetType().GetMethod("ShowOperationsLogic").Invoke(Program.SearchParent(this, "ViewOperation"), new object[] { });
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void editBtn_Click(object sender, EventArgs e)
         {
-            operationType operationType;
-            operationType.TryParse(operationTypeCbox.SelectedItem.ToString(), out operationType);
+            try
+            {
+                operationType operationType;
+                operationType.TryParse(operationTypeCbox.SelectedItem.ToString(), out operationType);
 
-            paymentType paymentType;
-            paymentType.TryParse(paymentTypeCbox.SelectedItem.ToString(), out paymentType);
+                paymentType paymentType;
+                paymentType.TryParse(paymentTypeCbox.SelectedItem.ToString(), out paymentType);
 
-            Controller.OperationController.EditOperation(mOperation, nameTxtBox.Text,
-                float.Parse(amountTxtBox.Text), paymentType, operationType, dateTPicker.Value, Program.currentLoggedUser.Categories.Find(c => c.GetName() == categoryCbox.SelectedItem.ToString()));
+                Controller.OperationController.EditOperation(mOperation, nameTxtBox.Text,
+                    float.Parse(amountTxtBox.Text), paymentType, operationType, dateTPicker.Value, Program.currentLoggedUser.Categories.Find(c => c.GetName() == categoryCbox.SelectedItem.ToString()));
 
-            Program.SearchParent(this, "ViewOperation").GetType().GetMethod("ShowOperationsLogic").Invoke(Program.SearchParent(this, "ViewOperation"), new object[] { });
+                Program.SearchParent(this, "ViewOperation").GetType().GetMethod("ShowOperationsLogic").Invoke(Program.SearchParent(this, "ViewOperation"), new object[] { });
+            }
+            catch (Exception)
+            {
 
+            }
         }
     }
 }

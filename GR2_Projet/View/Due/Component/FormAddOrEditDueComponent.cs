@@ -55,29 +55,43 @@ namespace GR2_Projet.View.Due.Component
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            operationType operationType;
-            operationType.TryParse(operationTypeCbox.SelectedItem.ToString(), out operationType);
+            try
+            {
+                operationType operationType;
+                operationType.TryParse(operationTypeCbox.SelectedItem.ToString(), out operationType);
 
-            paymentType paymentType;
-            paymentType.TryParse(paymentTypeCbox.SelectedItem.ToString(), out paymentType);
+                paymentType paymentType;
+                paymentType.TryParse(paymentTypeCbox.SelectedItem.ToString(), out paymentType);
 
-            Controller.DueController.AddDue(Program.currentSelectedAccount, nameTxtBox.Text, operationType,
-                int.Parse(dayTxtBox.Text), paymentType, float.Parse(amountTxtBox.Text),
-                Program.currentLoggedUser.Categories.Find(c => c.GetName() == categoryCbox.SelectedItem.ToString()));
-            Program.SearchParent(this, "ViewDue").GetType().GetMethod("ShowDuesLogic").Invoke(Program.SearchParent(this, "ViewDue"), new object[] { });
+                Controller.DueController.AddDue(Program.currentSelectedAccount, nameTxtBox.Text, operationType,
+                    int.Parse(dayTxtBox.Text), paymentType, float.Parse(amountTxtBox.Text),
+                    Program.currentLoggedUser.Categories.Find(c => c.GetName() == categoryCbox.SelectedItem.ToString()));
+                Program.SearchParent(this, "ViewDue").GetType().GetMethod("ShowDuesLogic").Invoke(Program.SearchParent(this, "ViewDue"), new object[] { });
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void editBtn_Click(object sender, EventArgs e)
         {
-            operationType operationType;
-            operationType.TryParse(operationTypeCbox.SelectedItem.ToString(), out operationType);
+            try
+            {
+                operationType operationType;
+                operationType.TryParse(operationTypeCbox.SelectedItem.ToString(), out operationType);
 
-            paymentType paymentType;
-            paymentType.TryParse(paymentTypeCbox.SelectedItem.ToString(), out paymentType);
+                paymentType paymentType;
+                paymentType.TryParse(paymentTypeCbox.SelectedItem.ToString(), out paymentType);
 
-            Controller.DueController.EditDue(mDue, nameTxtBox.Text, float.Parse(amountTxtBox.Text), paymentType, operationType, int.Parse(dayTxtBox.Text), Program.currentLoggedUser.Categories.Find(c => c.GetName() == categoryCbox.SelectedItem.ToString()));
+                Controller.DueController.EditDue(mDue, nameTxtBox.Text, float.Parse(amountTxtBox.Text), paymentType, operationType, int.Parse(dayTxtBox.Text), Program.currentLoggedUser.Categories.Find(c => c.GetName() == categoryCbox.SelectedItem.ToString()));
 
-            Program.SearchParent(this, "ViewDue").GetType().GetMethod("ShowDuesLogic").Invoke(Program.SearchParent(this, "ViewDue"), new object[] {});
+                Program.SearchParent(this, "ViewDue").GetType().GetMethod("ShowDuesLogic").Invoke(Program.SearchParent(this, "ViewDue"), new object[] {});
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
 

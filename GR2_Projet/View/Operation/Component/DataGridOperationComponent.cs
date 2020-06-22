@@ -16,7 +16,6 @@ namespace GR2_Projet.View.Operation.Component
         {
             InitializeComponent();
 
-            UpdateCbox();
             InsertData(Program.currentSelectedAccount.Operations);
         }
 
@@ -31,12 +30,6 @@ namespace GR2_Projet.View.Operation.Component
             foreach (Model.Operation operation in operations)
                 dataOperationGridView.Rows.Add(operation.Id, operation.Name, operation.PaymentType,
                     operation.Amount + "€", operation.OperationType, operation.Date.ToString(), operation.category.GetName());
-        }
-
-        private void UpdateCbox()
-        {
-            foreach (Model.Category category in Program.currentLoggedUser.Categories)
-                categoriesCbox.Items.Add(category.GetName());
         }
 
         private Model.Operation currentOperation = null;
